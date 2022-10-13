@@ -1,44 +1,38 @@
 ---
-title: "Demo aft format to use as template"
+title: "Computo Journal Format"
+subtitle: "To be used as Template for contribution to Computo"
 format:
-  aft-pdf:
-    keep-tex: true  
-  aft-html: default
+  computo-html: default
 author:
-  - name: John Doe
+  - name: The Computo Team
     affiliations:
-      - name: Dummy org
-        department: Cool Dep
-        address: Somewhere
-        city: Magic city
-        country: best one
-        postal-code: 9999
-      - Demo Journal
+      - name: Société Française de Statistique
+        department: Statistique
+        address: IHP
+        city: Paris
+        country: France
+        postal-code: 75005
     orcid: 0000-0000-0000-0000
-    email: JD@example.org
-    url: https://example.org/
-  - name: his friend
+    email: computo@sfds
+    url: https://computo.sfds.asso.fr
+  - name: a friend
     affiliations:
       - Another Affiliation
 abstract: |
-  This document is only a demo explaining how to use the template.
-keywords: [template, demo]
-reference-section-title: References
-bibliography: bibliography.bib  
+  This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere
+  vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan
+  eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis
+  libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor
+  cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu
+  ipsum.
+keywords: [template, quarto, R, Python, reproductibility]
+reference-section-title: Bibliography
+bibliography: references.bib  
 ---
 
 ## Introduction {#sec-intro}
 
-This is a dummy example only for the purpose to use this repo as a template starter for creating new formats.  For this `article-format-template` we call our dummy article `aft`. 
-
-This quarto extension format supports PDF and HTML outputs. `quarto-journals` is aiming at porting existing {{< latex >}} template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.
-
-## About Quarto Extensions formats And Quarto Journals Article
-
-First, please get familiar with the following resources: 
-
-- [Creating Formats](https://quarto.org/docs/extensions/formats.html) in Quarto as part of the [Extensions](https://quarto.org/docs/extensions/) mechanism.
-- [Journals Articles](https://quarto.org/docs/journals/) for Quarto.
+This is a dummy example only for the purpose to use this repo as a template starter for creating new formats.
 
 ## Structure of this repository
 
@@ -51,7 +45,6 @@ Everything for the extensions is in `_extensions`. See Quarto doc for details.
 - `aft` format sets some defaults which are different from `pdf` or `html`, link setting links to URL in read inside PDF output.
 
 Source repository for this template format can found on [Github](https://github.com/quarto-journals/article-format-template)
-
 
 ### `_extensions\aft` 
 
@@ -175,7 +168,220 @@ This is possible thanks to the Lua Filter included in the custom extension forma
 
 I did not read this book [@CameronTrivedi2013] but it must be interesting. 
 
-Differences between `aft-html` and `aft-pdf`: 
 
-* For the HTML format, we are using Pandoc citeproc to include the bibliography. Here `reference-section-title` controls the title for the chapter that will be used.
-* For the PDF format, `natbib` is used by default and the bibliography is included with a title by the LaTeX template. 
+## Introduction {#sec-intro}
+
+### About this document
+
+This document provides a template based on the [quarto system](https://quarto.org/) for contributions to **Computo** @computo. We show how `Python` [@perez2011python] or  `R` [@R-base] code can be included.
+
+### Advice for writting your manuscript
+
+First make sure that you are able to build your manuscript as a regular notebook on your system. Then you can start configure the binder environment.
+
+## Formatting
+
+This section covers basic formatting guidelines. [Quarto](https://quarto.org/) is a versatile  formatting system for authoring HTML based on markdown, integrating $\LaTeX$ and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the [Pandoc Markdown](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html) markup language.
+
+To render/compile a document, run `quarto render`. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:
+
+``` .bash
+quarto render content.qmd # will render to html
+```
+
+### Basic markdown formatting
+
+**Bold text** or _italic_
+
+- This is a list
+- With more elements
+- It isn't numbered.
+
+But we can also do a numbered list
+
+1. This is my first item
+2. This is my second item
+3. This is my third item
+
+### Mathematics
+
+#### Mathematical formulae
+
+[LaTeX](https://www.latex-project.org/) code is natively supported[^katex], which makes it possible to use mathematical formulae:
+
+[^katex]: We use [katex](https://katex.org/) for this purpose.
+
+will render
+
+$$
+f(x_1, \dots, x_n; \mu, \sigma^2) =
+\frac{1}{\sigma \sqrt{2\pi}} \exp{\left(- \frac{1}{2\sigma^2}\sum_{i=1}^n(x_i - \mu)^2\right)}
+$$
+
+It is also posible to cross-reference an equation, see @eq-mylabel:
+
+$$
+\begin{aligned}
+D_{x_N} & = \frac12
+\left[\begin{array}{cc}
+x_L^\top & x_N^\top \end{array}\right] \,
+\left[\begin{array}{cc}  L_L & B \\ B^\top & L_N \end{array}\right] \,
+\left[\begin{array}{c}
+x_L \\ x_N \end{array}\right] \\
+& = \frac12 (x_L^\top L_L x_L + 2 x_N^\top B^\top x_L + x_N^\top L_N x_N),
+\end{aligned}
+$$ {#eq-mylabel}
+
+#### Theorems and other amsthem-like environments
+
+Quarto includes a nice support for theorems, with predefined prefix labels for theorems, lemmas, proposition, etc. see [this page](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs). Here is a simple example:
+
+::: {#thm-slln}
+### Strong law of large numbers
+
+The sample average converges almost surely to the expected value:
+
+$$\overline{X}_n\ \xrightarrow{\text{a.s.}}\ \mu \qquad\textrm{when}\ n \to \infty.$$
+:::
+
+See @thm-slln.
+
+### Code
+
+Quarto uses either Jupyter or knitr to render code chunks. This can be triggered in the yaml header, e.g., for Jupyter (should be installed on your computer) use
+
+``` yaml
+---
+title: "My Document"
+author "Jane Doe"
+jupyter: python3
+---
+```
+
+For knitr (R + knitr must be installed on your computer)
+
+``` yaml
+---
+title: "My Document"
+author "Jane Doe"
+---
+```
+
+You can use Jupyter for Python code and more. And R + KnitR for if you want to mix R with Python (via the package reticulate @R-reticulate).
+
+#### R
+
+`R` code [@R-base] chunks may be embedded as follows:
+
+```{r r-code, echo=TRUE}
+x <- rnorm(10)
+```
+
+
+#### Python
+
+``` yaml
+---
+title: "My Document"
+author "Jane Doe"
+jupyter: python3
+---
+```
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, ax = plt.subplots()
+ax.plot(np.arange(10))
+```
+
+## Figures
+
+Plots can be generated as follows:
+
+```{r pressure, message = FALSE}
+library("ggplot2")
+p <- ggplot(mpg, aes(displ, hwy)) +
+  geom_point() +
+  geom_smooth()
+p
+```
+
+Interactive plots may also be produced in the HTML output of the document:
+
+```{r, message=FALSE}
+library("plotly")
+ggplotly(p)
+```
+
+It is also possible to create figures from static images:
+
+:::{#fig-logo}
+
+![](figures/sfds.png)
+
+SFdS logo (c.a. 2021)
+
+:::
+
+### Tables
+
+Tables (with label: `@tbl-mylabel` renders @tbl-mylabel) can be generated with markdown as follows
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+: my table caption {#tbl-mylabel}
+
+Table can also be generated by some code, for instance with knitr here:
+
+```{r cars}
+knitr::kable(summary(cars), caption = "Table caption.")
+```
+
+### Algorithms
+
+A solution to typeset pseudocode just like you would do with $\LaTeX$, yet with HTML output is to rely on the JavaScript [peudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a `<pre>` tag. You need to modify the file `includes/pseudocode-footer.html` so that the `Id` of the rendered element match the one in `<pre id ="">`. The result is as follows:
+
+::: {#algo-label}
+
+<pre id="myalgo">
+
+\begin{algorithm}
+\caption{A simple Algorithm}
+\begin{algorithmic}
+\STATE \textbf{Data}: $\mathcal{X} = \{x_1, \dots, x_n\}$
+\STATE optimization parameters: number of iterations $T$, learning rate $\eta$
+\STATE \textbf{Result}: output $\mathcal{Y} = \{y_1, \dots, y_n\}$
+\PROCEDURE{myproc}{$T$, $\eta$}
+    \FOR{$t = 0$ \TO $T$}
+        \STATE do something (and fast please)
+    \ENDFOR
+\ENDPROCEDURE
+\end{algorithmic}
+\end{algorithm}
+
+</pre>
+
+:::
+
+### Handling references {#sec-references}
+
+#### Bibliographic references
+
+References are displayed as footnotes using [BibTeX](http://www.bibtex.org/), e.g. `[@computo]` will be displayed
+as [@computo], where `computo` is the bibtex key for this specific entry. The bibliographic information is automatically retrieved from
+the `.bib` file specified in the header of this document (here:`references.bib`).
+
+#### Other cross-references
+
+As already (partially) seen, Quarto includes a mecanism similar to the bibliographic references for sections, equations, theorems, figures,
+lists, etc. Have a look at [this page](https://quarto.org/docs/authoring/cross-references.html).
+
+### Bibliography {.unnumbered}
+
+::: {#refs}
+:::

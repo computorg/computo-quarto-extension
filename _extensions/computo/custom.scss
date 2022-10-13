@@ -1,0 +1,66 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+/*******************************************************************************
+ * Variables used throughout the theme.
+ * To adjust anything, simply edit the variables below and rebuild the theme.
+ ******************************************************************************/
+
+// Colors
+$grey-color:          #828282 !default;
+$grey-color-light:    lighten($grey-color, 40%);
+$grey-color-dark:     darken($grey-color, 25%);
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
+$computo-color:        #034E79 !default;
+$computo-color-dark:    darken($computo-color, 10%);
+$computo-color-light:   lighten($computo-color, 60%);
+
+// Theme colors
+$body-color:            $grey-color-dark;
+$code-bg-color-light:    rgba($computo-color, 0.05);
+$code-bg-color-dark:     darken($computo-color, 25%);
+$link-color: $computo-color;
+
+// Font
+$headings-font-weight:  500 !default;
+$h2-font-size: 1.6rem !default;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$ff-title: 'Oswald', sans-serif;
+$ff-main: 'Open Sans', sans-serif;
+
+// Callout
+$callout-border-color: $computo-color-light !important;
+$callout-color-note: $computo-color;
+$callout-header-color: $computo-color-dark;
+$callout-border-width: 6px ;
+
+$navbar-bg: $computo-color;
+$navbar-fg: $white-color;
+$navbar-text-color: $white-color;
+$navbar-hover-color: #{$computo-color-light};
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: $ff-title ;
+  font-weight: 500;
+  color: var(--computo-color-dark) !important;
+}
+
+:root {
+    font-size:16px;
+}
+
+body {
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.callout-header {
+    background-color: $computo-color !important;
+    font-size: 1.1rem;
+    font-weight: 600;    
+    color: $computo-color-dark ;
+}
