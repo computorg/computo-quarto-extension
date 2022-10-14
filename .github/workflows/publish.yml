@@ -16,14 +16,14 @@ jobs:
 
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
-	with:
-	  to: html 
-	    
+        with:
+         to: html
+
       - name: Publish to GitHub Pages (without rendering)
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
-	  render: false
+          render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
       
