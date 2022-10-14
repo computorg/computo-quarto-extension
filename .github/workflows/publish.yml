@@ -13,7 +13,7 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-         with:
+        with:
           version: pre-release
 
       - name: Publish to GitHub Pages
@@ -21,4 +21,4 @@ jobs:
         with:
           target: gh-pages
           path: template.qmd
-	  
+
