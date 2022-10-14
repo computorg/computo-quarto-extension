@@ -46,7 +46,5 @@ contributes:
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
-        - "partials/html/metadata.html"
-        - "partials/html/toc.html"
       # Use a CSL file to style (https://www.zotero.org/styles/)
       # csl: https://www.zotero.org/styles/journal-of-the-american-statistical-association
