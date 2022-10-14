@@ -1,6 +1,6 @@
 # Use of the Computo Format Template
 
-This is a Quarto template that assists you in creating a manuscript for Computo.
+This is a [Quarto-based](https://quarto.org) that assists you in creating a manuscript for Computo.
 
 ## Creating a New Article
 
@@ -35,8 +35,6 @@ format:
   computo-html: default
 ```
 
-You can view a preview of the rendered template at <https://quarto-journals.github.io/article-format-template/>.
+You can view a preview of the rendered template at <https://quarto-journals.github.io/computo-quarto-extension/>.
 
-Documentation and sample of a [Quarto-based](https://quarto.org) submission for the Computo journal.
 
-Shows how to automatically setup and build the HTML outputs, ready to submit to our peer-review platform.
