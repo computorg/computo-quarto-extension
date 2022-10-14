@@ -16,14 +16,15 @@ contributes:
           echo: false
     html:
       # define default configuration for the html version of your format
-      max-width: "1200px"
-      number-sections: true
+      page-layout: article
       theme: custom.scss
       include-in-header:
         - includes/pseudocode-header.html
       include-after-body: includes/pseudocode-footer.html
       toc: true
       toc-title: Contents
+      title-block-banner: "#034E79"
+      title-block-banner-color: "#FFFFFF"
       license: "CC BY"
       reference-section-title: Bibliography
       date-format: long
@@ -48,3 +49,9 @@ contributes:
         - "partials/html/title-metadata.html"
       # Use a CSL file to style (https://www.zotero.org/styles/)
       # csl: https://www.zotero.org/styles/journal-of-the-american-statistical-association
+  number-sections: true
+  crossref:
+  sec-prefix: Section
+  eq-prefix: Equation
+  fig-prefix: Figure   
+  tbl-prefix: Table

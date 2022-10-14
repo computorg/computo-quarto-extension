@@ -57,8 +57,10 @@ $callout-border-width: 6px ;
   color: $computo-color-dark !important;
 }
 
-$title-block-banner: $computo-color ;
-$title-block-banner-color: $white-color ;
+// Bad inclusion of TOC if color specified in CSS for title-block-banner
+// Works when using .yml
+// $title-block-banner: $computo-color ;
+// $title-block-banner-color: $white-color ;
 
 $navbar-bg: $computo-color;
 $navbar-fg: $white-color;
