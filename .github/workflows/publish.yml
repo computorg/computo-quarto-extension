@@ -11,6 +11,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: Installing dependencies with Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          auto-activate-base: false
+          miniconda-version: 'latest'
+          environment-file: environment.yml
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:

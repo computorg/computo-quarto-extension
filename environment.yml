@@ -1,0 +1,14 @@
+name: computorbuild
+channels:
+  - conda-forge
+  - r
+dependencies:
+  - jupyter
+  - matplotlib
+  - numpy
+  - r-base
+  - r-knitr
+  - r-plotly
+  - r-tidyverse
+  - r-reticulate
+ 
