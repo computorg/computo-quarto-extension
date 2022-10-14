@@ -35,6 +35,6 @@ format:
   computo-html: default
 ```
 
-You can view a preview of the rendered template at <https://quarto-journals.github.io/computo-quarto-extension/>.
+You can view a preview of the rendered template at <https://computorg.github.io/computo-quarto-extension/>.
 
 
