@@ -13,18 +13,17 @@ $grey-color-light:    lighten($grey-color, 40%);
 $grey-color-dark:     darken($grey-color, 25%);
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
-$computo-color:        #034E79 !default;
+$computo-color:         #034E79 !default;
 $computo-color-dark:    darken($computo-color, 10%);
 $computo-color-light:   lighten($computo-color, 60%);
+$computo-color-lighter: rgba($computo-color, 0.04);
 
 // Theme colors
-$body-color:            $grey-color-dark;
-$code-bg-color-light:    rgba($computo-color, 0.05);
-$code-bg-color-dark:     darken($computo-color, 25%);
+$body-color: $grey-color-dark;
 $link-color: $computo-color;
 
 // Font
-$headings-font-weight:  500 !default;
+$headings-font-weight: 500 !default;
 $h2-font-size: 1.6rem !default;
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $ff-title: 'Oswald', sans-serif;
@@ -36,10 +35,41 @@ $callout-color-note: $computo-color;
 $callout-header-color: $computo-color-dark;
 $callout-border-width: 6px ;
 
+.callout-header {
+    background-color: $computo-color !important;
+    font-size: 1.1rem;
+    font-weight: 600;    
+    color: $computo-color-dark ;
+}
+
+.theorem, .proposition, .lemma, .corrolary {
+    background-color: $computo-color-lighter ;
+    border-radius: 4px;
+    border: 1px solid $computo-color-light;
+    border-left-width: 5px ;
+    border-left-color: $computo-color-dark ;
+    padding: 2px 4px;
+    margin: 1em 0 ;
+}
+
+.theorem-title {
+  font-family: $ff-title ;
+  color: $computo-color-dark !important;
+}
+
+$title-block-banner: $computo-color ;
+$title-block-banner-color: $white-color ;
+
 $navbar-bg: $computo-color;
 $navbar-fg: $white-color;
 $navbar-text-color: $white-color;
 $navbar-hover-color: #{$computo-color-light};
+
+// Code block
+$code-block-bg: $computo-color-lighter;
+$code-block-border: $computo-color-light;
+$code-block-border-left: $computo-color-dark;
+$code-block-border-left-size: 5px;
 
 /*-- scss:rules --*/
 h1, h2, h3, h4, h5, h6 {
@@ -56,11 +86,4 @@ body {
   text-align: justify;
   font-size: 1rem;
   font-weight: 300;
-}
-
-.callout-header {
-    background-color: $computo-color !important;
-    font-size: 1.1rem;
-    font-weight: 600;    
-    color: $computo-color-dark ;
 }

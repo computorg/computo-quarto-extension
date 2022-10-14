@@ -1,10 +1,14 @@
 ---
 title: "Computo Journal Format"
-subtitle: "To be used as Template for contribution to Computo"
-format:
-  computo-html: default
+subtitle: "To be used as template for contribution to Computo"
+date: '10/14/2022'
+date-modified: '10/14/2022'
 author:
   - name: The Computo Team
+    corresponding: true
+    email: computo@sfds.asso.fr
+    url: https://computo.sfds.asso.fr
+    orcid: 0000-0000-0000-0000
     affiliations:
       - name: Société Française de Statistique
         department: Statistique
@@ -12,174 +16,43 @@ author:
         city: Paris
         country: France
         postal-code: 75005
-    orcid: 0000-0000-0000-0000
-    email: computo@sfds
-    url: https://computo.sfds.asso.fr
   - name: a friend
     affiliations:
       - Another Affiliation
+description: |
+  This document provides a template based on the quarto system for contributions to Computo. We show how Python (Perez, Granger, and Hunter 2011) or R (R Core Team 2020) code can be included. The github repository in itself can be used to install the quarto corresponding extension useful for authors.
 abstract: |
-  This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere
-  vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan
-  eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis
-  libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor
-  cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu
-  ipsum.
+  This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor
+  cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
 keywords: [template, quarto, R, Python, reproductibility]
-reference-section-title: Bibliography
-bibliography: references.bib  
+doi: 10.xxxx/xxx-xxx
+citation:
+  type: article-journal
+  container-title: "Computo"
+  doi: "10.xxxx/xxx-xxx"
+  url: "https://github.com/computorg/computo-quarto-extension"
+  issn: "2824-7795"
+bibliography: references.bib
+google-scholar: true
+github-user: computorg
+repo: "computo-quarto-extension"
+format:
+  computo-html: default
 ---
 
-## Introduction {#sec-intro}
+<!-- - Publish a demo of you format to github pages of the repo by using `quarto publish` command  -->
 
-This is a dummy example only for the purpose to use this repo as a template starter for creating new formats.
+# Introduction {#sec-intro}
 
-## Structure of this repository
-
-Everything for the extensions is in `_extensions`. See Quarto doc for details. 
-
-- In `partials`, you'll find the `.tex` partials that can be used and should be removed or tweaked,s
-
-- Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the `aft` format. 
-
-- `aft` format sets some defaults which are different from `pdf` or `html`, link setting links to URL in read inside PDF output.
-
-Source repository for this template format can found on [Github](https://github.com/quarto-journals/article-format-template)
-
-### `_extensions\aft` 
-
-In this folder you'll find everything that defines the extensions which could be installed using `quarto install extension` or be part of the template when using `quarto use template`
-
-Format Metadata
-  ~ This is in `_extension.yml` is where all the metadata about the format are defined so that Quarto knows what to use.
-  Adapt this file for you own template.
-
-Partials
-  ~ In `partials`, there are the `.tex` files that will be used as Pandoc's template. We provide here all the partials supported by Quarto and custom one for this format. Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc's template and keeping it up to date.  
-    This template repo contains all the relevant partials that you can use with Quarto _as example_. We only tweaked `title.tex` to show the usage of a custom partials called `_custom.tex`.  
-    **Only keep the partials that you need to tweak for the format you are creating**
-
-    If you need to completely change the default template (i.g customizing partials is not enough), then you need to provide your own template to Pandoc based on [`template.tex`](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/template.tex) and also using partials or not. This can be provided using the `template` YAML key in `_extension.yml` for Quarto to use it. 
-
-    This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default `template.tex` content if you remove some specific parts.
-
-Lua Filters
-  ~ Most of the time, custom formats will need Lua filters to provide specific features like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to `_extensions` metadata). 
-    We have provided two examples: 
-
-    - `color-text.lua`, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax
-    - `shorcodes.lua`, a Lua filter which follow [Quarto custom shortcodes](https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes) guidelines to provide a `{{< LaTeX >}}` shortcode to nicely print LaTeX in PDF and HTML. 
-
-    **Remove or replace with your own Lua filters**
-
-Format resources
-
-  ~ Resources required by the format needs to be available. We have provided two examples: 
-
-    - `te.bst` is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence [LPPL](https://www.latex-project.org/lppl/)
-    - `aft.cls` is a dummy class file for this example format. It is a copy of official `article.cls`, the one provided in LaTeX installation (i.e at `kpsewhich article.cls`) and renamed as example (Licence LaTeX Project Public License)
-    - `custom.scss` is a style file to have a custom theme for our HTML format so that our Lua filter feature `color-tex.lua` works.
-
-    Those files are referenced within the `_extension.yml` to be used with our example format.
-
-    **Remove and replace with your own resources**
-
-`.quartoignore`
-
-  ~ Sometimes it is useful to have some files only needed for reference or for development. They should be available in the source repository but not downloaded to the user when `quarto use template` is used.
-
-    **Use `.quartoignore` to register such file and folder (one file or folder per line)**
-
-`style-guide` folder
-
-  ~ For `quarto-journals` format, use `style-guide` folder to include any documentation and resourced used for format creation, like a journal style guide or original `.tex` template. This folder is already added in `.quartoignore` in this example repo.
-
-    **Remove, rename or add to this folder**
-
-`template.qmd`
-
-  ~ This file is the template document that shows how to use the custom format. It will be downloaded with other resource by `quarto use template`, and even offered to be renamed if the name `template.qmd` is used. 
-
-    This file will usually use the custom format (here `aft-pdf` and `aft-html`) and show how to use the template. When you'll copy this template, you should be able to render this document to the demo format. 
-
-    **Adapt this file to provide a suitable template for your custom format**
-
-Other files
-
-  ~ Other files are needed by the template and are usually user provided - they are not part of the custom format. 
-
-    Here `bibliography.bib` is here to demo the usage of the bst file from the custom format.
-
-    **Remove this file and provide a suitable one for your template**
-
-{{< pagebreak >}}
-
-## Checklist: Creating a custom format
-
-Here is the checklist to help you know what to modify:
-
-- Read the resources mentioned at the top,
-- Use this template repo to create a new repository for your format (Click on "Use this template" to create new github repo)
-- Once you are acquainted with the content, remove the resources that are there only as example (see above)
-- Update README by replacing `aft` and `Article Format Template` mentions for your journal format
-- Keep only the template partials that you need to tweak, and add custom ones if needed
-- Add any Lua filters for shortcodes and other that would be useful to create the expected output format
-- Add any external resource your format will need, and that should be part of the extension format that will be downloaded,
-- Check `_extension.yml` is updated correctly
-- Modify the skeleton `template.qmd` to your format and add any required resources to be downloaded to user.
-- Check `.quartoignore` is updated which everything that should not be downloaded.
-- Publish a demo of you format to github pages of the repo by using `quarto publish` command 
-
-## Demo of some features found in this demo journal template
-
-### Shortcode demo {#sec-shortcode}
-
-PDF are rendered using {{< latex >}} but it is best if one can use a Markdown syntax for cross format support.
-
-`{{< latex >}}` used in source is a shortcode syntax where the shortcode is included in the extension folder `_extensions`
-
-### Code chunk {#sec-chunks}
-
-This format hide chunks by default as option has been set in `_extension.yml` file.
-
-```{r}
-#| prompt: true
-# Loading some data but this chunk won't be shown.
-data("quine", package = "MASS")
-```
-
-But you can set `echo` option to `true` locally in the chunk
-
-```{r}
-#| echo: true
-m_pois <- glm(Days ~ (Eth + Sex + Age + Lrn)^2, data = quine, family = poisson)
-summary(m_pois)
-```
-
-### Text color {#sec-summary}
-
-Our format makes applying color on inline text possible using the `[content]{color=<name>}` syntax. Let's see an example.
-
-Here we are using a special feature of our format which is the coloring because [pink is a **nice** color]{color=mypink}.
-
-This is possible thanks to the Lua Filter included in the custom extension format.
-
-### Using references {.unnumbered}
-
-I did not read this book [@CameronTrivedi2013] but it must be interesting. 
-
-
-## Introduction {#sec-intro}
-
-### About this document
+## About this document
 
 This document provides a template based on the [quarto system](https://quarto.org/) for contributions to **Computo** @computo. We show how `Python` [@perez2011python] or  `R` [@R-base] code can be included.
 
-### Advice for writting your manuscript
+## Advice for writting your manuscript
 
 First make sure that you are able to build your manuscript as a regular notebook on your system. Then you can start configure the binder environment.
 
-## Formatting
+# Formatting
 
 This section covers basic formatting guidelines. [Quarto](https://quarto.org/) is a versatile  formatting system for authoring HTML based on markdown, integrating $\LaTeX$ and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the [Pandoc Markdown](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html) markup language.
 
@@ -189,7 +62,7 @@ To render/compile a document, run `quarto render`. A document will be generated 
 quarto render content.qmd # will render to html
 ```
 
-### Basic markdown formatting
+## Basic markdown formatting
 
 **Bold text** or _italic_
 
@@ -203,9 +76,9 @@ But we can also do a numbered list
 2. This is my second item
 3. This is my third item
 
-### Mathematics
+## Mathematics
 
-#### Mathematical formulae
+### Mathematical formulae
 
 [LaTeX](https://www.latex-project.org/) code is natively supported[^katex], which makes it possible to use mathematical formulae:
 
@@ -232,7 +105,7 @@ x_L \\ x_N \end{array}\right] \\
 \end{aligned}
 $$ {#eq-mylabel}
 
-#### Theorems and other amsthem-like environments
+### Theorems and other amsthem-like environments
 
 Quarto includes a nice support for theorems, with predefined prefix labels for theorems, lemmas, proposition, etc. see [this page](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs). Here is a simple example:
 
@@ -246,7 +119,7 @@ $$\overline{X}_n\ \xrightarrow{\text{a.s.}}\ \mu \qquad\textrm{when}\ n \to \inf
 
 See @thm-slln.
 
-### Code
+## Code
 
 Quarto uses either Jupyter or knitr to render code chunks. This can be triggered in the yaml header, e.g., for Jupyter (should be installed on your computer) use
 
@@ -269,7 +142,7 @@ author "Jane Doe"
 
 You can use Jupyter for Python code and more. And R + KnitR for if you want to mix R with Python (via the package reticulate @R-reticulate).
 
-#### R
+### R
 
 `R` code [@R-base] chunks may be embedded as follows:
 
@@ -278,7 +151,7 @@ x <- rnorm(10)
 ```
 
 
-#### Python
+### Python
 
 ``` yaml
 ---
@@ -304,7 +177,7 @@ Plots can be generated as follows:
 library("ggplot2")
 p <- ggplot(mpg, aes(displ, hwy)) +
   geom_point() +
-  geom_smooth()
+  geom_smooth() + theme_bw()
 p
 ```
 
@@ -312,7 +185,7 @@ Interactive plots may also be produced in the HTML output of the document:
 
 ```{r, message=FALSE}
 library("plotly")
-ggplotly(p)
+ggplotly(p) + theme_bw()
 ```
 
 It is also possible to create figures from static images:
@@ -325,7 +198,7 @@ SFdS logo (c.a. 2021)
 
 :::
 
-### Tables
+## Tables
 
 Tables (with label: `@tbl-mylabel` renders @tbl-mylabel) can be generated with markdown as follows
 
@@ -342,7 +215,7 @@ Table can also be generated by some code, for instance with knitr here:
 knitr::kable(summary(cars), caption = "Table caption.")
 ```
 
-### Algorithms
+## Algorithms
 
 A solution to typeset pseudocode just like you would do with $\LaTeX$, yet with HTML output is to rely on the JavaScript [peudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a `<pre>` tag. You need to modify the file `includes/pseudocode-footer.html` so that the `Id` of the rendered element match the one in `<pre id ="">`. The result is as follows:
 
@@ -368,20 +241,20 @@ A solution to typeset pseudocode just like you would do with $\LaTeX$, yet with 
 
 :::
 
-### Handling references {#sec-references}
+## Handling references {#sec-references}
 
-#### Bibliographic references
+### Bibliographic references
 
 References are displayed as footnotes using [BibTeX](http://www.bibtex.org/), e.g. `[@computo]` will be displayed
 as [@computo], where `computo` is the bibtex key for this specific entry. The bibliographic information is automatically retrieved from
 the `.bib` file specified in the header of this document (here:`references.bib`).
 
-#### Other cross-references
+### Other cross-references
 
 As already (partially) seen, Quarto includes a mecanism similar to the bibliographic references for sections, equations, theorems, figures,
 lists, etc. Have a look at [this page](https://quarto.org/docs/authoring/cross-references.html).
 
-### Bibliography {.unnumbered}
+## Bibliography {.unnumbered}
 
 ::: {#refs}
 :::
