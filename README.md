@@ -1,10 +1,10 @@
-# Use of the Computo Format Template
+# Use of the Computo format template
 
-This is a [Quarto-based](https://quarto.org) that assists you in creating a manuscript for Computo.
+This is a [Quarto-based](https://quarto.org) tempalte that assists you in creating a manuscript for Computo.
 
-## Creating a New Article
+## Creating a new article
 
-You can use this as a template to create an article for an AFT journal. To do this, use the following command:
+You can use this as a template to create an article for Computo. To do this, use the following command:
 
 ```bash
 quarto use template computorg/computo-quarto-extension
@@ -12,7 +12,7 @@ quarto use template computorg/computo-quarto-extension
 
 This will install the extension and create an example qmd file and bibiography that you can use as a starting place for your article.
 
-## Installation For Existing Document
+## Installation for existing document
 
 You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
 
