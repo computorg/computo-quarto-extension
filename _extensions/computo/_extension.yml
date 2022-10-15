@@ -15,8 +15,6 @@ contributes:
         opts_chunk:
           echo: true
     html:
-      # define default configuration for the html version of your format
-      page-layout: article
       theme: custom.scss
       include-in-header:
         - includes/pseudocode-header.html
@@ -42,16 +40,16 @@ contributes:
       anchor-sections: true
       link-external-icon: false
       link-external-newwindow: true
+      crossref:
+      sec-prefix: Section
+      eq-prefix: Equation
+      fig-prefix: Figure   
+      tbl-prefix: Table
       html-math-method: katex
+      number-sections: true
       self-contained: true
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
       # Use a CSL file to style (https://www.zotero.org/styles/)
       # csl: https://www.zotero.org/styles/journal-of-the-american-statistical-association
-  number-sections: true
-  crossref:
-  sec-prefix: Section
-  eq-prefix: Equation
-  fig-prefix: Figure   
-  tbl-prefix: Table
