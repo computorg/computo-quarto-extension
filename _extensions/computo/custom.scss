@@ -31,12 +31,12 @@ $ff-main: 'Open Sans', sans-serif;
 
 // Callout
 $callout-border-color: $computo-color-light !important;
-$callout-color-note: $computo-color;
+$callout-color-note: $computo-color-dark;
 $callout-header-color: $computo-color-dark;
-$callout-border-width: 6px ;
+$callout-border-width: 5px ;
 
 .callout-header {
-    background-color: $computo-color !important;
+    background-color: $computo-color-lighter !important;
     font-size: 1.1rem;
     font-weight: 600;    
     color: $computo-color-dark ;

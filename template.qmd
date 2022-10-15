@@ -19,7 +19,7 @@ author:
     affiliations:
       - Another Affiliation
 description: |
-  This document provides a template based on the quarto system for contributions to Computo. We show how Python (Perez, Granger, and Hunter 2011) or R (R Core Team 2020) code can be included. The github repository in itself can be used to install the quarto corresponding extension useful for authors.
+  This document provides a template based on the quarto system for contributions to Computo. We show how Python (Perez, Granger, and Hunter 2011) or R (R Core Team 2020) code can be included. The github repository in itself provides a specific quarto extension useful for authors (and editors!).
 abstract: |
   This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor
   cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
@@ -41,13 +41,11 @@ format:
   computo-html: default
 ---
 
-<!-- - Publish a demo of you format to github pages of the repo by using `quarto publish` command  -->
-
 # Introduction {#sec-intro}
 
 ## About this document
 
-This document provides a template based on the [quarto system](https://quarto.org/) for contributions to **Computo** @computo. We show how `Python` [@perez2011python] or  `R` [@R-base] code can be included.
+This document provides a template based on the [quarto system](https://quarto.org/) for contributions to **Computo** [@computo]. We show how `Python` [@perez2011python] or  `R` [@R-base] code can be included.
 
 ## Advice for writting your manuscript
 
@@ -55,7 +53,11 @@ First make sure that you are able to build your manuscript as a regular notebook
 
 # Formatting
 
-This section covers basic formatting guidelines. [Quarto](https://quarto.org/) is a versatile  formatting system for authoring HTML based on markdown, integrating $\LaTeX$ and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the [Pandoc Markdown](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html) markup language.
+This section covers basic formatting guidelines. [Quarto](https://quarto.org/) is a versatile  formatting system for authoring HTML based on markdown, integrating $\LaTeX$ and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the [Pandoc Markdown](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html) markup language. 
+
+:::{.callout-note}
+We will only give some formatting elements. Authors can refer to the [Quarto web page](https://quarto.org/) for a complete view of formatting possibilities.
+:::
 
 To render/compile a document, run `quarto render`. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:
 
