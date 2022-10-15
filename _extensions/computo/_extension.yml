@@ -13,7 +13,7 @@ contributes:
         - shortcodes.lua
       knitr:
         opts_chunk:
-          echo: false
+          echo: true
     html:
       # define default configuration for the html version of your format
       page-layout: article
@@ -37,8 +37,8 @@ contributes:
         toggle: false
         caption: "source"
       code-copy: true
-      code-summary: "Show the code"
-      code-fold: true
+      code-summary: "Hide/Show the code"
+      code-fold: show
       anchor-sections: true
       link-external-icon: false
       link-external-newwindow: true

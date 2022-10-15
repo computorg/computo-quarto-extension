@@ -1,8 +1,7 @@
 ---
 title: "Computo Journal Format"
 subtitle: "To be used as template for contribution to Computo"
-date: '10/14/2022'
-date-modified: '10/14/2022'
+date: '2022-10-14'
 author:
   - name: The Computo Team
     corresponding: true
@@ -36,6 +35,8 @@ bibliography: references.bib
 google-scholar: true
 github-user: computorg
 repo: "computo-quarto-extension"
+draft: true # set to false once the build is running
+published: false # will be set to true once accepted
 format:
   computo-html: default
 ---
@@ -153,15 +154,7 @@ x <- rnorm(10)
 
 ### Python
 
-``` yaml
----
-title: "My Document"
-author "Jane Doe"
-jupyter: python3
----
-```
-
-```{python}
+```{python, eval = FALSE}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -171,9 +164,12 @@ ax.plot(np.arange(10))
 
 ## Figures
 
-Plots can be generated as follows:
+Plots can be generated as follows and referenced. See plot @fig-gg:
 
 ```{r pressure, message = FALSE}
+#| label: fig-gg
+#| fig-cap: "A simple ggplot example"
+
 library("ggplot2")
 p <- ggplot(mpg, aes(displ, hwy)) +
   geom_point() +
@@ -183,9 +179,9 @@ p
 
 Interactive plots may also be produced in the HTML output of the document:
 
-```{r, message=FALSE}
+```{r, message = FALSE}
 library("plotly")
-ggplotly(p) + theme_bw()
+ggplotly(p)
 ```
 
 It is also possible to create figures from static images:
