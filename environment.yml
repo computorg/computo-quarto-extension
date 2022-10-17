@@ -12,4 +12,3 @@ dependencies:
   - r-plotly
   - r-tidyverse
   - r-reticulate
-  - python=3.10
