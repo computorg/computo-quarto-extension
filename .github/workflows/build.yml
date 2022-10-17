@@ -22,9 +22,6 @@ jobs:
       - name: Installing dependencies with Miniconda
         uses: conda-incubator/setup-miniconda@v2
         with:
-          miniconda-version: 'latest'
-          auto-activate-base: true
-          activate-environment: ""
           environment-file: environment.yml
 
       - name: Installing quarto
