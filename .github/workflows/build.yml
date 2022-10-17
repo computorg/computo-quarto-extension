@@ -32,7 +32,7 @@ jobs:
         shell: bash -l {0}
         run: |
             echo "jupyter: computoenv" >> …quarto.yml
-            quarto render ${{ env.quarto_file }}.qmd --jupyter=python3
+            quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             cp environment.yml _build/
