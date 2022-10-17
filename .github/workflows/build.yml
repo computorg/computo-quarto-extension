@@ -31,7 +31,7 @@ jobs:
       - name: Rendering with Quarto
         shell: bash -l {0}
         run: |
-            export QUARTO_PYTHON=$(which python)
+            export RETICULATE_PYTHON=$(which python)
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
