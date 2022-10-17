@@ -24,14 +24,17 @@ jobs:
         with:
           environment-file: environment.yml
           environment-name: computoenv
+          cache-downloads: true
+          cache-env: true
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/install-quarto@v1
 
       - name: Rendering with Quarto
         shell: bash -l {0}
+        # https://github.com/rstudio/reticulate/issues/1184#issuecomment-1113450617
         run: |
-            export RETICULATE_PYTHON=$(which python)
+            rm -r $CONDA_PREFIX/conda-meta 
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
