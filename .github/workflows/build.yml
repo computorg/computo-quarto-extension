@@ -19,8 +19,8 @@ jobs:
       - name: Checking out repository for Github action
         uses: actions/checkout@v2
 
-      - name: Installing dependencies with Miniconda
-        uses: conda-incubator/setup-miniconda@v2
+      - name: Installing dependencies with Micromamba
+        uses: mamba-org/provision-with-micromamba@main
         with:
           environment-file: environment.yml
 
