@@ -1,6 +1,6 @@
 # Use of the Computo format template
 
-This is a [Quarto-based](https://quarto.org) tempalte that assists you in creating a manuscript for Computo.
+This is a [Quarto-based](https://quarto.org) template that assists you in creating a manuscript for Computo.
 
 ## Creating a new article
 
