@@ -158,12 +158,13 @@ x <- rnorm(10)
 
 ### Python
 
-```{python, eval = FALSE}
-import matplotlib.pyplot as plt
-import numpy as np
-
-fig, ax = plt.subplots()
-ax.plot(np.arange(10))
+```{python}
+import plotly.express as px
+df = px.data.tips()
+fig = px.histogram(df, x="total_bill", y="tip", color="sex",
+                   marginal="box", # or violin, rug
+                   hover_data=df.columns)
+fig.show()
 ```
 
 ## Figures

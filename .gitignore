@@ -2,3 +2,7 @@
 .Rhistory
 template.html
 /.luarc.json
+/.quarto/
+/template_cache
+/template_files
+/template.html

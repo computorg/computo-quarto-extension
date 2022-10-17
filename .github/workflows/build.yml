@@ -1,0 +1,48 @@
+name: build
+on:
+  schedule:
+    - cron: '0 0 * * 0' 
+  push:
+    branches:
+      - master
+      - main
+
+env: # Change this if needed
+  quarto_file: template
+  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  computorticle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking out repository for Github action
+        uses: actions/checkout@v2
+
+      - name: Installing dependencies with Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          auto-activate-base: false
+          miniconda-version: 'latest'
+          python-version: 3.10
+          environment-file: environment.yml
+          activate-environment: computo
+
+      - name: Installing quarto
+        uses: quarto-dev/quarto-actions/install-quarto@v1
+
+      - name: Rendering with Quarto
+        shell: bash -l {0}
+        run: |
+            quarto render ${{ env.quarto_file }}.qmd
+            mkdir _build
+            mv ${{ env.quarto_file }}.html _build/index.html
+            cp environment.yml _build/
+
+      - name: Deploying article on github pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          BRANCH: gh-pages
+          FOLDER: _build
+          CLEAN: true
