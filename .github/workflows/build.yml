@@ -23,6 +23,7 @@ jobs:
         uses: mamba-org/provision-with-micromamba@main
         with:
           environment-file: environment.yml
+          environment-name: computoenv
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/install-quarto@v1
@@ -30,7 +31,8 @@ jobs:
       - name: Rendering with Quarto
         shell: bash -l {0}
         run: |
-            quarto render ${{ env.quarto_file }}.qmd
+            echo "jupyter: computoenv" >> …quarto.yml
+            quarto render ${{ env.quarto_file }}.qmd --jupyter=python3
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             cp environment.yml _build/
