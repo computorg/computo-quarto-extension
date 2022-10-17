@@ -215,11 +215,11 @@ knitr::kable(summary(cars), caption = "Table caption.")
 
 ## Algorithms
 
-A solution to typeset pseudocode just like you would do with $\LaTeX$, yet with HTML output is to rely on the JavaScript [peudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a `<pre>` tag. You need to modify the file `includes/pseudocode-footer.html` so that the `Id` of the rendered element match the one in `<pre id ="">`. The result is as follows:
+A solution to typeset pseudocode just like you would do with $\LaTeX$, yet with HTML output is to rely on the JavaScript [pseudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a `<pre class="pseudocode">` tag. Do not forget the class tag, that will trigger the rendering process of your pseudo-code. The result is as follows:
 
 ::: {#algo-label}
 
-<pre id="myalgo">
+<pre class="pseudocode">
 
 \begin{algorithm}
 \caption{A simple Algorithm}
