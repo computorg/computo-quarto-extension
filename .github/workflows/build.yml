@@ -20,30 +20,21 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Installing dependencies with Micromamba
-        uses: mamba-org/provision-with-micromamba@v13
+        uses: mamba-org/provision-with-micromamba@main
         with:
-          environment-file: environment.yml
-          environment-name: computoenv
-          cache-downloads: true
           cache-env: true
 
       - name: Installing quarto
-        uses: quarto-dev/quarto-actions/install-quarto@v1
+        uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Rendering with Quarto
-        shell: bash -l {0}
-        # https://github.com/rstudio/reticulate/issues/1184#issuecomment-1113450617
-        run: |
-            rm -r $CONDA_PREFIX/conda-meta 
-            quarto render ${{ env.quarto_file }}.qmd --embed-ressources
-            mkdir _build
-            mv ${{ env.quarto_file }}.html _build/index.html
-            cp environment.yml _build/
-            touch _build/.nojekyll
-
-      - name: Deploying article on github pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Rendering quarto
+        uses: quarto-dev/quarto-actions/render@v2
         with:
-          BRANCH: gh-pages
-          FOLDER: _build
-          CLEAN: true
+          path: ${{ env.quarto_file }}.qmd
+
+      - name: Rendering quarto
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
