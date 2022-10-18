@@ -26,6 +26,7 @@ jobs:
           environment-name: computoenv
           cache-downloads: true
           cache-env: true
+          log-level: off
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/install-quarto@v1
