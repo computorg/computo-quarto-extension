@@ -32,7 +32,7 @@ jobs:
         # https://github.com/rstudio/reticulate/issues/1184#issuecomment-1113450617
         run: |
             rm -r $CONDA_PREFIX/conda-meta 
-            quarto render ${{ env.quarto_file }}.qmd --embed-ressources
+            quarto render ${{ env.quarto_file }}.qmd --embed-resources
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             cp environment.yml _build/
