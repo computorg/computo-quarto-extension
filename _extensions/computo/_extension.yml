@@ -8,6 +8,7 @@ contributes:
       filters:
         # You can include here Lua filters from your extension format 
         - color-text.lua
+        - list-table.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
@@ -47,7 +48,7 @@ contributes:
       tbl-prefix: Table
       html-math-method: katex
       number-sections: true
-      self-contained: true
+      embed-resources: true
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
