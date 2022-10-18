@@ -26,6 +26,8 @@ jobs:
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: LATEST
 
       - name: Rendering with Quarto
         shell: bash -l {0}
