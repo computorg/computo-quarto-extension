@@ -38,7 +38,9 @@ jobs:
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
+            mv  ${{ env.quarto_file }}_files _build/
             cp environment.yml _build/
+            touch _build/.nojekyll
 
       - name: Deploying article on github pages
         uses: JamesIves/github-pages-deploy-action@v4
