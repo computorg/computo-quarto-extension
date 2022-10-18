@@ -37,7 +37,7 @@ jobs:
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
-            mv -vf ${{ env.quarto_file }}_files _build/
+            mv -vf ${{ env.quarto_file }}_files figures _build/
             cp environment.yml _build/
             touch _build/.nojekyll
 
