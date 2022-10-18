@@ -27,16 +27,17 @@ jobs:
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: LATEST
+          version: pre-release
 
       - name: Rendering with Quarto
         shell: bash -l {0}
         # https://github.com/rstudio/reticulate/issues/1184#issuecomment-1113450617
         run: |
             rm -r $CONDA_PREFIX/conda-meta 
-            quarto render ${{ env.quarto_file }}.qmd --embed-resources
+            quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
+            mv -vf ${{ env.quarto_file }}_files _build/
             cp environment.yml _build/
             touch _build/.nojekyll
 
