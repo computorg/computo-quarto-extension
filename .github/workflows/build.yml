@@ -35,10 +35,9 @@ jobs:
         # https://github.com/rstudio/reticulate/issues/1184#issuecomment-1113450617
         run: |
             rm -r $CONDA_PREFIX/conda-meta 
-            quarto render ${{ env.quarto_file }}.qmd
+            quarto render ${{ env.quarto_file }}.qmd --embed-ressources
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
-            mv  ${{ env.quarto_file }}_files _build/
             cp environment.yml _build/
             touch _build/.nojekyll
 
