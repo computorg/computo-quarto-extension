@@ -34,7 +34,7 @@ jobs:
         # https://github.com/rstudio/reticulate/issues/1184#issuecomment-1113450617
         run: |
             rm -r $CONDA_PREFIX/conda-meta 
-            quarto render ${{ env.quarto_file }}.qmd
+            quarto render ${{ env.quarto_file }}.qmd --profile ci
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             mv -vf ${{ env.quarto_file }}_files _build/
