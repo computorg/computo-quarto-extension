@@ -48,7 +48,6 @@ contributes:
       tbl-prefix: Table
       html-math-method: katex
       number-sections: true
-      embed-resources: true
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
