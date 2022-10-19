@@ -11,7 +11,7 @@ env: # Change this if needed
 
 jobs:
   computorticle:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checking out repository for Github action
@@ -19,6 +19,8 @@ jobs:
 
       - name: Installing dependencies with Micromamba
         uses: mamba-org/provision-with-micromamba@main
+        with:
+          cache-env: true
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -30,8 +32,9 @@ jobs:
         shell: bash -l {0}
         # https://github.com/rstudio/reticulate/issues/1184#issuecomment-1113450617
         run: |
-            rm -r $CONDA_PREFIX/conda-meta 
-            quarto render ${{ env.quarto_file }}.qmd
+            mv $CONDA_PREFIX/conda-meta /tmp
+            QUARTO_R=$(which R) quarto render ${{ env.quarto_file }}.qmd
+            mv /tmp/conda-meta $CONDA_PREFIX
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/

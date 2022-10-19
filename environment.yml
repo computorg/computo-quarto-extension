@@ -6,7 +6,6 @@ dependencies:
   - jupyter
   - plotly
   - matplotlib
-  - python-kaleido
   - numpy
   - pandas
   - r-base
