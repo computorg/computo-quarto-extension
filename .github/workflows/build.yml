@@ -28,6 +28,7 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: pre-release
+          tinytex: true
 
       - name: Rendering with Quarto
         shell: bash -l {0}
@@ -36,7 +37,7 @@ jobs:
             rm -r $CONDA_PREFIX/conda-meta 
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
-            mv ${{ env.quarto_file }}.html _build/index.html
+            mv ${{ env.quarto_file }}.html {{ env.quarto_file }}.pdf _build/index.html
             mv -vf ${{ env.quarto_file }}_files figures _build/
             cp environment.yml _build/
             touch _build/.nojekyll

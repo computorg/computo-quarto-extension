@@ -39,6 +39,7 @@ draft: true # set to false once the build is running
 published: false # will be set to true once accepted
 format:
   computo-html: default
+  computo-pdf: default
 ---
 
 # Introduction {#sec-intro}
@@ -53,7 +54,7 @@ First make sure that you are able to build your manuscript as a regular notebook
 
 # Formatting
 
-This section covers basic formatting guidelines. [Quarto](https://quarto.org/) is a versatile  formatting system for authoring HTML based on markdown, integrating $\LaTeX$ and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the [Pandoc Markdown](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html) markup language. 
+This section covers basic formatting guidelines. [Quarto](https://quarto.org/) is a versatile  formatting system for authoring HTML based on markdown, integrating {{< latex >}} and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the [Pandoc Markdown](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html) markup language. 
 
 :::{.callout-note}
 We will only give some formatting elements. Authors can refer to the [Quarto web page](https://quarto.org/) for a complete view of formatting possibilities.
@@ -83,7 +84,7 @@ But we can also do a numbered list
 
 ### Mathematical formulae
 
-[LaTeX](https://www.latex-project.org/) code is natively supported[^katex], which makes it possible to use mathematical formulae:
+[{{< latex >}}](https://www.latex-project.org/) code is natively supported[^katex], which makes it possible to use mathematical formulae:
 
 [^katex]: We use [katex](https://katex.org/) for this purpose.
 
@@ -156,13 +157,16 @@ x <- rnorm(10)
 
 ### Python
 
-```{python}
+```{python, message=FALSE}
+#| label: fig-plotly
+#| fig-cap: "A simple python plotly example"
+
 import plotly.express as px
 df = px.data.tips()
 fig = px.histogram(df, x="total_bill", y="tip", color="sex",
                    marginal="box", # or violin, rug
                    hover_data=df.columns)
-fig.show()
+fig
 ```
 
 ## Figures
@@ -181,11 +185,6 @@ p
 ```
 
 Interactive plots may also be produced in the HTML output of the document:
-
-```{r, message = FALSE}
-library("plotly")
-ggplotly(p)
-```
 
 It is also possible to create figures from static images:
 
@@ -248,27 +247,70 @@ Alternatively you may use the [list tables](https://github.com/pandoc/lua-filter
 
 ## Algorithms
 
-A solution to typeset pseudocode just like you would do with $\LaTeX$, yet with HTML output is to rely on the JavaScript [pseudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a `<pre class="pseudocode">` tag. Do not forget the class tag, that will trigger the rendering process of your pseudo-code. The result is as follows:
+A solution to typeset pseudocode just like you would do with {{< latex >}}, yet with HTML output is to rely on the JavaScript [pseudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a [Code Block](https://quarto.org/docs/authoring/markdown-basics.html#source-code) with the `pseudocode` class. Do not forget the class tag, that will trigger the rendering process of your pseudo-code. The result is as follows^[For proper pdf rendering, use [Camel cased](https://en.wikipedia.org/wiki/Camel_case) names for all `algorithmic` keywords, not upper case ones like the examples in `pseudocode.js`’s documentation]:
 
 ::: {#algo-label}
 
-<pre class="pseudocode">
-
+````markdown
+```{.pseudocode}
+% This quicksort algorithm is extracted from Chapter 7, Introduction 
+% to Algorithms (3rd edition)
 \begin{algorithm}
-\caption{A simple Algorithm}
+\caption{Quicksort}
 \begin{algorithmic}
-\STATE \textbf{Data}: $\mathcal{X} = \{x_1, \dots, x_n\}$
-\STATE optimization parameters: number of iterations $T$, learning rate $\eta$
-\STATE \textbf{Result}: output $\mathcal{Y} = \{y_1, \dots, y_n\}$
-\PROCEDURE{myproc}{$T$, $\eta$}
-    \FOR{$t = 0$ \TO $T$}
-        \STATE do something (and fast please)
-    \ENDFOR
-\ENDPROCEDURE
+\Procedure{Quicksort}{$A, p, r$}
+    \If{$p < r$} 
+        \State $q = $ \Call{Partition}{$A, p, r$}
+        \State \Call{Quicksort}{$A, p, q - 1$}
+        \State \Call{Quicksort}{$A, q + 1, r$}
+    \EndIf
+\EndProcedure
+\Procedure{Partition}{$A, p, r$}
+    \State $x = A[r]$
+    \State $i = p - 1$
+    \For{$j = p, \dots, r - 1$}
+        \If{$A[j] < x$}
+            \State $i = i + 1$
+            \State exchange
+            $A[i]$ with $A[j]$
+        \EndIf
+        \State exchange $A[i]$ with $A[r]$
+    \EndFor
+\EndProcedure
 \end{algorithmic}
 \end{algorithm}
+```
+````
 
-</pre>
+```{.pseudocode}
+% This quicksort algorithm is extracted from Chapter 7, Introduction 
+% to Algorithms (3rd edition)
+\begin{algorithm}
+\caption{Quicksort}
+\begin{algorithmic}
+\Procedure{Quicksort}{$A, p, r$}
+    \If{$p < r$} 
+        \State $q = $ \Call{Partition}{$A, p, r$}
+        \State \Call{Quicksort}{$A, p, q - 1$}
+        \State \Call{Quicksort}{$A, q + 1, r$}
+    \EndIf
+\EndProcedure
+\Procedure{Partition}{$A, p, r$}
+    \State $x = A[r]$
+    \State $i = p - 1$
+    \For{$j = p, \dots, r - 1$}
+        \If{$A[j] < x$}
+            \State $i = i + 1$
+            \State exchange
+            $A[i]$ with $A[j]$
+        \EndIf
+        \State exchange $A[i]$ with $A[r]$
+    \EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+```
+
 
 :::
 
