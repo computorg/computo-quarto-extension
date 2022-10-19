@@ -19,8 +19,6 @@ jobs:
 
       - name: Installing dependencies with Micromamba
         uses: mamba-org/provision-with-micromamba@main
-        with:
-          cache-env: true
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
