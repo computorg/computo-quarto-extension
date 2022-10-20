@@ -169,6 +169,11 @@ fig = px.histogram(df, x="total_bill", y="tip", color="sex",
 fig
 ```
 
+```{python}
+import plotly.io as pio
+pio.renderers
+```
+
 ## Figures
 
 Plots can be generated as follows and referenced. See plot @fig-gg:
