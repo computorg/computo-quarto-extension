@@ -16,7 +16,5 @@ dependencies:
   - r-reticulate
   - r-webshot
   - r-magick
+  - r-pdftools
   - python=3.10
-  - r-httpgd
-  - r-languageserver
-  - radian
