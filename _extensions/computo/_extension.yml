@@ -17,6 +17,10 @@ contributes:
       knitr:
         opts_chunk:
           echo: true
+          screenshot.opts: 
+            cliprect: viewport
+            vwidth: 640
+            vheight: 400
     html:
       theme: custom.scss
       toc: true
@@ -57,10 +61,4 @@ contributes:
       toc-title: Contents
       code-copy: true
       code-block-background: true
-      keep-tex: true
-      keep-md: true
-      include-in-header:
-        text: |
-          \usepackage{algorithm}
-          \usepackage{algpseudocodex}
 

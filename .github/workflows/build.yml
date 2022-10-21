@@ -30,11 +30,9 @@ jobs:
 
       - name: Rendering with Quarto
         shell: bash -l {0}
-        # https://github.com/rstudio/reticulate/issues/1184#issuecomment-1113450617
+
         run: |
-            mv $CONDA_PREFIX/conda-meta /tmp
-            QUARTO_R=$(which R) quarto render ${{ env.quarto_file }}.qmd
-            mv /tmp/conda-meta $CONDA_PREFIX
+            quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
