@@ -8,17 +8,21 @@ contributes:
       filters:
         # You can include here Lua filters from your extension format 
         - color-text.lua
+        - list-table.lua
+        - pseudocode.lua
+        - not-in-format.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
       knitr:
         opts_chunk:
           echo: true
+          screenshot.opts: 
+            cliprect: viewport
+            vwidth: 640
+            vheight: 400
     html:
       theme: custom.scss
-      include-in-header:
-        - includes/pseudocode-header.html
-      include-after-body: includes/pseudocode-footer.html
       toc: true
       toc-title: Contents
       title-block-banner: "#034E79"
@@ -47,9 +51,14 @@ contributes:
       tbl-prefix: Table
       html-math-method: katex
       number-sections: true
-      self-contained: true
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
       # Use a CSL file to style (https://www.zotero.org/styles/)
       # csl: https://www.zotero.org/styles/journal-of-the-american-statistical-association
+    pdf:
+      toc: true
+      toc-title: Contents
+      code-copy: true
+      code-block-background: true
+

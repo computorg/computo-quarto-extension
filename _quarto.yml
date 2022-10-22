@@ -1,0 +1,3 @@
+project:
+  pre-render: prerender.R
+  post-render: postrender.R
