@@ -1,0 +1,2 @@
+project:
+  pre-render: start.R

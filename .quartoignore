@@ -2,4 +2,3 @@
 # but should not be in the downloaded bundle after `quarto use template`
 style-guide
 .github
-!.Rprofile
