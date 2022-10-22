@@ -21,6 +21,9 @@ contributes:
             cliprect: viewport
             vwidth: 640
             vheight: 400
+      format-resources:
+        - environment.yml
+        - .Renviron
     html:
       theme: custom.scss
       toc: true
