@@ -1,2 +1,3 @@
 project:
-  pre-render: cp start.R .Rprofile
+  pre-render: prerender.R
+  post-render: postrender.R

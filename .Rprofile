@@ -15,12 +15,3 @@ reticulateLoad <- function(...) {
 }
 
 setHook(packageEvent("reticulate","onLoad"), reticulateLoad)
-
-.Last <- function() {
-        condapref <- Sys.getenv("CONDA_PREFIX")
-        if ((condapref != "")  &
-                exists("reticulate_micromamba_hack") &
-                file.exists(file.path(condapref,"conda-meta-tmp"))) {
-                file.rename(file.path(condapref,"conda-meta-tmp"),file.path(condapref,"conda-meta"))
-        }
-}
