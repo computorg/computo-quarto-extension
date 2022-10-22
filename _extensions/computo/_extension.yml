@@ -21,9 +21,6 @@ contributes:
             cliprect: viewport
             vwidth: 640
             vheight: 400
-      format-resources:
-        - ../../environment.yml
-        - ../../.Renviron
     html:
       theme: custom.scss
       toc: true
@@ -57,6 +54,9 @@ contributes:
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
+      format-resources:
+        - ../../environment.yml
+        - ../../.Renviron
       # Use a CSL file to style (https://www.zotero.org/styles/)
       # csl: https://www.zotero.org/styles/journal-of-the-american-statistical-association
     pdf:
