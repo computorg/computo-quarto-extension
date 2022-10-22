@@ -1,0 +1,23 @@
+name: computorbuild
+channels:
+  - conda-forge
+  - r
+dependencies:
+  - jupyter
+  - plotly
+  - matplotlib
+  - numpy
+  - pandas
+  - python-kaleido
+  - r-base
+  - r-knitr
+  - r-plotly
+  - r-tidyverse
+  - r-reticulate
+  - r-webshot
+  - r-magick
+  - r-pdftools
+  - python=3.10
+  - r-httpgd
+  - r-languageserver
+  - radian
