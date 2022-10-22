@@ -1,2 +1,2 @@
 project:
-  pre-render: start.R
+  pre-render: cp start.R .Rprofile
