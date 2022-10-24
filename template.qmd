@@ -53,6 +53,13 @@ This section covers basic formatting guidelines. [Quarto](https://quarto.org/) i
 We will only give some formatting elements. Authors can refer to the [Quarto web page](https://quarto.org/) for a complete view of the formatting possibilities.
 :::
 
+:::{.callout-note}
+Quarto itself is a work-in-progress and a lot of bugs are constantly fixed or features added. As such, we recommend:
+
+- searching any encountered issue with renders in [the upstream quarto dev repo](https://github.com/quarto-dev/quarto-cli/issues)
+- using a [version of quarto > 1.2](https://github.com/quarto-dev/quarto-cli/releases)
+:::
+
 To render/compile a document, run `quarto render`. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:
 
 ``` .bash
