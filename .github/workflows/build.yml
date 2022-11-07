@@ -6,7 +6,8 @@ on:
       - main
 
 env: # Change this if needed
-  quarto_file: template
+  quarto_file_R: template-R
+  quarto_paper: published-paper-tsne
   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
@@ -32,10 +33,11 @@ jobs:
         shell: bash -l {0}
 
         run: |
-            quarto render ${{ env.quarto_file }}.qmd
+            quarto render
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
-            mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
+            mv ${{ env.quarto_paper }}.html _build/
+            mv -vf *_files *.pdf figures _build/
             cp environment.yml _build/
             touch _build/.nojekyll
 

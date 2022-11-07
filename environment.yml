@@ -1,4 +1,4 @@
-name: computorbuild
+name: computobuild
 channels:
   - conda-forge
   - r
@@ -8,6 +8,8 @@ dependencies:
   - matplotlib
   - numpy
   - pandas
+  - statsmodels
+  - scikit-learn
   - python-kaleido
   - r-base
   - r-knitr
@@ -18,3 +20,6 @@ dependencies:
   - r-magick
   - r-pdftools
   - python=3.10
+  - r-httpgd
+  - r-languageserver
+  - radian
