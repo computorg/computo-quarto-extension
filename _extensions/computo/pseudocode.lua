@@ -1,6 +1,6 @@
 function CodeBlock(cb)
     if cb.attr.classes[1] == "pseudocode" then
-        if quarto.doc.is_format("pdf") then
+        if quarto.doc.is_format("latex") then
             quarto.doc.use_latex_package("algorithm") 
             quarto.doc.use_latex_package("algpseudocodex")
             return pandoc.RawBlock('tex', cb.text)
