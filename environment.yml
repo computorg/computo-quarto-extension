@@ -1,4 +1,4 @@
-name: computorbuild
+name: computo-quarto-extension
 channels:
   - conda-forge
   - r
