@@ -61,6 +61,3 @@ contributes:
       toc-title: Contents
       code-copy: true
       code-block-background: true
-      header-includes: |
-        \usepackage{algorithm}
-        \usepackage{algpseudocodex}
