@@ -2,5 +2,5 @@ project:
   pre-render: prerender.R
   post-render: postrender.R
   render:
-    - Rtemplate.qmd
+    - template-R.qmd
     - published-paper-tsne.qmd
