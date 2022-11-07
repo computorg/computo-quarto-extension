@@ -1,11 +1,11 @@
 .DS_Store
 .Rhistory
-template.html
-template.pdf
+*.pdf
+*.ipynb
 /.luarc.json
 /.quarto/
-/template_cache
-/template_files
-/template.html
+/*_cache
+/*_files
+/*.html
 .Rprofile
 /.joblib
