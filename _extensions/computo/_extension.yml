@@ -1,6 +1,6 @@
 title: Computo Format Template
-author: Julien Chiquet
-version: 0.1.0
+author: Computorg Team
+version: 0.2.0
 contributes:
   formats:
     common:
@@ -61,4 +61,3 @@ contributes:
       toc-title: Contents
       code-copy: true
       code-block-background: true
-
