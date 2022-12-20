@@ -17,10 +17,36 @@ $computo-color:         #034E79 !default;
 $computo-color-dark:    darken($computo-color, 10%);
 $computo-color-light:   lighten($computo-color, 60%);
 $computo-color-lighter: rgba($computo-color, 0.04);
+$computo-color-stdout: #7a7c00 !default;
+$computo-color-stdout-dark:    darken($computo-color-stdout, 10%);
+$computo-color-stdout-light:    lighten($computo-color-stdout, 60%);
+$computo-color-stdout-lighter: rgba($computo-color-stdout, 0.04);
+$computo-color-stderr: #7c0000 !default;
+$computo-color-stderr-dark:    darken($computo-color-stderr, 10%);
+$computo-color-stderr-light:    lighten($computo-color-stderr, 60%);
+$computo-color-stderr-lighter: rgba($computo-color-stderr, 0.04);
 
 // Theme colors
 $body-color: $grey-color-dark;
 $link-color: $computo-color;
+
+.cell-output-display pre, .cell-output-stdout pre {
+    background-color: $computo-color-stdout-lighter !important;
+    border: 1px solid $computo-color-stdout-light;
+    border-radius: .25rem;
+    border-left: 5px;
+    border-left-style: solid;
+    border-left-color: $computo-color-stdout-dark;
+}
+
+.cell-output-stderr pre {
+    background-color: $computo-color-stderr-lighter !important;
+    border: 1px solid $computo-color-stderr-light;
+    border-radius: .25rem;
+    border-left: 5px;
+    border-left-style: solid;
+    border-left-color: $computo-color-stderr-dark;
+}
 
 // Font
 $headings-font-weight: 500 !default;
@@ -86,8 +112,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size:16px;
 }
 
-body {
+.content {
   text-align: justify;
+}
+
+body {
   font-size: 1rem;
   font-weight: 300;
 }

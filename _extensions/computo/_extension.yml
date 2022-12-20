@@ -21,10 +21,13 @@ contributes:
             cliprect: viewport
             vwidth: 640
             vheight: 400
-    html:
-      theme: custom.scss
+      number-sections: true
       toc: true
       toc-title: Contents
+      code-copy: true
+      code-block-background: true
+    html:
+      theme: custom.scss
       title-block-banner: "#034E79"
       title-block-banner-color: "#FFFFFF"
       license: "CC BY"
@@ -50,14 +53,11 @@ contributes:
       fig-prefix: Figure   
       tbl-prefix: Table
       html-math-method: katex
-      number-sections: true
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
       # Use a CSL file to style (https://www.zotero.org/styles/)
       # csl: https://www.zotero.org/styles/journal-of-the-american-statistical-association
     pdf:
-      toc: true
-      toc-title: Contents
-      code-copy: true
-      code-block-background: true
+      classoption: a4paper
+      fontfamily: libertinus
