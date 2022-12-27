@@ -59,5 +59,18 @@ contributes:
       # Use a CSL file to style (https://www.zotero.org/styles/)
       # csl: https://www.zotero.org/styles/journal-of-the-american-statistical-association
     pdf:
-      classoption: a4paper
+      papersize: a4
+      geometry: a4paper
       fontfamily: libertinus
+      fontsize: 11pt
+      highlight-style: github
+      monofont: Latin Modern Mono
+      monofontoptions:
+        - Scale=0.92
+      include-in-header:
+        - "partials/pdf/include-in-header.tex"
+      template-partials:
+        #- "partials/title.tex"
+        - "partials/pdf/before-body.tex"
+      format-resources:
+        - logo_text_white.pdf

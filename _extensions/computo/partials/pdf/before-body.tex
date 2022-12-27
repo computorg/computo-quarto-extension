@@ -1,0 +1,54 @@
+\definecolor{computo-blue}{HTML}{034E79}
+
+\begin{tikzpicture}[remember picture,overlay]
+\fill[computo-blue]
+  (current page.north west) -- (current page.north east) --
+  ([yshift=-5cm]current page.north east|-current page.north east) --
+  ([yshift=-5cm]current page.north west|-current page.north west) -- cycle;
+\node[anchor=north west, xshift=.75cm,
+  yshift=-.75cm] at (current page.north west) {\includegraphics[height=3cm]{logo_text_white}};
+\node[font=\sffamily\bfseries\color{white},anchor=north west, xshift=.75cm,
+  yshift=-4.25cm] at (current page.north
+  west) {\fontsize{10}{12}\selectfont ISSN 2824-7795};
+\node[font=\sffamily\bfseries\color{white},anchor=west,
+  xshift=4.25cm,yshift=-2.75cm] at (current page.north west)
+  {\begin{minipage}{15cm}
+    \fontsize{25}{30}\selectfont
+    $title$
+    \vspace{.5cm}
+    \\
+    \fontsize{15}{18}\selectfont
+    $subtitle$
+  \end{minipage}};
+\end{tikzpicture}
+
+\vspace*{2cm}
+\begin{center}
+  \begin{tabularx}{\textwidth}{lp{1em}X}
+    $for(by-author)$
+      $if(by-author.name.literal)$$by-author.name.literal$$endif$ &&
+      $if(by-author.affiliations)$
+      \begin{tabular}[t]{p{.6\textwidth}}
+      $for(by-author.affiliations)$
+      \setlength{\parindent}{-1em}
+      $if(it.department)$$it.department$$if(it.name)$, $endif$$endif$$if(it.name)$$it.name$$endif$$if(it.department)$\\$elseif(it.name)$\\$endif$
+      $endfor$
+      \end{tabular}\\
+      $endif$
+    $endfor$
+  \end{tabularx}
+\end{center}
+
+
+\bigskip
+\bigskip
+\begin{abstract}
+$abstract$
+\end{abstract}
+
+$if(keywords)$
+\noindent%
+{\it Keywords:} $for(keywords)$$it$$sep$, $endfor$
+\vfill
+$endif$
+
