@@ -6,18 +6,19 @@ contributes:
     common:
       # define below YAML configuration common to all formats
       filters:
-        # You can include here Lua filters from your extension format 
+        # You can include here Lua filters from your extension format
         - color-text.lua
         - list-table.lua
         - pseudocode.lua
         - not-in-format.lua
+        - code-block-all.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
       knitr:
         opts_chunk:
           echo: true
-          screenshot.opts: 
+          screenshot.opts:
             cliprect: viewport
             vwidth: 640
             vheight: 400
@@ -27,7 +28,7 @@ contributes:
       code-copy: true
       code-block-background: true
     html:
-      theme: custom.scss
+      theme: [code-block-all.scss, custom.scss]
       title-block-banner: "#034E79"
       title-block-banner-color: "#FFFFFF"
       license: "CC BY"
@@ -44,14 +45,14 @@ contributes:
         caption: "source"
       code-copy: true
       code-summary: "Hide/Show the code"
-      code-fold: show
+      code-fold: false
       anchor-sections: true
       link-external-icon: false
       link-external-newwindow: true
       crossref:
       sec-prefix: Section
       eq-prefix: Equation
-      fig-prefix: Figure   
+      fig-prefix: Figure
       tbl-prefix: Table
       html-math-method: katex
       template-partials:

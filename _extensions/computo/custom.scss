@@ -17,36 +17,14 @@ $computo-color:         #034E79 !default;
 $computo-color-dark:    darken($computo-color, 10%);
 $computo-color-light:   lighten($computo-color, 60%);
 $computo-color-lighter: rgba($computo-color, 0.04);
-$computo-color-stdout: #7a7c00 !default;
-$computo-color-stdout-dark:    darken($computo-color-stdout, 10%);
-$computo-color-stdout-light:    lighten($computo-color-stdout, 60%);
-$computo-color-stdout-lighter: rgba($computo-color-stdout, 0.04);
-$computo-color-stderr: #7c0000 !default;
-$computo-color-stderr-dark:    darken($computo-color-stderr, 10%);
-$computo-color-stderr-light:    lighten($computo-color-stderr, 60%);
-$computo-color-stderr-lighter: rgba($computo-color-stderr, 0.04);
+
+$computo-color-yellow:         #797903 !default;
+$computo-color-red:         #790303 !default;
+
 
 // Theme colors
 $body-color: $grey-color-dark;
 $link-color: $computo-color;
-
-.cell-output-display pre, .cell-output-stdout pre {
-    background-color: $computo-color-stdout-lighter !important;
-    border: 1px solid $computo-color-stdout-light;
-    border-radius: .25rem;
-    border-left: 5px;
-    border-left-style: solid;
-    border-left-color: $computo-color-stdout-dark;
-}
-
-.cell-output-stderr pre {
-    background-color: $computo-color-stderr-lighter !important;
-    border: 1px solid $computo-color-stderr-light;
-    border-radius: .25rem;
-    border-left: 5px;
-    border-left-style: solid;
-    border-left-color: $computo-color-stderr-dark;
-}
 
 // Font
 $headings-font-weight: 500 !default;
@@ -64,7 +42,7 @@ $callout-border-width: 5px ;
 .callout-header {
     background-color: $computo-color-lighter !important;
     font-size: 1.1rem;
-    font-weight: 600;    
+    font-weight: 600;
     color: $computo-color-dark ;
 }
 
@@ -94,12 +72,6 @@ $navbar-bg: $computo-color;
 $navbar-fg: $white-color;
 $navbar-text-color: $white-color;
 $navbar-hover-color: #{$computo-color-light};
-
-// Code block
-$code-block-bg: $computo-color-lighter;
-$code-block-border: $computo-color-light;
-$code-block-border-left: $computo-color-dark;
-$code-block-border-left-size: 5px;
 
 /*-- scss:rules --*/
 h1, h2, h3, h4, h5, h6 {
