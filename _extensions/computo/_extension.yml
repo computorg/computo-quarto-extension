@@ -35,6 +35,7 @@ contributes:
       date-format: long
       hover-citations: true
       hover-footnotes: true
+      fig-format: svg
       highlight-style: github
       code-block-background: true
       code-tools:
