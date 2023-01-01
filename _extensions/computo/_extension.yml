@@ -66,7 +66,7 @@ contributes:
       fontfamily: libertinus
       fontsize: 11pt
       highlight-style: github
-      monofont: Latin Modern Mono
+#      monofont: Latin Modern Mono
       monofontoptions:
         - Scale=0.92
       include-in-header:
