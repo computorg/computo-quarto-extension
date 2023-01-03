@@ -45,7 +45,7 @@ contributes:
         caption: "source"
       code-copy: true
       code-summary: "Hide/Show the code"
-      code-fold: false
+      code-fold: show
       anchor-sections: true
       link-external-icon: false
       link-external-newwindow: true
@@ -58,15 +58,14 @@ contributes:
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
-      # Use a CSL file to style (https://www.zotero.org/styles/)
-      # csl: https://www.zotero.org/styles/journal-of-the-american-statistical-association
     pdf:
+      pdf-engine: lualatex
       papersize: a4
       geometry: a4paper
       fontfamily: libertinus
       fontsize: 11pt
       highlight-style: github
-#      monofont: Latin Modern Mono
+      monofont: Latin Modern Mono
       monofontoptions:
         - Scale=0.92
       include-in-header:
