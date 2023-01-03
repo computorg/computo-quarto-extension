@@ -15,7 +15,7 @@ jobs:
     permissions:
       packages: read
     container:
-      image: ghcr.io/computorg/docker-image-computo
+      image: ghcr.io/computorg/docker-image-computo:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
