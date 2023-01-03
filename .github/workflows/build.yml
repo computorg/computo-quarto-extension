@@ -12,8 +12,10 @@ env: # Change this if needed
 jobs:
   computorticle:
     runs-on: ubuntu-latest
+    permissions:
+      packages: read
     container:
-      image: ghcr.io/computorg/docker-image-computo:${{ github.sha }}
+      image: ghcr.io/computorg/docker-image-computo
       credentials:
         username: computorg
         password: ${{ secrets.github_token }}
