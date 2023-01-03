@@ -15,7 +15,7 @@ jobs:
     container:
       image: ghcr.io/computorg/docker-image-computo
       credentials:
-        username: ${{ github.actor }}
+        username: computorg
         password: ${{ secrets.github_token }}
     
     steps:
