@@ -12,7 +12,8 @@ env: # Change this if needed
 jobs:
   computorticle:
     runs-on: ubuntu-latest
-
+    container: ghcr.io/computorg/docker-image-computo
+    
     steps:
       - name: Checking out repository for Github action
         uses: actions/checkout@v2
@@ -22,10 +23,10 @@ jobs:
         with:
           cache-env: true
 
-      - name: Installing quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          tinytex: true
+#      - name: Installing quarto
+#        uses: quarto-dev/quarto-actions/setup@v2
+#        with:
+#          tinytex: true
 
       - name: Rendering with Quarto
         shell: bash -l {0}
