@@ -17,8 +17,8 @@ jobs:
     container:
       image: ghcr.io/computorg/docker-image-computo
       credentials:
-        username: computorg
-        password: ${{ secrets.github_token }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     
     steps:
       - name: Checking out repository for Github action
