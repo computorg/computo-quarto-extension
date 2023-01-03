@@ -2,7 +2,6 @@ name: build
 on:
   push:
     branches:
-      - master
       - main
 
 env: # Change this if needed
@@ -12,8 +11,6 @@ env: # Change this if needed
 jobs:
   computorticle:
     runs-on: ubuntu-latest
-    permissions:
-      packages: read
     container:
       image: ghcr.io/computorg/docker-image-computo:latest
       credentials:
