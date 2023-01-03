@@ -13,7 +13,7 @@ jobs:
   computorticle:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/computorg/docker-image-computo
+      image: ghcr.io/computorg/docker-image-computo:${{ github.sha }}
       credentials:
         username: computorg
         password: ${{ secrets.github_token }}
