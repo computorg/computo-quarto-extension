@@ -12,7 +12,11 @@ env: # Change this if needed
 jobs:
   computorticle:
     runs-on: ubuntu-latest
-    container: ghcr.io/computorg/docker-image-computo
+    container:
+      image: ghcr.io/computorg/docker-image-computo
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
     
     steps:
       - name: Checking out repository for Github action
