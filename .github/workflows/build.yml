@@ -9,13 +9,13 @@ env: # Change this if needed
   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  computorticle:
+  build-and-publish:    
     runs-on: ubuntu-latest
-#    container:
-#      image: ghcr.io/computorg/docker-image-computo:latest
-#      credentials:
-#        username: ${{ github.actor }}
-#        password: ${{ secrets.GITHUB_TOKEN }}
+    container:
+      image: ghcr.io/computorg/docker-image-computo:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     
     steps:
       - name: Checking out repository for Github action
@@ -26,10 +26,10 @@ jobs:
         with:
           cache-env: true
 
-      - name: Installing quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          tinytex: true
+#      - name: Installing quarto
+#        uses: quarto-dev/quarto-actions/setup@v2
+#        with:
+#          tinytex: true
 
       - name: Rendering with Quarto
         shell: bash -l {0}
