@@ -36,6 +36,7 @@ jobs:
         shell: bash -l {0}
 
         run: |
+            R -e 'webshot::install_phantomjs()'
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
