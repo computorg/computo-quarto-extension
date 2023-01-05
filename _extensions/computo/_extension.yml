@@ -36,7 +36,7 @@ contributes:
       date-format: long
       hover-citations: true
       hover-footnotes: true
-      fig-format: svg
+      fig-format: png
       highlight-style: github
       code-block-background: true
       code-tools:
@@ -65,13 +65,12 @@ contributes:
       fontfamily: libertinus
       fontsize: 11pt
       highlight-style: github
-      monofont: Latin Modern Mono
+#      monofont: Latin Modern Mono
       monofontoptions:
         - Scale=0.92
       include-in-header:
         - "partials/pdf/include-in-header.tex"
       template-partials:
-        #- "partials/title.tex"
         - "partials/pdf/before-body.tex"
       format-resources:
         - logo_text_white.pdf

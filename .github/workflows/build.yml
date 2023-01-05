@@ -11,11 +11,6 @@ env:
 jobs:
   build-and-publish:    
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/computorg/docker-image-computo:latest
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
     
     steps:
       - name: Checking out repository for Github action
@@ -26,16 +21,15 @@ jobs:
         with:
           cache-env: true
 
-#      - name: Installing quarto
-#        uses: quarto-dev/quarto-actions/setup@v2
-#        with:
-#          tinytex: true
+      - name: Installing quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
       - name: Rendering with Quarto
         shell: bash -l {0}
 
         run: |
-            R -e 'webshot::install_phantomjs()'
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
