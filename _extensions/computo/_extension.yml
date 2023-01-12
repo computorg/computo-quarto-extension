@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 0.2.0
+version: 0.2.1
 contributes:
   formats:
     common:
