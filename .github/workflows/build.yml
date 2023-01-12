@@ -24,7 +24,7 @@ jobs:
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-	  version: pre-release
+          version: pre-release
           tinytex: true
 
       - name: Rendering with Quarto
