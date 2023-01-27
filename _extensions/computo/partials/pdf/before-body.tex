@@ -33,8 +33,9 @@
       \setlength{\parindent}{-1em}
       $if(it.department)$$it.department$$if(it.name)$, $endif$$endif$$if(it.name)$$it.name$$endif$$if(it.department)$\\$elseif(it.name)$\\$endif$
       $endfor$
-      \end{tabular}\\
+      \end{tabular}
       $endif$
+      \\
     $endfor$
   \end{tabularx}
 \end{center}
