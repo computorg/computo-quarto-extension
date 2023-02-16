@@ -1,7 +1,8 @@
 ---
 title: "Computo Journal Format"
 subtitle: "To be used as template for contribution to Computo"
-date: last-modified
+date: 01/02/2023
+date-modified: last-modified
 author:
   - name: The Computo Team
     corresponding: true
