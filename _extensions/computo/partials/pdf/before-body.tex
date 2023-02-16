@@ -22,26 +22,20 @@
   \end{minipage}};
 \end{tikzpicture}
 
-\vspace*{2cm}
+\vspace*{2.5cm}
 \begin{center}
-  \begin{tabularx}{\textwidth}{lp{1em}X}
     $for(by-author)$
-      $if(by-author.name.literal)$$by-author.name.literal$$endif$ &&
-      $if(by-author.affiliations)$
-      \begin{tabular}[t]{p{.6\textwidth}}
+      $if(by-author.name.literal)$$by-author.name.literal$$endif$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$$if(it.attributes.corresponding)$\footnote{Corresponding author: $if(it.email)$\href{mailto:$it.email$}{$it.email$}$endif$}$endif$\quad
       $for(by-author.affiliations)$
-      \setlength{\parindent}{-1em}
-      $if(it.department)$$it.department$$if(it.name)$, $endif$$endif$$if(it.name)$$it.name$$endif$$if(it.department)$\\$elseif(it.name)$\\$endif$
-      $endfor$
-      \end{tabular}
-      $endif$
-      \\
+       $if(it.department)$$it.department$$if(it.name)$, $endif$$endif$$if(it.name)$$it.name$$endif$$if(it.department)$\\$elseif(it.name)$\\$endif$
+       $endfor$
     $endfor$
-  \end{tabularx}
+
+  \bigskip
+  
+  Date published: $date$ \quad Last modified: $date-modified$
 \end{center}
-
-
-\bigskip
+      
 \bigskip
 \begin{abstract}
 $abstract$
@@ -52,4 +46,3 @@ $if(keywords)$
 {\it Keywords:} $for(keywords)$$it$$sep$, $endfor$
 \vfill
 $endif$
-
