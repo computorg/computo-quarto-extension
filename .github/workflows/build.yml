@@ -40,8 +40,6 @@ jobs:
         shell: bash -l {0}
 
         run: |
-            tlmgr install dvisvgm
-            tlmgr path add
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
