@@ -1,3 +1,4 @@
 project:
+  title: "computo-quarto-extension"
   pre-render: prerender.R
   post-render: postrender.R
