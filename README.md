@@ -17,7 +17,7 @@ This will install the extension and create an example qmd file and bibiography t
 You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
 
 ```bash
-quarto install extension computorg/computo-quarto-extension
+quarto add computorg/computo-quarto-extension
 ```
 
 ## Usage
@@ -35,8 +35,6 @@ format:
   computo-html: default
 ```
 
-You can view a preview of the rendered HTML template at <https://computorg.github.io/computo-quarto-extension/>.
-
-The rendered PDF (still work in progress) is reachable here <https://computorg.github.io/computo-quarto-extension/template.pdf>.
+You can view a preview of the rendered HTML and PDF template at <https://computorg.github.io/computo-quarto-extension/> (for PDF, see "other formats" bnext to the TOC).
 
 
