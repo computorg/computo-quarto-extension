@@ -6,6 +6,7 @@ on:
     branches: main
 
 env:
+  quarto_file: computo-quarto-extension
   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
@@ -28,27 +29,27 @@ jobs:
           tinytex: true
           version: pre-release
 
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-#      - name: Rendering with Quarto
-#        shell: bash -l {0}
-#
-#        run: |
-#            quarto render ${{ env.quarto_file }}.qmd
-#            mkdir _build
-#            mv ${{ env.quarto_file }}.html _build/index.html
-#            mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
-#            cp environment.yml _build/
-#            touch _build/.nojekyll
-#
-#      - name: Deploying article on github pages
-#        uses: JamesIves/github-pages-deploy-action@v4
+#      - name: Render and Publish
+#        uses: quarto-dev/quarto-actions/publish@v2
 #        with:
-#          BRANCH: gh-pages
-#          FOLDER: _build
-#          CLEAN: true
+#          target: gh-pages
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Rendering with Quarto
+        shell: bash -l {0}
+
+        run: |
+            quarto render ${{ env.quarto_file }}.qmd
+            mkdir _build
+            mv ${{ env.quarto_file }}.html _build/index.html
+            mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
+            cp environment.yml _build/
+            touch _build/.nojekyll
+
+      - name: Deploying article on github pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          BRANCH: gh-pages
+          FOLDER: _build
+          CLEAN: true
