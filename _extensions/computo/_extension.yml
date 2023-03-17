@@ -63,8 +63,8 @@ contributes:
       papersize: a4
       geometry: 
         - a4paper
-        - textheight=60em
-        - textwidth=40em
+        - textheight=24cm
+        - textwidth=15.5cm
       fontfamily: libertinus
       fontsize: 11pt
       highlight-style: github
