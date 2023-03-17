@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.203">
+<meta name="generator" content="quarto-1.3.272">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,9 +22,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -51,48 +52,19 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -106,8 +78,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="computo-quarto-extension_files/libs/clipboard/clipboard.min.js"></script>
@@ -165,7 +136,7 @@ background: #034E79;
 <meta name="citation_abstract" content="This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
 ">
 <meta name="citation_keywords" content="template,quarto,R,Python,reproductibility">
-<meta name="citation_author" content="The Computo Team">
+<meta name="citation_author" content="The ComputoTeam">
 <meta name="citation_author" content="a friend">
 <meta name="citation_publication_date" content="2023-01-02">
 <meta name="citation_cover_date" content="2023-01-02">
@@ -239,7 +210,7 @@ ISSN 2824-7795</p>
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">February 16, 2023</p>
+        <p class="date-modified">March 17, 2023</p>
       </div>
     </div>
       
@@ -281,35 +252,35 @@ ISSN 2824-7795</p>
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#about-this-document" id="toc-about-this-document" class="nav-link active" data-scroll-target="#about-this-document"><span class="toc-section-number">1</span>  About this document</a></li>
-  <li><a href="#formatting" id="toc-formatting" class="nav-link" data-scroll-target="#formatting"><span class="toc-section-number">2</span>  Formatting</a>
+  <li><a href="#about-this-document" id="toc-about-this-document" class="nav-link active" data-scroll-target="#about-this-document"><span class="header-section-number">1</span> About this document</a></li>
+  <li><a href="#formatting" id="toc-formatting" class="nav-link" data-scroll-target="#formatting"><span class="header-section-number">2</span> Formatting</a>
   <ul class="collapse">
-  <li><a href="#basic-markdown-formatting" id="toc-basic-markdown-formatting" class="nav-link" data-scroll-target="#basic-markdown-formatting"><span class="toc-section-number">2.1</span>  Basic markdown formatting</a></li>
-  <li><a href="#mathematics" id="toc-mathematics" class="nav-link" data-scroll-target="#mathematics"><span class="toc-section-number">2.2</span>  Mathematics</a>
+  <li><a href="#basic-markdown-formatting" id="toc-basic-markdown-formatting" class="nav-link" data-scroll-target="#basic-markdown-formatting"><span class="header-section-number">2.1</span> Basic markdown formatting</a></li>
+  <li><a href="#mathematics" id="toc-mathematics" class="nav-link" data-scroll-target="#mathematics"><span class="header-section-number">2.2</span> Mathematics</a>
   <ul class="collapse">
-  <li><a href="#mathematical-formulae" id="toc-mathematical-formulae" class="nav-link" data-scroll-target="#mathematical-formulae"><span class="toc-section-number">2.2.1</span>  Mathematical formulae</a></li>
-  <li><a href="#theorems-and-other-amsthem-like-environments" id="toc-theorems-and-other-amsthem-like-environments" class="nav-link" data-scroll-target="#theorems-and-other-amsthem-like-environments"><span class="toc-section-number">2.2.2</span>  Theorems and other amsthem-like environments</a></li>
+  <li><a href="#mathematical-formulae" id="toc-mathematical-formulae" class="nav-link" data-scroll-target="#mathematical-formulae"><span class="header-section-number">2.2.1</span> Mathematical formulae</a></li>
+  <li><a href="#theorems-and-other-amsthem-like-environments" id="toc-theorems-and-other-amsthem-like-environments" class="nav-link" data-scroll-target="#theorems-and-other-amsthem-like-environments"><span class="header-section-number">2.2.2</span> Theorems and other amsthem-like environments</a></li>
   </ul></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="toc-section-number">2.3</span>  Code</a>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">2.3</span> Code</a>
   <ul class="collapse">
-  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r"><span class="toc-section-number">2.3.1</span>  R</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="toc-section-number">2.3.2</span>  Python</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r"><span class="header-section-number">2.3.1</span> R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">2.3.2</span> Python</a></li>
   </ul></li>
-  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="toc-section-number">2.4</span>  Figures</a></li>
-  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="toc-section-number">2.5</span>  Tables</a>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="header-section-number">2.4</span> Figures</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="header-section-number">2.5</span> Tables</a>
   <ul class="collapse">
-  <li><a href="#markdown-syntax" id="toc-markdown-syntax" class="nav-link" data-scroll-target="#markdown-syntax"><span class="toc-section-number">2.5.1</span>  Markdown syntax</a></li>
-  <li><a href="#list-table-filter" id="toc-list-table-filter" class="nav-link" data-scroll-target="#list-table-filter"><span class="toc-section-number">2.5.2</span>  List-table filter</a></li>
-  <li><a href="#table-generated-from-code" id="toc-table-generated-from-code" class="nav-link" data-scroll-target="#table-generated-from-code"><span class="toc-section-number">2.5.3</span>  Table generated from code</a></li>
+  <li><a href="#markdown-syntax" id="toc-markdown-syntax" class="nav-link" data-scroll-target="#markdown-syntax"><span class="header-section-number">2.5.1</span> Markdown syntax</a></li>
+  <li><a href="#list-table-filter" id="toc-list-table-filter" class="nav-link" data-scroll-target="#list-table-filter"><span class="header-section-number">2.5.2</span> List-table filter</a></li>
+  <li><a href="#table-generated-from-code" id="toc-table-generated-from-code" class="nav-link" data-scroll-target="#table-generated-from-code"><span class="header-section-number">2.5.3</span> Table generated from code</a></li>
   </ul></li>
-  <li><a href="#algorithms" id="toc-algorithms" class="nav-link" data-scroll-target="#algorithms"><span class="toc-section-number">2.6</span>  Algorithms</a></li>
-  <li><a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams"><span class="toc-section-number">2.7</span>  Diagrams</a></li>
-  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references"><span class="toc-section-number">2.8</span>  Handling references</a>
+  <li><a href="#algorithms" id="toc-algorithms" class="nav-link" data-scroll-target="#algorithms"><span class="header-section-number">2.6</span> Algorithms</a></li>
+  <li><a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams"><span class="header-section-number">2.7</span> Diagrams</a></li>
+  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references"><span class="header-section-number">2.8</span> Handling references</a>
   <ul class="collapse">
-  <li><a href="#bibliographic-references" id="toc-bibliographic-references" class="nav-link" data-scroll-target="#bibliographic-references"><span class="toc-section-number">2.8.1</span>  Bibliographic references</a></li>
-  <li><a href="#other-cross-references" id="toc-other-cross-references" class="nav-link" data-scroll-target="#other-cross-references"><span class="toc-section-number">2.8.2</span>  Other cross-references</a></li>
+  <li><a href="#bibliographic-references" id="toc-bibliographic-references" class="nav-link" data-scroll-target="#bibliographic-references"><span class="header-section-number">2.8.1</span> Bibliographic references</a></li>
+  <li><a href="#other-cross-references" id="toc-other-cross-references" class="nav-link" data-scroll-target="#other-cross-references"><span class="header-section-number">2.8.2</span> Other cross-references</a></li>
   </ul></li>
-  <li><a href="#to-go-further" id="toc-to-go-further" class="nav-link" data-scroll-target="#to-go-further"><span class="toc-section-number">2.9</span>  To go further</a></li>
+  <li><a href="#to-go-further" id="toc-to-go-further" class="nav-link" data-scroll-target="#to-go-further"><span class="header-section-number">2.9</span> To go further</a></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
   </ul></li>
   </ul>
@@ -326,12 +297,12 @@ ISSN 2824-7795</p>
 <section id="formatting" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Formatting</h1>
 <p>This section covers basic formatting guidelines. <a href="https://quarto.org/">Quarto</a> is a versatile formatting system for authoring HTML based on markdown, integrating <span class="math inline">\LaTeX</span> and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the <a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html">Pandoc Markdown</a> markup language.</p>
-<div class="callout callout-style-default callout-note callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -339,12 +310,12 @@ Note
 <p>We will only give some formatting elements. Authors can refer to the <a href="https://quarto.org/">Quarto web page</a> for a complete view of the formatting possibilities.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -446,7 +417,7 @@ x_L \\ x_N \end{array}\right] \\
 <figure class="figure">
 
 <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script src="https://cdn.plot.ly/plotly-2.18.0.min.js"></script>                <div id="335b9822-93f5-4b2c-b40e-b9b6df1c3110" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("335b9822-93f5-4b2c-b40e-b9b6df1c3110")) {                    Plotly.newPlot(                        "335b9822-93f5-4b2c-b40e-b9b6df1c3110",                        [{"alignmentgroup":"True","bingroup":"x","histfunc":"sum","hovertemplate":"sex=Female<br>total_bill=%{x}<br>sum of tip=%{y}<extra></extra>","legendgroup":"Female","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"Female","offsetgroup":"Female","orientation":"v","showlegend":true,"x":[16.99,24.59,35.26,14.83,10.33,16.97,20.29,15.77,19.65,15.06,20.69,16.93,10.29,34.81,26.41,16.45,3.07,17.07,26.86,25.28,14.73,10.07,34.83,5.75,16.32,22.75,11.35,15.38,44.3,22.42,20.92,14.31,7.25,25.71,17.31,10.65,12.43,24.08,13.42,12.48,29.8,14.52,11.38,20.27,11.17,12.26,18.26,8.51,10.33,14.15,13.16,17.47,27.05,16.43,8.35,18.64,11.87,29.85,25.0,13.39,16.21,17.51,10.59,10.63,9.6,20.9,18.15,19.81,43.11,13.0,12.74,13.0,16.4,16.47,12.76,13.27,28.17,12.9,30.14,13.42,15.98,16.27,10.09,22.12,35.83,27.18,18.78],"xaxis":"x","y":[1.01,3.61,5.0,3.02,1.67,3.5,2.75,2.23,3.0,3.0,2.45,3.07,2.6,5.2,1.5,2.47,1.0,3.0,3.14,5.0,2.2,1.83,5.17,1.0,4.3,3.25,2.5,3.0,2.5,3.48,4.08,4.0,1.0,4.0,3.5,1.5,1.8,2.92,1.68,2.52,4.2,2.0,2.0,2.83,1.5,2.0,3.25,1.25,2.0,2.0,2.75,3.5,5.0,2.3,1.5,1.36,1.63,5.14,3.75,2.61,2.0,3.0,1.61,2.0,4.0,3.5,3.5,4.19,5.0,2.0,2.01,2.0,2.5,3.23,2.23,2.5,6.5,1.1,3.09,3.48,3.0,2.5,2.0,2.88,4.67,2.0,3.0],"yaxis":"y","type":"histogram"},{"alignmentgroup":"True","customdata":[["Female","No","Sun","Dinner",2],["Female","No","Sun","Dinner",4],["Female","No","Sun","Dinner",4],["Female","No","Sun","Dinner",2],["Female","No","Sun","Dinner",3],["Female","No","Sun","Dinner",3],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",4],["Female","No","Sat","Dinner",3],["Female","No","Sun","Dinner",2],["Female","No","Sun","Dinner",4],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","Yes","Sat","Dinner",1],["Female","No","Sat","Dinner",3],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","No","Thur","Lunch",1],["Female","No","Thur","Lunch",4],["Female","Yes","Fri","Dinner",2],["Female","Yes","Fri","Dinner",2],["Female","No","Fri","Dinner",2],["Female","Yes","Fri","Dinner",2],["Female","Yes","Fri","Dinner",2],["Female","Yes","Sat","Dinner",3],["Female","Yes","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","No","Sat","Dinner",1],["Female","No","Sun","Dinner",3],["Female","No","Sun","Dinner",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",4],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",6],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",6],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",3],["Female","No","Thur","Lunch",2],["Female","No","Sun","Dinner",5],["Female","No","Sun","Dinner",4],["Female","No","Sun","Dinner",2],["Female","No","Sun","Dinner",3],["Female","Yes","Sun","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sun","Dinner",2],["Female","Yes","Sun","Dinner",3],["Female","Yes","Sun","Dinner",3],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",4],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",3],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",3],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",4],["Female","Yes","Fri","Lunch",2],["Female","No","Fri","Lunch",3],["Female","Yes","Fri","Lunch",2],["Female","Yes","Fri","Lunch",2],["Female","Yes","Sat","Dinner",2],["Female","No","Sat","Dinner",3],["Female","Yes","Sat","Dinner",2],["Female","No","Thur","Dinner",2]],"hovertemplate":"sex=%{customdata[0]}<br>total_bill=%{x}<br>smoker=%{customdata[1]}<br>day=%{customdata[2]}<br>time=%{customdata[3]}<br>size=%{customdata[4]}<extra></extra>","legendgroup":"Female","marker":{"color":"#636efa"},"name":"Female","notched":true,"offsetgroup":"Female","showlegend":false,"x":[16.99,24.59,35.26,14.83,10.33,16.97,20.29,15.77,19.65,15.06,20.69,16.93,10.29,34.81,26.41,16.45,3.07,17.07,26.86,25.28,14.73,10.07,34.83,5.75,16.32,22.75,11.35,15.38,44.3,22.42,20.92,14.31,7.25,25.71,17.31,10.65,12.43,24.08,13.42,12.48,29.8,14.52,11.38,20.27,11.17,12.26,18.26,8.51,10.33,14.15,13.16,17.47,27.05,16.43,8.35,18.64,11.87,29.85,25.0,13.39,16.21,17.51,10.59,10.63,9.6,20.9,18.15,19.81,43.11,13.0,12.74,13.0,16.4,16.47,12.76,13.27,28.17,12.9,30.14,13.42,15.98,16.27,10.09,22.12,35.83,27.18,18.78],"xaxis":"x2","yaxis":"y2","type":"box"},{"alignmentgroup":"True","bingroup":"x","histfunc":"sum","hovertemplate":"sex=Male<br>total_bill=%{x}<br>sum of tip=%{y}<extra></extra>","legendgroup":"Male","marker":{"color":"#EF553B","pattern":{"shape":""}},"name":"Male","offsetgroup":"Male","orientation":"v","showlegend":true,"x":[10.34,21.01,23.68,25.29,8.77,26.88,15.04,14.78,10.27,15.42,18.43,21.58,16.29,20.65,17.92,39.42,19.82,17.81,13.37,12.69,21.7,9.55,18.35,17.78,24.06,16.31,18.69,31.27,16.04,17.46,13.94,9.68,30.4,18.29,22.23,32.4,28.55,18.04,12.54,9.94,25.56,19.49,38.01,11.24,48.27,20.29,13.81,11.02,18.29,17.59,20.08,20.23,15.01,12.02,10.51,17.92,27.2,22.76,17.29,19.44,16.66,32.68,15.98,13.03,18.28,24.71,21.16,28.97,22.49,40.17,27.28,12.03,21.01,12.46,15.36,20.49,25.21,18.24,14.0,38.07,23.95,29.93,11.69,14.26,15.95,8.52,22.82,19.08,16.0,34.3,41.19,9.78,7.51,14.07,13.13,17.26,24.55,19.77,48.17,16.49,21.5,12.66,13.81,24.52,20.76,31.71,50.81,15.81,7.25,31.85,16.82,32.9,17.89,14.48,34.63,34.65,23.33,45.35,23.17,40.55,20.69,30.46,23.1,15.69,28.44,15.48,16.58,7.56,10.34,13.51,18.71,20.53,26.59,38.73,24.27,30.06,25.89,48.33,28.15,11.59,7.74,12.16,8.58,13.42,20.45,13.28,24.01,15.69,11.61,10.77,15.53,10.07,12.6,32.83,29.03,22.67,17.82],"xaxis":"x","y":[1.66,3.5,3.31,4.71,2.0,3.12,1.96,3.23,1.71,1.57,3.0,3.92,3.71,3.35,4.08,7.58,3.18,2.34,2.0,2.0,4.3,1.45,2.5,3.27,3.6,2.0,2.31,5.0,2.24,2.54,3.06,1.32,5.6,3.0,5.0,6.0,2.05,3.0,2.5,1.56,4.34,3.51,3.0,1.76,6.73,3.21,2.0,1.98,3.76,2.64,3.15,2.01,2.09,1.97,1.25,3.08,4.0,3.0,2.71,3.0,3.4,5.0,2.03,2.0,4.0,5.85,3.0,3.0,3.5,4.73,4.0,1.5,3.0,1.5,1.64,4.06,4.29,3.76,3.0,4.0,2.55,5.07,2.31,2.5,2.0,1.48,2.18,1.5,2.0,6.7,5.0,1.73,2.0,2.5,2.0,2.74,2.0,2.0,5.0,2.0,3.5,2.5,2.0,3.48,2.24,4.5,10.0,3.16,5.15,3.18,4.0,3.11,2.0,2.0,3.55,3.68,5.65,3.5,6.5,3.0,5.0,2.0,4.0,1.5,2.56,2.02,4.0,1.44,2.0,2.0,4.0,4.0,3.41,3.0,2.03,2.0,5.16,9.0,3.0,1.5,1.44,2.2,1.92,1.58,3.0,2.72,2.0,3.0,3.39,1.47,3.0,1.25,1.0,1.17,5.92,2.0,1.75],"yaxis":"y","type":"histogram"},{"alignmentgroup":"True","customdata":[["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",4],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",4],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",4],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","Yes","Sat","Dinner",4],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",4],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",4],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Thur","Lunch",4],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","Yes","Fri","Dinner",2],["Male","No","Fri","Dinner",2],["Male","Yes","Fri","Dinner",4],["Male","Yes","Fri","Dinner",2],["Male","Yes","Fri","Dinner",2],["Male","Yes","Fri","Dinner",2],["Male","No","Fri","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",3],["Male","No","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","No","Thur","Lunch",6],["Male","No","Thur","Lunch",5],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",6],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","Yes","Sat","Dinner",3],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",4],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",3],["Male","Yes","Sun","Dinner",4],["Male","Yes","Sun","Dinner",2],["Male","No","Sun","Dinner",5],["Male","Yes","Sun","Dinner",5],["Male","Yes","Sun","Dinner",3],["Male","Yes","Sun","Dinner",2],["Male","Yes","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","Yes","Thur","Lunch",3],["Male","Yes","Thur","Lunch",4],["Male","Yes","Sat","Dinner",3],["Male","Yes","Sat","Dinner",4],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",3],["Male","Yes","Sat","Dinner",4],["Male","No","Sat","Dinner",4],["Male","Yes","Sat","Dinner",5],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Fri","Lunch",2],["Male","Yes","Fri","Lunch",1],["Male","Yes","Fri","Lunch",2],["Male","No","Sat","Dinner",4],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",4],["Male","Yes","Sat","Dinner",3],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",3],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",2]],"hovertemplate":"sex=%{customdata[0]}<br>total_bill=%{x}<br>smoker=%{customdata[1]}<br>day=%{customdata[2]}<br>time=%{customdata[3]}<br>size=%{customdata[4]}<extra></extra>","legendgroup":"Male","marker":{"color":"#EF553B"},"name":"Male","notched":true,"offsetgroup":"Male","showlegend":false,"x":[10.34,21.01,23.68,25.29,8.77,26.88,15.04,14.78,10.27,15.42,18.43,21.58,16.29,20.65,17.92,39.42,19.82,17.81,13.37,12.69,21.7,9.55,18.35,17.78,24.06,16.31,18.69,31.27,16.04,17.46,13.94,9.68,30.4,18.29,22.23,32.4,28.55,18.04,12.54,9.94,25.56,19.49,38.01,11.24,48.27,20.29,13.81,11.02,18.29,17.59,20.08,20.23,15.01,12.02,10.51,17.92,27.2,22.76,17.29,19.44,16.66,32.68,15.98,13.03,18.28,24.71,21.16,28.97,22.49,40.17,27.28,12.03,21.01,12.46,15.36,20.49,25.21,18.24,14.0,38.07,23.95,29.93,11.69,14.26,15.95,8.52,22.82,19.08,16.0,34.3,41.19,9.78,7.51,14.07,13.13,17.26,24.55,19.77,48.17,16.49,21.5,12.66,13.81,24.52,20.76,31.71,50.81,15.81,7.25,31.85,16.82,32.9,17.89,14.48,34.63,34.65,23.33,45.35,23.17,40.55,20.69,30.46,23.1,15.69,28.44,15.48,16.58,7.56,10.34,13.51,18.71,20.53,26.59,38.73,24.27,30.06,25.89,48.33,28.15,11.59,7.74,12.16,8.58,13.42,20.45,13.28,24.01,15.69,11.61,10.77,15.53,10.07,12.6,32.83,29.03,22.67,17.82],"xaxis":"x2","yaxis":"y2","type":"box"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"total_bill"}},"yaxis":{"anchor":"x","domain":[0.0,0.7326],"title":{"text":"sum of tip"}},"xaxis2":{"anchor":"y2","domain":[0.0,1.0],"matches":"x","showticklabels":false,"showgrid":true},"yaxis2":{"anchor":"x2","domain":[0.7426,1.0],"matches":"y2","showticklabels":false,"showline":false,"ticks":"","showgrid":false},"legend":{"title":{"text":"sex"},"tracegroupgap":0},"margin":{"t":60},"barmode":"relative"},                        {"responsive": true}                    )                };                            </script>        </div>
+        <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>                <div id="1ccfb042-a6a3-4d76-8de9-527d5bd6fbd4" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("1ccfb042-a6a3-4d76-8de9-527d5bd6fbd4")) {                    Plotly.newPlot(                        "1ccfb042-a6a3-4d76-8de9-527d5bd6fbd4",                        [{"alignmentgroup":"True","bingroup":"x","histfunc":"sum","hovertemplate":"sex=Female<br>total_bill=%{x}<br>sum of tip=%{y}<extra></extra>","legendgroup":"Female","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"Female","offsetgroup":"Female","orientation":"v","showlegend":true,"x":[16.99,24.59,35.26,14.83,10.33,16.97,20.29,15.77,19.65,15.06,20.69,16.93,10.29,34.81,26.41,16.45,3.07,17.07,26.86,25.28,14.73,10.07,34.83,5.75,16.32,22.75,11.35,15.38,44.3,22.42,20.92,14.31,7.25,25.71,17.31,10.65,12.43,24.08,13.42,12.48,29.8,14.52,11.38,20.27,11.17,12.26,18.26,8.51,10.33,14.15,13.16,17.47,27.05,16.43,8.35,18.64,11.87,29.85,25.0,13.39,16.21,17.51,10.59,10.63,9.6,20.9,18.15,19.81,43.11,13.0,12.74,13.0,16.4,16.47,12.76,13.27,28.17,12.9,30.14,13.42,15.98,16.27,10.09,22.12,35.83,27.18,18.78],"xaxis":"x","y":[1.01,3.61,5.0,3.02,1.67,3.5,2.75,2.23,3.0,3.0,2.45,3.07,2.6,5.2,1.5,2.47,1.0,3.0,3.14,5.0,2.2,1.83,5.17,1.0,4.3,3.25,2.5,3.0,2.5,3.48,4.08,4.0,1.0,4.0,3.5,1.5,1.8,2.92,1.68,2.52,4.2,2.0,2.0,2.83,1.5,2.0,3.25,1.25,2.0,2.0,2.75,3.5,5.0,2.3,1.5,1.36,1.63,5.14,3.75,2.61,2.0,3.0,1.61,2.0,4.0,3.5,3.5,4.19,5.0,2.0,2.01,2.0,2.5,3.23,2.23,2.5,6.5,1.1,3.09,3.48,3.0,2.5,2.0,2.88,4.67,2.0,3.0],"yaxis":"y","type":"histogram"},{"alignmentgroup":"True","customdata":[["Female","No","Sun","Dinner",2],["Female","No","Sun","Dinner",4],["Female","No","Sun","Dinner",4],["Female","No","Sun","Dinner",2],["Female","No","Sun","Dinner",3],["Female","No","Sun","Dinner",3],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",4],["Female","No","Sat","Dinner",3],["Female","No","Sun","Dinner",2],["Female","No","Sun","Dinner",4],["Female","No","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","Yes","Sat","Dinner",1],["Female","No","Sat","Dinner",3],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","No","Thur","Lunch",1],["Female","No","Thur","Lunch",4],["Female","Yes","Fri","Dinner",2],["Female","Yes","Fri","Dinner",2],["Female","No","Fri","Dinner",2],["Female","Yes","Fri","Dinner",2],["Female","Yes","Fri","Dinner",2],["Female","Yes","Sat","Dinner",3],["Female","Yes","Sat","Dinner",2],["Female","No","Sat","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","No","Sat","Dinner",1],["Female","No","Sun","Dinner",3],["Female","No","Sun","Dinner",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",4],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",6],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",6],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",2],["Female","No","Thur","Lunch",3],["Female","No","Thur","Lunch",2],["Female","No","Sun","Dinner",5],["Female","No","Sun","Dinner",4],["Female","No","Sun","Dinner",2],["Female","No","Sun","Dinner",3],["Female","Yes","Sun","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sun","Dinner",2],["Female","Yes","Sun","Dinner",3],["Female","Yes","Sun","Dinner",3],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",4],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",2],["Female","Yes","Thur","Lunch",3],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",3],["Female","Yes","Sat","Dinner",2],["Female","Yes","Sat","Dinner",4],["Female","Yes","Fri","Lunch",2],["Female","No","Fri","Lunch",3],["Female","Yes","Fri","Lunch",2],["Female","Yes","Fri","Lunch",2],["Female","Yes","Sat","Dinner",2],["Female","No","Sat","Dinner",3],["Female","Yes","Sat","Dinner",2],["Female","No","Thur","Dinner",2]],"hovertemplate":"sex=%{customdata[0]}<br>total_bill=%{x}<br>smoker=%{customdata[1]}<br>day=%{customdata[2]}<br>time=%{customdata[3]}<br>size=%{customdata[4]}<extra></extra>","legendgroup":"Female","marker":{"color":"#636efa"},"name":"Female","notched":true,"offsetgroup":"Female","showlegend":false,"x":[16.99,24.59,35.26,14.83,10.33,16.97,20.29,15.77,19.65,15.06,20.69,16.93,10.29,34.81,26.41,16.45,3.07,17.07,26.86,25.28,14.73,10.07,34.83,5.75,16.32,22.75,11.35,15.38,44.3,22.42,20.92,14.31,7.25,25.71,17.31,10.65,12.43,24.08,13.42,12.48,29.8,14.52,11.38,20.27,11.17,12.26,18.26,8.51,10.33,14.15,13.16,17.47,27.05,16.43,8.35,18.64,11.87,29.85,25.0,13.39,16.21,17.51,10.59,10.63,9.6,20.9,18.15,19.81,43.11,13.0,12.74,13.0,16.4,16.47,12.76,13.27,28.17,12.9,30.14,13.42,15.98,16.27,10.09,22.12,35.83,27.18,18.78],"xaxis":"x2","yaxis":"y2","type":"box"},{"alignmentgroup":"True","bingroup":"x","histfunc":"sum","hovertemplate":"sex=Male<br>total_bill=%{x}<br>sum of tip=%{y}<extra></extra>","legendgroup":"Male","marker":{"color":"#EF553B","pattern":{"shape":""}},"name":"Male","offsetgroup":"Male","orientation":"v","showlegend":true,"x":[10.34,21.01,23.68,25.29,8.77,26.88,15.04,14.78,10.27,15.42,18.43,21.58,16.29,20.65,17.92,39.42,19.82,17.81,13.37,12.69,21.7,9.55,18.35,17.78,24.06,16.31,18.69,31.27,16.04,17.46,13.94,9.68,30.4,18.29,22.23,32.4,28.55,18.04,12.54,9.94,25.56,19.49,38.01,11.24,48.27,20.29,13.81,11.02,18.29,17.59,20.08,20.23,15.01,12.02,10.51,17.92,27.2,22.76,17.29,19.44,16.66,32.68,15.98,13.03,18.28,24.71,21.16,28.97,22.49,40.17,27.28,12.03,21.01,12.46,15.36,20.49,25.21,18.24,14.0,38.07,23.95,29.93,11.69,14.26,15.95,8.52,22.82,19.08,16.0,34.3,41.19,9.78,7.51,14.07,13.13,17.26,24.55,19.77,48.17,16.49,21.5,12.66,13.81,24.52,20.76,31.71,50.81,15.81,7.25,31.85,16.82,32.9,17.89,14.48,34.63,34.65,23.33,45.35,23.17,40.55,20.69,30.46,23.1,15.69,28.44,15.48,16.58,7.56,10.34,13.51,18.71,20.53,26.59,38.73,24.27,30.06,25.89,48.33,28.15,11.59,7.74,12.16,8.58,13.42,20.45,13.28,24.01,15.69,11.61,10.77,15.53,10.07,12.6,32.83,29.03,22.67,17.82],"xaxis":"x","y":[1.66,3.5,3.31,4.71,2.0,3.12,1.96,3.23,1.71,1.57,3.0,3.92,3.71,3.35,4.08,7.58,3.18,2.34,2.0,2.0,4.3,1.45,2.5,3.27,3.6,2.0,2.31,5.0,2.24,2.54,3.06,1.32,5.6,3.0,5.0,6.0,2.05,3.0,2.5,1.56,4.34,3.51,3.0,1.76,6.73,3.21,2.0,1.98,3.76,2.64,3.15,2.01,2.09,1.97,1.25,3.08,4.0,3.0,2.71,3.0,3.4,5.0,2.03,2.0,4.0,5.85,3.0,3.0,3.5,4.73,4.0,1.5,3.0,1.5,1.64,4.06,4.29,3.76,3.0,4.0,2.55,5.07,2.31,2.5,2.0,1.48,2.18,1.5,2.0,6.7,5.0,1.73,2.0,2.5,2.0,2.74,2.0,2.0,5.0,2.0,3.5,2.5,2.0,3.48,2.24,4.5,10.0,3.16,5.15,3.18,4.0,3.11,2.0,2.0,3.55,3.68,5.65,3.5,6.5,3.0,5.0,2.0,4.0,1.5,2.56,2.02,4.0,1.44,2.0,2.0,4.0,4.0,3.41,3.0,2.03,2.0,5.16,9.0,3.0,1.5,1.44,2.2,1.92,1.58,3.0,2.72,2.0,3.0,3.39,1.47,3.0,1.25,1.0,1.17,5.92,2.0,1.75],"yaxis":"y","type":"histogram"},{"alignmentgroup":"True","customdata":[["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",4],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",4],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",4],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","Yes","Sat","Dinner",4],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",4],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",4],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",3],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Thur","Lunch",4],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","Yes","Fri","Dinner",2],["Male","No","Fri","Dinner",2],["Male","Yes","Fri","Dinner",4],["Male","Yes","Fri","Dinner",2],["Male","Yes","Fri","Dinner",2],["Male","Yes","Fri","Dinner",2],["Male","No","Fri","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",3],["Male","No","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","No","Thur","Lunch",6],["Male","No","Thur","Lunch",5],["Male","No","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",6],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",4],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",3],["Male","No","Sun","Dinner",2],["Male","No","Sun","Dinner",4],["Male","Yes","Sat","Dinner",3],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",4],["Male","Yes","Sun","Dinner",2],["Male","Yes","Sun","Dinner",3],["Male","Yes","Sun","Dinner",4],["Male","Yes","Sun","Dinner",2],["Male","No","Sun","Dinner",5],["Male","Yes","Sun","Dinner",5],["Male","Yes","Sun","Dinner",3],["Male","Yes","Sun","Dinner",2],["Male","Yes","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","No","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","Yes","Thur","Lunch",2],["Male","Yes","Thur","Lunch",3],["Male","Yes","Thur","Lunch",4],["Male","Yes","Sat","Dinner",3],["Male","Yes","Sat","Dinner",4],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",3],["Male","Yes","Sat","Dinner",4],["Male","No","Sat","Dinner",4],["Male","Yes","Sat","Dinner",5],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Fri","Lunch",2],["Male","Yes","Fri","Lunch",1],["Male","Yes","Fri","Lunch",2],["Male","No","Sat","Dinner",4],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",4],["Male","Yes","Sat","Dinner",3],["Male","No","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",3],["Male","Yes","Sat","Dinner",2],["Male","No","Sat","Dinner",2]],"hovertemplate":"sex=%{customdata[0]}<br>total_bill=%{x}<br>smoker=%{customdata[1]}<br>day=%{customdata[2]}<br>time=%{customdata[3]}<br>size=%{customdata[4]}<extra></extra>","legendgroup":"Male","marker":{"color":"#EF553B"},"name":"Male","notched":true,"offsetgroup":"Male","showlegend":false,"x":[10.34,21.01,23.68,25.29,8.77,26.88,15.04,14.78,10.27,15.42,18.43,21.58,16.29,20.65,17.92,39.42,19.82,17.81,13.37,12.69,21.7,9.55,18.35,17.78,24.06,16.31,18.69,31.27,16.04,17.46,13.94,9.68,30.4,18.29,22.23,32.4,28.55,18.04,12.54,9.94,25.56,19.49,38.01,11.24,48.27,20.29,13.81,11.02,18.29,17.59,20.08,20.23,15.01,12.02,10.51,17.92,27.2,22.76,17.29,19.44,16.66,32.68,15.98,13.03,18.28,24.71,21.16,28.97,22.49,40.17,27.28,12.03,21.01,12.46,15.36,20.49,25.21,18.24,14.0,38.07,23.95,29.93,11.69,14.26,15.95,8.52,22.82,19.08,16.0,34.3,41.19,9.78,7.51,14.07,13.13,17.26,24.55,19.77,48.17,16.49,21.5,12.66,13.81,24.52,20.76,31.71,50.81,15.81,7.25,31.85,16.82,32.9,17.89,14.48,34.63,34.65,23.33,45.35,23.17,40.55,20.69,30.46,23.1,15.69,28.44,15.48,16.58,7.56,10.34,13.51,18.71,20.53,26.59,38.73,24.27,30.06,25.89,48.33,28.15,11.59,7.74,12.16,8.58,13.42,20.45,13.28,24.01,15.69,11.61,10.77,15.53,10.07,12.6,32.83,29.03,22.67,17.82],"xaxis":"x2","yaxis":"y2","type":"box"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"total_bill"}},"yaxis":{"anchor":"x","domain":[0.0,0.7326],"title":{"text":"sum of tip"}},"xaxis2":{"anchor":"y2","domain":[0.0,1.0],"matches":"x","showticklabels":false,"showgrid":true},"yaxis2":{"anchor":"x2","domain":[0.7426,1.0],"matches":"y2","showticklabels":false,"showline":false,"ticks":"","showgrid":false},"legend":{"title":{"text":"sex"},"tracegroupgap":0},"margin":{"t":60},"barmode":"relative"},                        {"responsive": true}                    )                };                            </script>        </div>
 <p></p><figcaption class="figure-caption">Figure&nbsp;1: A simple python plotly example</figcaption><p></p>
 </figure>
 </div>
@@ -468,7 +439,7 @@ x_L \\ x_N \end{array}\right] \\
 <div class="cell-output-display">
 <div id="fig-gg" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="computo-quarto-extension_files/figure-html/fig-gg-1.svg" class="img-fluid figure-img"></p>
+<p><img src="computo-quarto-extension_files/figure-html/fig-gg-1.svg" class="quarto-discovered-preview-image img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;2: A simple ggplot example</figcaption><p></p>
 </figure>
 </div>
@@ -483,8 +454,8 @@ x_L \\ x_N \end{array}\right] \\
 </details>
 <div id="fig-ggplotly" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-644f43fc8404e6eb2095" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-644f43fc8404e6eb2095">{"x":{"data":[{"x":[1.8,1.8,2,2,2.8,2.8,3.1,1.8,1.8,2,2,2.8,2.8,3.1,3.1,2.8,3.1,4.2,5.3,5.3,5.3,5.7,6,5.7,5.7,6.2,6.2,7,5.3,5.3,5.7,6.5,2.4,2.4,3.1,3.5,3.6,2.4,3,3.3,3.3,3.3,3.3,3.3,3.8,3.8,3.8,4,3.7,3.7,3.9,3.9,4.7,4.7,4.7,5.2,5.2,3.9,4.7,4.7,4.7,5.2,5.7,5.9,4.7,4.7,4.7,4.7,4.7,4.7,5.2,5.2,5.7,5.9,4.6,5.4,5.4,4,4,4,4,4.6,5,4.2,4.2,4.6,4.6,4.6,5.4,5.4,3.8,3.8,4,4,4.6,4.6,4.6,4.6,5.4,1.6,1.6,1.6,1.6,1.6,1.8,1.8,1.8,2,2.4,2.4,2.4,2.4,2.5,2.5,3.3,2,2,2,2,2.7,2.7,2.7,3,3.7,4,4.7,4.7,4.7,5.7,6.1,4,4.2,4.4,4.6,5.4,5.4,5.4,4,4,4.6,5,2.4,2.4,2.5,2.5,3.5,3.5,3,3,3.5,3.3,3.3,4,5.6,3.1,3.8,3.8,3.8,5.3,2.5,2.5,2.5,2.5,2.5,2.5,2.2,2.2,2.5,2.5,2.5,2.5,2.5,2.5,2.7,2.7,3.4,3.4,4,4.7,2.2,2.2,2.4,2.4,3,3,3.5,2.2,2.2,2.4,2.4,3,3,3.3,1.8,1.8,1.8,1.8,1.8,4.7,5.7,2.7,2.7,2.7,3.4,3.4,4,4,2,2,2,2,2.8,1.9,2,2,2,2,2.5,2.5,2.8,2.8,1.9,1.9,2,2,2.5,2.5,1.8,1.8,2,2,2.8,2.8,3.6],"y":[29,29,31,30,26,26,27,26,25,28,27,25,25,25,25,24,25,23,20,15,20,17,17,26,23,26,25,24,19,14,15,17,27,30,26,29,26,24,24,22,22,24,24,17,22,21,23,23,19,18,17,17,19,19,12,17,15,17,17,12,17,16,18,15,16,12,17,17,16,12,15,16,17,15,17,17,18,17,19,17,19,19,17,17,17,16,16,17,15,17,26,25,26,24,21,22,23,22,20,33,32,32,29,32,34,36,36,29,26,27,30,31,26,26,28,26,29,28,27,24,24,24,22,19,20,17,12,19,18,14,15,18,18,15,17,16,18,17,19,19,17,29,27,31,32,27,26,26,25,25,17,17,20,18,26,26,27,28,25,25,24,27,25,26,23,26,26,26,26,25,27,25,27,20,20,19,17,20,17,29,27,31,31,26,26,28,27,29,31,31,26,26,27,30,33,35,37,35,15,18,20,20,22,17,19,18,20,29,26,29,29,24,44,29,26,29,29,29,29,23,24,44,41,29,26,28,29,29,29,28,29,26,26,26],"text":["displ: 1.8<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 2.0<br />hwy: 31","displ: 2.0<br />hwy: 30","displ: 2.8<br />hwy: 26","displ: 2.8<br />hwy: 26","displ: 3.1<br />hwy: 27","displ: 1.8<br />hwy: 26","displ: 1.8<br />hwy: 25","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 27","displ: 2.8<br />hwy: 25","displ: 2.8<br />hwy: 25","displ: 3.1<br />hwy: 25","displ: 3.1<br />hwy: 25","displ: 2.8<br />hwy: 24","displ: 3.1<br />hwy: 25","displ: 4.2<br />hwy: 23","displ: 5.3<br />hwy: 20","displ: 5.3<br />hwy: 15","displ: 5.3<br />hwy: 20","displ: 5.7<br />hwy: 17","displ: 6.0<br />hwy: 17","displ: 5.7<br />hwy: 26","displ: 5.7<br />hwy: 23","displ: 6.2<br />hwy: 26","displ: 6.2<br />hwy: 25","displ: 7.0<br />hwy: 24","displ: 5.3<br />hwy: 19","displ: 5.3<br />hwy: 14","displ: 5.7<br />hwy: 15","displ: 6.5<br />hwy: 17","displ: 2.4<br />hwy: 27","displ: 2.4<br />hwy: 30","displ: 3.1<br />hwy: 26","displ: 3.5<br />hwy: 29","displ: 3.6<br />hwy: 26","displ: 2.4<br />hwy: 24","displ: 3.0<br />hwy: 24","displ: 3.3<br />hwy: 22","displ: 3.3<br />hwy: 22","displ: 3.3<br />hwy: 24","displ: 3.3<br />hwy: 24","displ: 3.3<br />hwy: 17","displ: 3.8<br />hwy: 22","displ: 3.8<br />hwy: 21","displ: 3.8<br />hwy: 23","displ: 4.0<br />hwy: 23","displ: 3.7<br />hwy: 19","displ: 3.7<br />hwy: 18","displ: 3.9<br />hwy: 17","displ: 3.9<br />hwy: 17","displ: 4.7<br />hwy: 19","displ: 4.7<br />hwy: 19","displ: 4.7<br />hwy: 12","displ: 5.2<br />hwy: 17","displ: 5.2<br />hwy: 15","displ: 3.9<br />hwy: 17","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 17","displ: 5.2<br />hwy: 16","displ: 5.7<br />hwy: 18","displ: 5.9<br />hwy: 15","displ: 4.7<br />hwy: 16","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 16","displ: 4.7<br />hwy: 12","displ: 5.2<br />hwy: 15","displ: 5.2<br />hwy: 16","displ: 5.7<br />hwy: 17","displ: 5.9<br />hwy: 15","displ: 4.6<br />hwy: 17","displ: 5.4<br />hwy: 17","displ: 5.4<br />hwy: 18","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.6<br />hwy: 19","displ: 5.0<br />hwy: 17","displ: 4.2<br />hwy: 17","displ: 4.2<br />hwy: 17","displ: 4.6<br />hwy: 16","displ: 4.6<br />hwy: 16","displ: 4.6<br />hwy: 17","displ: 5.4<br />hwy: 15","displ: 5.4<br />hwy: 17","displ: 3.8<br />hwy: 26","displ: 3.8<br />hwy: 25","displ: 4.0<br />hwy: 26","displ: 4.0<br />hwy: 24","displ: 4.6<br />hwy: 21","displ: 4.6<br />hwy: 22","displ: 4.6<br />hwy: 23","displ: 4.6<br />hwy: 22","displ: 5.4<br />hwy: 20","displ: 1.6<br />hwy: 33","displ: 1.6<br />hwy: 32","displ: 1.6<br />hwy: 32","displ: 1.6<br />hwy: 29","displ: 1.6<br />hwy: 32","displ: 1.8<br />hwy: 34","displ: 1.8<br />hwy: 36","displ: 1.8<br />hwy: 36","displ: 2.0<br />hwy: 29","displ: 2.4<br />hwy: 26","displ: 2.4<br />hwy: 27","displ: 2.4<br />hwy: 30","displ: 2.4<br />hwy: 31","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 3.3<br />hwy: 28","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 27","displ: 2.7<br />hwy: 24","displ: 2.7<br />hwy: 24","displ: 2.7<br />hwy: 24","displ: 3.0<br />hwy: 22","displ: 3.7<br />hwy: 19","displ: 4.0<br />hwy: 20","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 19","displ: 5.7<br />hwy: 18","displ: 6.1<br />hwy: 14","displ: 4.0<br />hwy: 15","displ: 4.2<br />hwy: 18","displ: 4.4<br />hwy: 18","displ: 4.6<br />hwy: 15","displ: 5.4<br />hwy: 17","displ: 5.4<br />hwy: 16","displ: 5.4<br />hwy: 18","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.6<br />hwy: 19","displ: 5.0<br />hwy: 17","displ: 2.4<br />hwy: 29","displ: 2.4<br />hwy: 27","displ: 2.5<br />hwy: 31","displ: 2.5<br />hwy: 32","displ: 3.5<br />hwy: 27","displ: 3.5<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 25","displ: 3.5<br />hwy: 25","displ: 3.3<br />hwy: 17","displ: 3.3<br />hwy: 17","displ: 4.0<br />hwy: 20","displ: 5.6<br />hwy: 18","displ: 3.1<br />hwy: 26","displ: 3.8<br />hwy: 26","displ: 3.8<br />hwy: 27","displ: 3.8<br />hwy: 28","displ: 5.3<br />hwy: 25","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 24","displ: 2.5<br />hwy: 27","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 23","displ: 2.2<br />hwy: 26","displ: 2.2<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 27","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 27","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 20","displ: 3.4<br />hwy: 19","displ: 3.4<br />hwy: 17","displ: 4.0<br />hwy: 20","displ: 4.7<br />hwy: 17","displ: 2.2<br />hwy: 29","displ: 2.2<br />hwy: 27","displ: 2.4<br />hwy: 31","displ: 2.4<br />hwy: 31","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.5<br />hwy: 28","displ: 2.2<br />hwy: 27","displ: 2.2<br />hwy: 29","displ: 2.4<br />hwy: 31","displ: 2.4<br />hwy: 31","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.3<br />hwy: 27","displ: 1.8<br />hwy: 30","displ: 1.8<br />hwy: 33","displ: 1.8<br />hwy: 35","displ: 1.8<br />hwy: 37","displ: 1.8<br />hwy: 35","displ: 4.7<br />hwy: 15","displ: 5.7<br />hwy: 18","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 22","displ: 3.4<br />hwy: 17","displ: 3.4<br />hwy: 19","displ: 4.0<br />hwy: 18","displ: 4.0<br />hwy: 20","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 29","displ: 2.8<br />hwy: 24","displ: 1.9<br />hwy: 44","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 29","displ: 2.5<br />hwy: 29","displ: 2.5<br />hwy: 29","displ: 2.8<br />hwy: 23","displ: 2.8<br />hwy: 24","displ: 1.9<br />hwy: 44","displ: 1.9<br />hwy: 41","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.5<br />hwy: 28","displ: 2.5<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 29","displ: 2.8<br />hwy: 26","displ: 2.8<br />hwy: 26","displ: 3.6<br />hwy: 26"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.6,1.66835443037975,1.73670886075949,1.80506329113924,1.87341772151899,1.94177215189873,2.01012658227848,2.07848101265823,2.14683544303797,2.21518987341772,2.28354430379747,2.35189873417722,2.42025316455696,2.48860759493671,2.55696202531646,2.6253164556962,2.69367088607595,2.7620253164557,2.83037974683544,2.89873417721519,2.96708860759494,3.03544303797468,3.10379746835443,3.17215189873418,3.24050632911392,3.30886075949367,3.37721518987342,3.44556962025316,3.51392405063291,3.58227848101266,3.65063291139241,3.71898734177215,3.7873417721519,3.85569620253165,3.92405063291139,3.99240506329114,4.06075949367089,4.12911392405063,4.19746835443038,4.26582278481013,4.33417721518987,4.40253164556962,4.47088607594937,4.53924050632911,4.60759493670886,4.67594936708861,4.74430379746835,4.8126582278481,4.88101265822785,4.94936708860759,5.01772151898734,5.08607594936709,5.15443037974684,5.22278481012658,5.29113924050633,5.35949367088608,5.42784810126582,5.49620253164557,5.56455696202532,5.63291139240506,5.70126582278481,5.76962025316456,5.8379746835443,5.90632911392405,5.9746835443038,6.04303797468354,6.11139240506329,6.17974683544304,6.24810126582278,6.31645569620253,6.38481012658228,6.45316455696203,6.52151898734177,6.58987341772152,6.65822784810127,6.72658227848101,6.79493670886076,6.86329113924051,6.93164556962025,7],"y":[33.0928566018538,32.5107835503571,31.9422202829389,31.3884848606776,30.8508953446512,30.3299957500339,29.8238589188101,29.3333742194062,28.8583851390524,28.3981429072318,27.9518987534274,27.5189039071224,27.0987631133077,26.6957836735878,26.3090818821465,25.9355884664112,25.5722341538095,25.2291795381194,24.9181938113841,24.6298749747968,24.3546740169541,24.0830419264527,23.8054739954333,23.5295892802633,23.2646362481893,23.0081062857481,22.7574907794764,22.5102811159107,22.2639686815878,22.0160448630443,21.7640010468168,21.5053286194421,21.2375189674567,20.9580634773974,20.6636946027661,20.3463825302921,20.0114403884548,19.667539399964,19.3233507875294,18.9875457738607,18.6687955816675,18.3757714336596,18.1171445525467,17.9015861610384,17.7374782618847,17.6038925094818,17.4844691691521,17.3803696350212,17.2927553012146,17.2227875618577,17.171627811076,17.1404374429951,17.1303778517404,17.1426104314374,17.1782965762116,17.236490288008,17.3142595889583,17.4115496666742,17.5283491704687,17.6646467496545,17.8204310535445,17.9956907314514,18.1904144326882,18.4045908065676,18.6382085024024,18.8912561695054,19.1637224571895,19.4555960147675,19.7668654915521,20.0975195368563,20.4475467999927,20.8169359302743,21.2056755770139,21.6137543895241,22.041161017118,22.4878841091082,22.9539123148077,23.4392342835292,23.9438386645854,24.4677141072894],"text":["displ: 1.600000<br />hwy: 33.09286","displ: 1.668354<br />hwy: 32.51078","displ: 1.736709<br />hwy: 31.94222","displ: 1.805063<br />hwy: 31.38848","displ: 1.873418<br />hwy: 30.85090","displ: 1.941772<br />hwy: 30.33000","displ: 2.010127<br />hwy: 29.82386","displ: 2.078481<br />hwy: 29.33337","displ: 2.146835<br />hwy: 28.85839","displ: 2.215190<br />hwy: 28.39814","displ: 2.283544<br />hwy: 27.95190","displ: 2.351899<br />hwy: 27.51890","displ: 2.420253<br />hwy: 27.09876","displ: 2.488608<br />hwy: 26.69578","displ: 2.556962<br />hwy: 26.30908","displ: 2.625316<br />hwy: 25.93559","displ: 2.693671<br />hwy: 25.57223","displ: 2.762025<br />hwy: 25.22918","displ: 2.830380<br />hwy: 24.91819","displ: 2.898734<br />hwy: 24.62987","displ: 2.967089<br />hwy: 24.35467","displ: 3.035443<br />hwy: 24.08304","displ: 3.103797<br />hwy: 23.80547","displ: 3.172152<br />hwy: 23.52959","displ: 3.240506<br />hwy: 23.26464","displ: 3.308861<br />hwy: 23.00811","displ: 3.377215<br />hwy: 22.75749","displ: 3.445570<br />hwy: 22.51028","displ: 3.513924<br />hwy: 22.26397","displ: 3.582278<br />hwy: 22.01604","displ: 3.650633<br />hwy: 21.76400","displ: 3.718987<br />hwy: 21.50533","displ: 3.787342<br />hwy: 21.23752","displ: 3.855696<br />hwy: 20.95806","displ: 3.924051<br />hwy: 20.66369","displ: 3.992405<br />hwy: 20.34638","displ: 4.060759<br />hwy: 20.01144","displ: 4.129114<br />hwy: 19.66754","displ: 4.197468<br />hwy: 19.32335","displ: 4.265823<br />hwy: 18.98755","displ: 4.334177<br />hwy: 18.66880","displ: 4.402532<br />hwy: 18.37577","displ: 4.470886<br />hwy: 18.11714","displ: 4.539241<br />hwy: 17.90159","displ: 4.607595<br />hwy: 17.73748","displ: 4.675949<br />hwy: 17.60389","displ: 4.744304<br />hwy: 17.48447","displ: 4.812658<br />hwy: 17.38037","displ: 4.881013<br />hwy: 17.29276","displ: 4.949367<br />hwy: 17.22279","displ: 5.017722<br />hwy: 17.17163","displ: 5.086076<br />hwy: 17.14044","displ: 5.154430<br />hwy: 17.13038","displ: 5.222785<br />hwy: 17.14261","displ: 5.291139<br />hwy: 17.17830","displ: 5.359494<br />hwy: 17.23649","displ: 5.427848<br />hwy: 17.31426","displ: 5.496203<br />hwy: 17.41155","displ: 5.564557<br />hwy: 17.52835","displ: 5.632911<br />hwy: 17.66465","displ: 5.701266<br />hwy: 17.82043","displ: 5.769620<br />hwy: 17.99569","displ: 5.837975<br />hwy: 18.19041","displ: 5.906329<br />hwy: 18.40459","displ: 5.974684<br />hwy: 18.63821","displ: 6.043038<br />hwy: 18.89126","displ: 6.111392<br />hwy: 19.16372","displ: 6.179747<br />hwy: 19.45560","displ: 6.248101<br />hwy: 19.76687","displ: 6.316456<br />hwy: 20.09752","displ: 6.384810<br />hwy: 20.44755","displ: 6.453165<br />hwy: 20.81694","displ: 6.521519<br />hwy: 21.20568","displ: 6.589873<br />hwy: 21.61375","displ: 6.658228<br />hwy: 22.04116","displ: 6.726582<br />hwy: 22.48788","displ: 6.794937<br />hwy: 22.95391","displ: 6.863291<br />hwy: 23.43923","displ: 6.931646<br />hwy: 23.94384","displ: 7.000000<br />hwy: 24.46771"],"type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.77952755905512,"color":"rgba(51,102,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.6,1.66835443037975,1.73670886075949,1.80506329113924,1.87341772151899,1.94177215189873,2.01012658227848,2.07848101265823,2.14683544303797,2.21518987341772,2.28354430379747,2.35189873417722,2.42025316455696,2.48860759493671,2.55696202531646,2.6253164556962,2.69367088607595,2.7620253164557,2.83037974683544,2.89873417721519,2.96708860759494,3.03544303797468,3.10379746835443,3.17215189873418,3.24050632911392,3.30886075949367,3.37721518987342,3.44556962025316,3.51392405063291,3.58227848101266,3.65063291139241,3.71898734177215,3.7873417721519,3.85569620253165,3.92405063291139,3.99240506329114,4.06075949367089,4.12911392405063,4.19746835443038,4.26582278481013,4.33417721518987,4.40253164556962,4.47088607594937,4.53924050632911,4.60759493670886,4.67594936708861,4.74430379746835,4.8126582278481,4.88101265822785,4.94936708860759,5.01772151898734,5.08607594936709,5.15443037974684,5.22278481012658,5.29113924050633,5.35949367088608,5.42784810126582,5.49620253164557,5.56455696202532,5.63291139240506,5.70126582278481,5.76962025316456,5.8379746835443,5.90632911392405,5.9746835443038,6.04303797468354,6.11139240506329,6.17974683544304,6.24810126582278,6.31645569620253,6.38481012658228,6.45316455696203,6.52151898734177,6.58987341772152,6.65822784810127,6.72658227848101,6.79493670886076,6.86329113924051,6.93164556962025,7,7,7,6.93164556962025,6.86329113924051,6.79493670886076,6.72658227848101,6.65822784810127,6.58987341772152,6.52151898734177,6.45316455696203,6.38481012658228,6.31645569620253,6.24810126582278,6.17974683544304,6.11139240506329,6.04303797468354,5.9746835443038,5.90632911392405,5.8379746835443,5.76962025316456,5.70126582278481,5.63291139240506,5.56455696202532,5.49620253164557,5.42784810126582,5.35949367088608,5.29113924050633,5.22278481012658,5.15443037974684,5.08607594936709,5.01772151898734,4.94936708860759,4.88101265822785,4.8126582278481,4.74430379746835,4.67594936708861,4.60759493670886,4.53924050632911,4.47088607594937,4.40253164556962,4.33417721518987,4.26582278481013,4.19746835443038,4.12911392405063,4.06075949367089,3.99240506329114,3.92405063291139,3.85569620253165,3.7873417721519,3.71898734177215,3.65063291139241,3.58227848101266,3.51392405063291,3.44556962025316,3.37721518987342,3.30886075949367,3.24050632911392,3.17215189873418,3.10379746835443,3.03544303797468,2.96708860759494,2.89873417721519,2.83037974683544,2.7620253164557,2.69367088607595,2.6253164556962,2.55696202531646,2.48860759493671,2.42025316455696,2.35189873417722,2.28354430379747,2.21518987341772,2.14683544303797,2.07848101265823,2.01012658227848,1.94177215189873,1.87341772151899,1.80506329113924,1.73670886075949,1.66835443037975,1.6,1.6],"y":[31.5502921741958,31.1439615496347,30.734766341174,30.3219174568165,29.9049715287249,29.483426427439,29.0546230954098,28.6191940644564,28.1781383521877,27.733165188184,27.2870808988393,26.8431891065526,26.4051327507517,25.9823949812496,25.5759219090576,25.1832547988793,24.8023931528773,24.4455018659603,24.1214382927233,23.8145276085106,23.5148523917237,23.2202429208538,22.9335208886164,22.6659912421514,22.419122021648,22.1841425160194,21.9523701781984,21.716169166381,21.4700300079552,21.2113377443099,20.9403757348463,20.6595519351853,20.3722850366144,20.0819821514624,19.7900608770642,19.4852250109723,19.1671348171781,18.8396841466058,18.5076154443181,18.1772560160021,17.857020684613,17.5574414737476,17.2906785924272,17.069694933759,16.9069745992304,16.7795028035949,16.6670937750875,16.5695395349039,16.4868393089263,16.4192917262173,16.3675400418557,16.3325551116914,16.3155489188277,16.3178229837809,16.3405653359364,16.3819090847767,16.4371370093744,16.5051767344106,16.5850224887057,16.6757594040711,16.7766265595726,16.8870537204214,17.0066695630085,17.1352859183229,17.2728667175174,17.4194909207075,17.5753166686961,17.7405508800896,17.9154258372097,18.1001825319467,18.2950596665187,18.500286958895,18.7160815031624,18.9426461741507,19.1801693243973,19.4288252461431,19.6887750454951,19.9601677023856,20.2431411773915,20.5378234847148,20.5378234847148,28.3976047298639,27.6445361517793,26.9183008646727,26.2190495841203,25.5469429720734,24.9021527098387,24.2848626048976,23.6952696508654,23.1335849016537,22.6000339334668,22.0948565417659,21.6183051458945,21.1706411494454,20.752128245683,20.3630214183034,20.0035502872874,19.6738956948123,19.374159302368,19.1043277424815,18.8642355475163,18.6535340952379,18.4716758522316,18.3179225989377,18.1913821685421,18.0910714912393,18.0160278164868,17.9673978790939,17.945206784653,17.9483197742987,17.9757155802963,18.026283397498,18.0986712935029,18.1911997351385,18.3018445632167,18.4282822153687,18.567981924539,18.7334773883177,18.9436105126661,19.1941013935716,19.4805704787221,19.7978355317193,20.1390861307408,20.4953946533223,20.8557459597315,21.2075400496118,21.537328328468,21.8341448033324,22.1027528982991,22.3511053036989,22.5876263587873,22.8207519817787,23.0579073552204,23.3043930654404,23.5626113807544,23.8320700554768,24.1101504747306,24.3931873183751,24.6774271022502,24.9458409320517,25.1944956421846,25.4452223410831,25.714949330045,26.0128572102785,26.3420751547416,26.6879221339431,27.0422418552354,27.4091723659259,27.7923934758638,28.1946187076923,28.6167166080156,29.0631206262796,29.5386319259172,30.047554374356,30.5930947422104,31.1765650726287,31.7968191605775,32.4550522645387,33.1496742247039,33.8776055510794,34.6354210295117,31.5502921741958],"text":["displ: 1.600000<br />hwy: 33.09286","displ: 1.668354<br />hwy: 32.51078","displ: 1.736709<br />hwy: 31.94222","displ: 1.805063<br />hwy: 31.38848","displ: 1.873418<br />hwy: 30.85090","displ: 1.941772<br />hwy: 30.33000","displ: 2.010127<br />hwy: 29.82386","displ: 2.078481<br />hwy: 29.33337","displ: 2.146835<br />hwy: 28.85839","displ: 2.215190<br />hwy: 28.39814","displ: 2.283544<br />hwy: 27.95190","displ: 2.351899<br />hwy: 27.51890","displ: 2.420253<br />hwy: 27.09876","displ: 2.488608<br />hwy: 26.69578","displ: 2.556962<br />hwy: 26.30908","displ: 2.625316<br />hwy: 25.93559","displ: 2.693671<br />hwy: 25.57223","displ: 2.762025<br />hwy: 25.22918","displ: 2.830380<br />hwy: 24.91819","displ: 2.898734<br />hwy: 24.62987","displ: 2.967089<br />hwy: 24.35467","displ: 3.035443<br />hwy: 24.08304","displ: 3.103797<br />hwy: 23.80547","displ: 3.172152<br />hwy: 23.52959","displ: 3.240506<br />hwy: 23.26464","displ: 3.308861<br />hwy: 23.00811","displ: 3.377215<br />hwy: 22.75749","displ: 3.445570<br />hwy: 22.51028","displ: 3.513924<br />hwy: 22.26397","displ: 3.582278<br />hwy: 22.01604","displ: 3.650633<br />hwy: 21.76400","displ: 3.718987<br />hwy: 21.50533","displ: 3.787342<br />hwy: 21.23752","displ: 3.855696<br />hwy: 20.95806","displ: 3.924051<br />hwy: 20.66369","displ: 3.992405<br />hwy: 20.34638","displ: 4.060759<br />hwy: 20.01144","displ: 4.129114<br />hwy: 19.66754","displ: 4.197468<br />hwy: 19.32335","displ: 4.265823<br />hwy: 18.98755","displ: 4.334177<br />hwy: 18.66880","displ: 4.402532<br />hwy: 18.37577","displ: 4.470886<br />hwy: 18.11714","displ: 4.539241<br />hwy: 17.90159","displ: 4.607595<br />hwy: 17.73748","displ: 4.675949<br />hwy: 17.60389","displ: 4.744304<br />hwy: 17.48447","displ: 4.812658<br />hwy: 17.38037","displ: 4.881013<br />hwy: 17.29276","displ: 4.949367<br />hwy: 17.22279","displ: 5.017722<br />hwy: 17.17163","displ: 5.086076<br />hwy: 17.14044","displ: 5.154430<br />hwy: 17.13038","displ: 5.222785<br />hwy: 17.14261","displ: 5.291139<br />hwy: 17.17830","displ: 5.359494<br />hwy: 17.23649","displ: 5.427848<br />hwy: 17.31426","displ: 5.496203<br />hwy: 17.41155","displ: 5.564557<br />hwy: 17.52835","displ: 5.632911<br />hwy: 17.66465","displ: 5.701266<br />hwy: 17.82043","displ: 5.769620<br />hwy: 17.99569","displ: 5.837975<br />hwy: 18.19041","displ: 5.906329<br />hwy: 18.40459","displ: 5.974684<br />hwy: 18.63821","displ: 6.043038<br />hwy: 18.89126","displ: 6.111392<br />hwy: 19.16372","displ: 6.179747<br />hwy: 19.45560","displ: 6.248101<br />hwy: 19.76687","displ: 6.316456<br />hwy: 20.09752","displ: 6.384810<br />hwy: 20.44755","displ: 6.453165<br />hwy: 20.81694","displ: 6.521519<br />hwy: 21.20568","displ: 6.589873<br />hwy: 21.61375","displ: 6.658228<br />hwy: 22.04116","displ: 6.726582<br />hwy: 22.48788","displ: 6.794937<br />hwy: 22.95391","displ: 6.863291<br />hwy: 23.43923","displ: 6.931646<br />hwy: 23.94384","displ: 7.000000<br />hwy: 24.46771","displ: 7.000000<br />hwy: 24.46771","displ: 7.000000<br />hwy: 24.46771","displ: 6.931646<br />hwy: 23.94384","displ: 6.863291<br />hwy: 23.43923","displ: 6.794937<br />hwy: 22.95391","displ: 6.726582<br />hwy: 22.48788","displ: 6.658228<br />hwy: 22.04116","displ: 6.589873<br />hwy: 21.61375","displ: 6.521519<br />hwy: 21.20568","displ: 6.453165<br />hwy: 20.81694","displ: 6.384810<br />hwy: 20.44755","displ: 6.316456<br />hwy: 20.09752","displ: 6.248101<br />hwy: 19.76687","displ: 6.179747<br />hwy: 19.45560","displ: 6.111392<br />hwy: 19.16372","displ: 6.043038<br />hwy: 18.89126","displ: 5.974684<br />hwy: 18.63821","displ: 5.906329<br />hwy: 18.40459","displ: 5.837975<br />hwy: 18.19041","displ: 5.769620<br />hwy: 17.99569","displ: 5.701266<br />hwy: 17.82043","displ: 5.632911<br />hwy: 17.66465","displ: 5.564557<br />hwy: 17.52835","displ: 5.496203<br />hwy: 17.41155","displ: 5.427848<br />hwy: 17.31426","displ: 5.359494<br />hwy: 17.23649","displ: 5.291139<br />hwy: 17.17830","displ: 5.222785<br />hwy: 17.14261","displ: 5.154430<br />hwy: 17.13038","displ: 5.086076<br />hwy: 17.14044","displ: 5.017722<br />hwy: 17.17163","displ: 4.949367<br />hwy: 17.22279","displ: 4.881013<br />hwy: 17.29276","displ: 4.812658<br />hwy: 17.38037","displ: 4.744304<br />hwy: 17.48447","displ: 4.675949<br />hwy: 17.60389","displ: 4.607595<br />hwy: 17.73748","displ: 4.539241<br />hwy: 17.90159","displ: 4.470886<br />hwy: 18.11714","displ: 4.402532<br />hwy: 18.37577","displ: 4.334177<br />hwy: 18.66880","displ: 4.265823<br />hwy: 18.98755","displ: 4.197468<br />hwy: 19.32335","displ: 4.129114<br />hwy: 19.66754","displ: 4.060759<br />hwy: 20.01144","displ: 3.992405<br />hwy: 20.34638","displ: 3.924051<br />hwy: 20.66369","displ: 3.855696<br />hwy: 20.95806","displ: 3.787342<br />hwy: 21.23752","displ: 3.718987<br />hwy: 21.50533","displ: 3.650633<br />hwy: 21.76400","displ: 3.582278<br />hwy: 22.01604","displ: 3.513924<br />hwy: 22.26397","displ: 3.445570<br />hwy: 22.51028","displ: 3.377215<br />hwy: 22.75749","displ: 3.308861<br />hwy: 23.00811","displ: 3.240506<br />hwy: 23.26464","displ: 3.172152<br />hwy: 23.52959","displ: 3.103797<br />hwy: 23.80547","displ: 3.035443<br />hwy: 24.08304","displ: 2.967089<br />hwy: 24.35467","displ: 2.898734<br />hwy: 24.62987","displ: 2.830380<br />hwy: 24.91819","displ: 2.762025<br />hwy: 25.22918","displ: 2.693671<br />hwy: 25.57223","displ: 2.625316<br />hwy: 25.93559","displ: 2.556962<br />hwy: 26.30908","displ: 2.488608<br />hwy: 26.69578","displ: 2.420253<br />hwy: 27.09876","displ: 2.351899<br />hwy: 27.51890","displ: 2.283544<br />hwy: 27.95190","displ: 2.215190<br />hwy: 28.39814","displ: 2.146835<br />hwy: 28.85839","displ: 2.078481<br />hwy: 29.33337","displ: 2.010127<br />hwy: 29.82386","displ: 1.941772<br />hwy: 30.33000","displ: 1.873418<br />hwy: 30.85090","displ: 1.805063<br />hwy: 31.38848","displ: 1.736709<br />hwy: 31.94222","displ: 1.668354<br />hwy: 32.51078","displ: 1.600000<br />hwy: 33.09286","displ: 1.600000<br />hwy: 33.09286"],"type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(153,153,153,0.4)","hoveron":"points","hoverinfo":"x+y","showlegend":false,"xaxis":"x","yaxis":"y","frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.33,7.27],"tickmode":"array","ticktext":["2","3","4","5","6","7"],"tickvals":[2,3,4,5,6,7],"categoryorder":"array","categoryarray":["2","3","4","5","6","7"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"displ","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[10.4,45.6],"tickmode":"array","ticktext":["20","30","40"],"tickvals":[20,30,40],"categoryorder":"array","categoryarray":["20","30","40"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"hwy","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"d7467d63f9d":{"x":{},"y":{},"type":"scatter"},"d74ff91cf7":{"x":{},"y":{}}},"cur_data":"d7467d63f9d","visdat":{"d7467d63f9d":["function (y) ","x"],"d74ff91cf7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c3402747d76e039f1500" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c3402747d76e039f1500">{"x":{"data":[{"x":[1.8,1.8,2,2,2.8,2.8,3.1,1.8,1.8,2,2,2.8,2.8,3.1,3.1,2.8,3.1,4.2,5.3,5.3,5.3,5.7,6,5.7,5.7,6.2,6.2,7,5.3,5.3,5.7,6.5,2.4,2.4,3.1,3.5,3.6,2.4,3,3.3,3.3,3.3,3.3,3.3,3.8,3.8,3.8,4,3.7,3.7,3.9,3.9,4.7,4.7,4.7,5.2,5.2,3.9,4.7,4.7,4.7,5.2,5.7,5.9,4.7,4.7,4.7,4.7,4.7,4.7,5.2,5.2,5.7,5.9,4.6,5.4,5.4,4,4,4,4,4.6,5,4.2,4.2,4.6,4.6,4.6,5.4,5.4,3.8,3.8,4,4,4.6,4.6,4.6,4.6,5.4,1.6,1.6,1.6,1.6,1.6,1.8,1.8,1.8,2,2.4,2.4,2.4,2.4,2.5,2.5,3.3,2,2,2,2,2.7,2.7,2.7,3,3.7,4,4.7,4.7,4.7,5.7,6.1,4,4.2,4.4,4.6,5.4,5.4,5.4,4,4,4.6,5,2.4,2.4,2.5,2.5,3.5,3.5,3,3,3.5,3.3,3.3,4,5.6,3.1,3.8,3.8,3.8,5.3,2.5,2.5,2.5,2.5,2.5,2.5,2.2,2.2,2.5,2.5,2.5,2.5,2.5,2.5,2.7,2.7,3.4,3.4,4,4.7,2.2,2.2,2.4,2.4,3,3,3.5,2.2,2.2,2.4,2.4,3,3,3.3,1.8,1.8,1.8,1.8,1.8,4.7,5.7,2.7,2.7,2.7,3.4,3.4,4,4,2,2,2,2,2.8,1.9,2,2,2,2,2.5,2.5,2.8,2.8,1.9,1.9,2,2,2.5,2.5,1.8,1.8,2,2,2.8,2.8,3.6],"y":[29,29,31,30,26,26,27,26,25,28,27,25,25,25,25,24,25,23,20,15,20,17,17,26,23,26,25,24,19,14,15,17,27,30,26,29,26,24,24,22,22,24,24,17,22,21,23,23,19,18,17,17,19,19,12,17,15,17,17,12,17,16,18,15,16,12,17,17,16,12,15,16,17,15,17,17,18,17,19,17,19,19,17,17,17,16,16,17,15,17,26,25,26,24,21,22,23,22,20,33,32,32,29,32,34,36,36,29,26,27,30,31,26,26,28,26,29,28,27,24,24,24,22,19,20,17,12,19,18,14,15,18,18,15,17,16,18,17,19,19,17,29,27,31,32,27,26,26,25,25,17,17,20,18,26,26,27,28,25,25,24,27,25,26,23,26,26,26,26,25,27,25,27,20,20,19,17,20,17,29,27,31,31,26,26,28,27,29,31,31,26,26,27,30,33,35,37,35,15,18,20,20,22,17,19,18,20,29,26,29,29,24,44,29,26,29,29,29,29,23,24,44,41,29,26,28,29,29,29,28,29,26,26,26],"text":["displ: 1.8<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 2.0<br />hwy: 31","displ: 2.0<br />hwy: 30","displ: 2.8<br />hwy: 26","displ: 2.8<br />hwy: 26","displ: 3.1<br />hwy: 27","displ: 1.8<br />hwy: 26","displ: 1.8<br />hwy: 25","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 27","displ: 2.8<br />hwy: 25","displ: 2.8<br />hwy: 25","displ: 3.1<br />hwy: 25","displ: 3.1<br />hwy: 25","displ: 2.8<br />hwy: 24","displ: 3.1<br />hwy: 25","displ: 4.2<br />hwy: 23","displ: 5.3<br />hwy: 20","displ: 5.3<br />hwy: 15","displ: 5.3<br />hwy: 20","displ: 5.7<br />hwy: 17","displ: 6.0<br />hwy: 17","displ: 5.7<br />hwy: 26","displ: 5.7<br />hwy: 23","displ: 6.2<br />hwy: 26","displ: 6.2<br />hwy: 25","displ: 7.0<br />hwy: 24","displ: 5.3<br />hwy: 19","displ: 5.3<br />hwy: 14","displ: 5.7<br />hwy: 15","displ: 6.5<br />hwy: 17","displ: 2.4<br />hwy: 27","displ: 2.4<br />hwy: 30","displ: 3.1<br />hwy: 26","displ: 3.5<br />hwy: 29","displ: 3.6<br />hwy: 26","displ: 2.4<br />hwy: 24","displ: 3.0<br />hwy: 24","displ: 3.3<br />hwy: 22","displ: 3.3<br />hwy: 22","displ: 3.3<br />hwy: 24","displ: 3.3<br />hwy: 24","displ: 3.3<br />hwy: 17","displ: 3.8<br />hwy: 22","displ: 3.8<br />hwy: 21","displ: 3.8<br />hwy: 23","displ: 4.0<br />hwy: 23","displ: 3.7<br />hwy: 19","displ: 3.7<br />hwy: 18","displ: 3.9<br />hwy: 17","displ: 3.9<br />hwy: 17","displ: 4.7<br />hwy: 19","displ: 4.7<br />hwy: 19","displ: 4.7<br />hwy: 12","displ: 5.2<br />hwy: 17","displ: 5.2<br />hwy: 15","displ: 3.9<br />hwy: 17","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 17","displ: 5.2<br />hwy: 16","displ: 5.7<br />hwy: 18","displ: 5.9<br />hwy: 15","displ: 4.7<br />hwy: 16","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 16","displ: 4.7<br />hwy: 12","displ: 5.2<br />hwy: 15","displ: 5.2<br />hwy: 16","displ: 5.7<br />hwy: 17","displ: 5.9<br />hwy: 15","displ: 4.6<br />hwy: 17","displ: 5.4<br />hwy: 17","displ: 5.4<br />hwy: 18","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.6<br />hwy: 19","displ: 5.0<br />hwy: 17","displ: 4.2<br />hwy: 17","displ: 4.2<br />hwy: 17","displ: 4.6<br />hwy: 16","displ: 4.6<br />hwy: 16","displ: 4.6<br />hwy: 17","displ: 5.4<br />hwy: 15","displ: 5.4<br />hwy: 17","displ: 3.8<br />hwy: 26","displ: 3.8<br />hwy: 25","displ: 4.0<br />hwy: 26","displ: 4.0<br />hwy: 24","displ: 4.6<br />hwy: 21","displ: 4.6<br />hwy: 22","displ: 4.6<br />hwy: 23","displ: 4.6<br />hwy: 22","displ: 5.4<br />hwy: 20","displ: 1.6<br />hwy: 33","displ: 1.6<br />hwy: 32","displ: 1.6<br />hwy: 32","displ: 1.6<br />hwy: 29","displ: 1.6<br />hwy: 32","displ: 1.8<br />hwy: 34","displ: 1.8<br />hwy: 36","displ: 1.8<br />hwy: 36","displ: 2.0<br />hwy: 29","displ: 2.4<br />hwy: 26","displ: 2.4<br />hwy: 27","displ: 2.4<br />hwy: 30","displ: 2.4<br />hwy: 31","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 3.3<br />hwy: 28","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 27","displ: 2.7<br />hwy: 24","displ: 2.7<br />hwy: 24","displ: 2.7<br />hwy: 24","displ: 3.0<br />hwy: 22","displ: 3.7<br />hwy: 19","displ: 4.0<br />hwy: 20","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 19","displ: 5.7<br />hwy: 18","displ: 6.1<br />hwy: 14","displ: 4.0<br />hwy: 15","displ: 4.2<br />hwy: 18","displ: 4.4<br />hwy: 18","displ: 4.6<br />hwy: 15","displ: 5.4<br />hwy: 17","displ: 5.4<br />hwy: 16","displ: 5.4<br />hwy: 18","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.6<br />hwy: 19","displ: 5.0<br />hwy: 17","displ: 2.4<br />hwy: 29","displ: 2.4<br />hwy: 27","displ: 2.5<br />hwy: 31","displ: 2.5<br />hwy: 32","displ: 3.5<br />hwy: 27","displ: 3.5<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 25","displ: 3.5<br />hwy: 25","displ: 3.3<br />hwy: 17","displ: 3.3<br />hwy: 17","displ: 4.0<br />hwy: 20","displ: 5.6<br />hwy: 18","displ: 3.1<br />hwy: 26","displ: 3.8<br />hwy: 26","displ: 3.8<br />hwy: 27","displ: 3.8<br />hwy: 28","displ: 5.3<br />hwy: 25","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 24","displ: 2.5<br />hwy: 27","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 23","displ: 2.2<br />hwy: 26","displ: 2.2<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 27","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 27","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 20","displ: 3.4<br />hwy: 19","displ: 3.4<br />hwy: 17","displ: 4.0<br />hwy: 20","displ: 4.7<br />hwy: 17","displ: 2.2<br />hwy: 29","displ: 2.2<br />hwy: 27","displ: 2.4<br />hwy: 31","displ: 2.4<br />hwy: 31","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.5<br />hwy: 28","displ: 2.2<br />hwy: 27","displ: 2.2<br />hwy: 29","displ: 2.4<br />hwy: 31","displ: 2.4<br />hwy: 31","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.3<br />hwy: 27","displ: 1.8<br />hwy: 30","displ: 1.8<br />hwy: 33","displ: 1.8<br />hwy: 35","displ: 1.8<br />hwy: 37","displ: 1.8<br />hwy: 35","displ: 4.7<br />hwy: 15","displ: 5.7<br />hwy: 18","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 22","displ: 3.4<br />hwy: 17","displ: 3.4<br />hwy: 19","displ: 4.0<br />hwy: 18","displ: 4.0<br />hwy: 20","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 29","displ: 2.8<br />hwy: 24","displ: 1.9<br />hwy: 44","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 29","displ: 2.5<br />hwy: 29","displ: 2.5<br />hwy: 29","displ: 2.8<br />hwy: 23","displ: 2.8<br />hwy: 24","displ: 1.9<br />hwy: 44","displ: 1.9<br />hwy: 41","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.5<br />hwy: 28","displ: 2.5<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 29","displ: 2.8<br />hwy: 26","displ: 2.8<br />hwy: 26","displ: 3.6<br />hwy: 26"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.6,1.66835443037975,1.73670886075949,1.80506329113924,1.87341772151899,1.94177215189873,2.01012658227848,2.07848101265823,2.14683544303797,2.21518987341772,2.28354430379747,2.35189873417722,2.42025316455696,2.48860759493671,2.55696202531646,2.6253164556962,2.69367088607595,2.7620253164557,2.83037974683544,2.89873417721519,2.96708860759494,3.03544303797468,3.10379746835443,3.17215189873418,3.24050632911392,3.30886075949367,3.37721518987342,3.44556962025316,3.51392405063291,3.58227848101266,3.65063291139241,3.71898734177215,3.7873417721519,3.85569620253165,3.92405063291139,3.99240506329114,4.06075949367089,4.12911392405063,4.19746835443038,4.26582278481013,4.33417721518987,4.40253164556962,4.47088607594937,4.53924050632911,4.60759493670886,4.67594936708861,4.74430379746835,4.8126582278481,4.88101265822785,4.94936708860759,5.01772151898734,5.08607594936709,5.15443037974684,5.22278481012658,5.29113924050633,5.35949367088608,5.42784810126582,5.49620253164557,5.56455696202532,5.63291139240506,5.70126582278481,5.76962025316456,5.8379746835443,5.90632911392405,5.9746835443038,6.04303797468354,6.11139240506329,6.17974683544304,6.24810126582278,6.31645569620253,6.38481012658228,6.45316455696203,6.52151898734177,6.58987341772152,6.65822784810127,6.72658227848101,6.79493670886076,6.86329113924051,6.93164556962025,7],"y":[33.0928566018538,32.5107835503571,31.9422202829389,31.3884848606775,30.8508953446512,30.3299957500339,29.8238589188101,29.3333742194062,28.8583851390524,28.3981429072318,27.9518987534274,27.5189039071224,27.0987631133077,26.6957836735878,26.3090818821465,25.9355884664112,25.5722341538095,25.2291795381194,24.9181938113842,24.6298749747968,24.3546740169542,24.0830419264527,23.8054739954333,23.5295892802633,23.2646362481893,23.0081062857482,22.7574907794764,22.5102811159107,22.2639686815878,22.0160448630443,21.7640010468168,21.5053286194421,21.2375189674567,20.9580634773974,20.6636946027661,20.3463825302921,20.0114403884548,19.667539399964,19.3233507875294,18.9875457738607,18.6687955816675,18.3757714336596,18.1171445525467,17.9015861610384,17.7374782618847,17.6038925094818,17.4844691691521,17.3803696350212,17.2927553012146,17.2227875618577,17.171627811076,17.1404374429951,17.1303778517404,17.1426104314374,17.1782965762116,17.236490288008,17.3142595889583,17.4115496666742,17.5283491704687,17.6646467496545,17.8204310535445,17.9956907314514,18.1904144326882,18.4045908065676,18.6382085024024,18.8912561695054,19.1637224571895,19.4555960147675,19.7668654915521,20.0975195368563,20.4475467999927,20.8169359302743,21.2056755770139,21.6137543895241,22.041161017118,22.4878841091082,22.9539123148077,23.4392342835291,23.9438386645854,24.4677141072894],"text":["displ: 1.600000<br />hwy: 33.09286","displ: 1.668354<br />hwy: 32.51078","displ: 1.736709<br />hwy: 31.94222","displ: 1.805063<br />hwy: 31.38848","displ: 1.873418<br />hwy: 30.85090","displ: 1.941772<br />hwy: 30.33000","displ: 2.010127<br />hwy: 29.82386","displ: 2.078481<br />hwy: 29.33337","displ: 2.146835<br />hwy: 28.85839","displ: 2.215190<br />hwy: 28.39814","displ: 2.283544<br />hwy: 27.95190","displ: 2.351899<br />hwy: 27.51890","displ: 2.420253<br />hwy: 27.09876","displ: 2.488608<br />hwy: 26.69578","displ: 2.556962<br />hwy: 26.30908","displ: 2.625316<br />hwy: 25.93559","displ: 2.693671<br />hwy: 25.57223","displ: 2.762025<br />hwy: 25.22918","displ: 2.830380<br />hwy: 24.91819","displ: 2.898734<br />hwy: 24.62987","displ: 2.967089<br />hwy: 24.35467","displ: 3.035443<br />hwy: 24.08304","displ: 3.103797<br />hwy: 23.80547","displ: 3.172152<br />hwy: 23.52959","displ: 3.240506<br />hwy: 23.26464","displ: 3.308861<br />hwy: 23.00811","displ: 3.377215<br />hwy: 22.75749","displ: 3.445570<br />hwy: 22.51028","displ: 3.513924<br />hwy: 22.26397","displ: 3.582278<br />hwy: 22.01604","displ: 3.650633<br />hwy: 21.76400","displ: 3.718987<br />hwy: 21.50533","displ: 3.787342<br />hwy: 21.23752","displ: 3.855696<br />hwy: 20.95806","displ: 3.924051<br />hwy: 20.66369","displ: 3.992405<br />hwy: 20.34638","displ: 4.060759<br />hwy: 20.01144","displ: 4.129114<br />hwy: 19.66754","displ: 4.197468<br />hwy: 19.32335","displ: 4.265823<br />hwy: 18.98755","displ: 4.334177<br />hwy: 18.66880","displ: 4.402532<br />hwy: 18.37577","displ: 4.470886<br />hwy: 18.11714","displ: 4.539241<br />hwy: 17.90159","displ: 4.607595<br />hwy: 17.73748","displ: 4.675949<br />hwy: 17.60389","displ: 4.744304<br />hwy: 17.48447","displ: 4.812658<br />hwy: 17.38037","displ: 4.881013<br />hwy: 17.29276","displ: 4.949367<br />hwy: 17.22279","displ: 5.017722<br />hwy: 17.17163","displ: 5.086076<br />hwy: 17.14044","displ: 5.154430<br />hwy: 17.13038","displ: 5.222785<br />hwy: 17.14261","displ: 5.291139<br />hwy: 17.17830","displ: 5.359494<br />hwy: 17.23649","displ: 5.427848<br />hwy: 17.31426","displ: 5.496203<br />hwy: 17.41155","displ: 5.564557<br />hwy: 17.52835","displ: 5.632911<br />hwy: 17.66465","displ: 5.701266<br />hwy: 17.82043","displ: 5.769620<br />hwy: 17.99569","displ: 5.837975<br />hwy: 18.19041","displ: 5.906329<br />hwy: 18.40459","displ: 5.974684<br />hwy: 18.63821","displ: 6.043038<br />hwy: 18.89126","displ: 6.111392<br />hwy: 19.16372","displ: 6.179747<br />hwy: 19.45560","displ: 6.248101<br />hwy: 19.76687","displ: 6.316456<br />hwy: 20.09752","displ: 6.384810<br />hwy: 20.44755","displ: 6.453165<br />hwy: 20.81694","displ: 6.521519<br />hwy: 21.20568","displ: 6.589873<br />hwy: 21.61375","displ: 6.658228<br />hwy: 22.04116","displ: 6.726582<br />hwy: 22.48788","displ: 6.794937<br />hwy: 22.95391","displ: 6.863291<br />hwy: 23.43923","displ: 6.931646<br />hwy: 23.94384","displ: 7.000000<br />hwy: 24.46771"],"type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.77952755905512,"color":"rgba(51,102,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.6,1.66835443037975,1.73670886075949,1.80506329113924,1.87341772151899,1.94177215189873,2.01012658227848,2.07848101265823,2.14683544303797,2.21518987341772,2.28354430379747,2.35189873417722,2.42025316455696,2.48860759493671,2.55696202531646,2.6253164556962,2.69367088607595,2.7620253164557,2.83037974683544,2.89873417721519,2.96708860759494,3.03544303797468,3.10379746835443,3.17215189873418,3.24050632911392,3.30886075949367,3.37721518987342,3.44556962025316,3.51392405063291,3.58227848101266,3.65063291139241,3.71898734177215,3.7873417721519,3.85569620253165,3.92405063291139,3.99240506329114,4.06075949367089,4.12911392405063,4.19746835443038,4.26582278481013,4.33417721518987,4.40253164556962,4.47088607594937,4.53924050632911,4.60759493670886,4.67594936708861,4.74430379746835,4.8126582278481,4.88101265822785,4.94936708860759,5.01772151898734,5.08607594936709,5.15443037974684,5.22278481012658,5.29113924050633,5.35949367088608,5.42784810126582,5.49620253164557,5.56455696202532,5.63291139240506,5.70126582278481,5.76962025316456,5.8379746835443,5.90632911392405,5.9746835443038,6.04303797468354,6.11139240506329,6.17974683544304,6.24810126582278,6.31645569620253,6.38481012658228,6.45316455696203,6.52151898734177,6.58987341772152,6.65822784810127,6.72658227848101,6.79493670886076,6.86329113924051,6.93164556962025,7,7,7,6.93164556962025,6.86329113924051,6.79493670886076,6.72658227848101,6.65822784810127,6.58987341772152,6.52151898734177,6.45316455696203,6.38481012658228,6.31645569620253,6.24810126582278,6.17974683544304,6.11139240506329,6.04303797468354,5.9746835443038,5.90632911392405,5.8379746835443,5.76962025316456,5.70126582278481,5.63291139240506,5.56455696202532,5.49620253164557,5.42784810126582,5.35949367088608,5.29113924050633,5.22278481012658,5.15443037974684,5.08607594936709,5.01772151898734,4.94936708860759,4.88101265822785,4.8126582278481,4.74430379746835,4.67594936708861,4.60759493670886,4.53924050632911,4.47088607594937,4.40253164556962,4.33417721518987,4.26582278481013,4.19746835443038,4.12911392405063,4.06075949367089,3.99240506329114,3.92405063291139,3.85569620253165,3.7873417721519,3.71898734177215,3.65063291139241,3.58227848101266,3.51392405063291,3.44556962025316,3.37721518987342,3.30886075949367,3.24050632911392,3.17215189873418,3.10379746835443,3.03544303797468,2.96708860759494,2.89873417721519,2.83037974683544,2.7620253164557,2.69367088607595,2.6253164556962,2.55696202531646,2.48860759493671,2.42025316455696,2.35189873417722,2.28354430379747,2.21518987341772,2.14683544303797,2.07848101265823,2.01012658227848,1.94177215189873,1.87341772151899,1.80506329113924,1.73670886075949,1.66835443037975,1.6,1.6],"y":[31.5502921741958,31.1439615496347,30.734766341174,30.3219174568165,29.9049715287249,29.483426427439,29.0546230954098,28.6191940644564,28.1781383521877,27.733165188184,27.2870808988393,26.8431891065526,26.4051327507517,25.9823949812496,25.5759219090576,25.1832547988793,24.8023931528773,24.4455018659603,24.1214382927233,23.8145276085106,23.5148523917237,23.2202429208538,22.9335208886165,22.6659912421514,22.419122021648,22.1841425160195,21.9523701781984,21.716169166381,21.4700300079552,21.2113377443099,20.9403757348464,20.6595519351853,20.3722850366144,20.0819821514625,19.7900608770642,19.4852250109723,19.1671348171781,18.8396841466058,18.5076154443181,18.1772560160021,17.857020684613,17.5574414737476,17.2906785924272,17.069694933759,16.9069745992304,16.7795028035949,16.6670937750876,16.5695395349039,16.4868393089263,16.4192917262173,16.3675400418557,16.3325551116914,16.3155489188277,16.3178229837809,16.3405653359364,16.3819090847767,16.4371370093744,16.5051767344106,16.5850224887057,16.6757594040711,16.7766265595726,16.8870537204214,17.0066695630085,17.1352859183229,17.2728667175174,17.4194909207075,17.5753166686961,17.7405508800896,17.9154258372097,18.1001825319467,18.2950596665187,18.500286958895,18.7160815031624,18.9426461741507,19.1801693243973,19.4288252461431,19.6887750454951,19.9601677023856,20.2431411773915,20.5378234847148,20.5378234847148,28.3976047298639,27.6445361517793,26.9183008646727,26.2190495841203,25.5469429720734,24.9021527098387,24.2848626048976,23.6952696508654,23.1335849016537,22.6000339334668,22.0948565417659,21.6183051458945,21.1706411494454,20.752128245683,20.3630214183034,20.0035502872874,19.6738956948123,19.374159302368,19.1043277424815,18.8642355475163,18.6535340952379,18.4716758522316,18.3179225989377,18.1913821685421,18.0910714912393,18.0160278164868,17.9673978790939,17.945206784653,17.9483197742987,17.9757155802963,18.026283397498,18.0986712935029,18.1911997351385,18.3018445632167,18.4282822153687,18.567981924539,18.7334773883177,18.9436105126661,19.1941013935716,19.4805704787221,19.7978355317193,20.1390861307408,20.4953946533223,20.8557459597315,21.2075400496118,21.537328328468,21.8341448033324,22.1027528982991,22.3511053036989,22.5876263587873,22.8207519817787,23.0579073552204,23.3043930654405,23.5626113807545,23.8320700554769,24.1101504747306,24.3931873183752,24.6774271022502,24.9458409320517,25.1944956421846,25.4452223410831,25.714949330045,26.0128572102785,26.3420751547416,26.6879221339431,27.0422418552354,27.4091723659259,27.7923934758638,28.1946187076923,28.6167166080156,29.0631206262796,29.5386319259172,30.047554374356,30.5930947422104,31.1765650726287,31.7968191605775,32.4550522645386,33.1496742247038,33.8776055510794,34.6354210295117,31.5502921741958],"text":["displ: 1.600000<br />hwy: 33.09286","displ: 1.668354<br />hwy: 32.51078","displ: 1.736709<br />hwy: 31.94222","displ: 1.805063<br />hwy: 31.38848","displ: 1.873418<br />hwy: 30.85090","displ: 1.941772<br />hwy: 30.33000","displ: 2.010127<br />hwy: 29.82386","displ: 2.078481<br />hwy: 29.33337","displ: 2.146835<br />hwy: 28.85839","displ: 2.215190<br />hwy: 28.39814","displ: 2.283544<br />hwy: 27.95190","displ: 2.351899<br />hwy: 27.51890","displ: 2.420253<br />hwy: 27.09876","displ: 2.488608<br />hwy: 26.69578","displ: 2.556962<br />hwy: 26.30908","displ: 2.625316<br />hwy: 25.93559","displ: 2.693671<br />hwy: 25.57223","displ: 2.762025<br />hwy: 25.22918","displ: 2.830380<br />hwy: 24.91819","displ: 2.898734<br />hwy: 24.62987","displ: 2.967089<br />hwy: 24.35467","displ: 3.035443<br />hwy: 24.08304","displ: 3.103797<br />hwy: 23.80547","displ: 3.172152<br />hwy: 23.52959","displ: 3.240506<br />hwy: 23.26464","displ: 3.308861<br />hwy: 23.00811","displ: 3.377215<br />hwy: 22.75749","displ: 3.445570<br />hwy: 22.51028","displ: 3.513924<br />hwy: 22.26397","displ: 3.582278<br />hwy: 22.01604","displ: 3.650633<br />hwy: 21.76400","displ: 3.718987<br />hwy: 21.50533","displ: 3.787342<br />hwy: 21.23752","displ: 3.855696<br />hwy: 20.95806","displ: 3.924051<br />hwy: 20.66369","displ: 3.992405<br />hwy: 20.34638","displ: 4.060759<br />hwy: 20.01144","displ: 4.129114<br />hwy: 19.66754","displ: 4.197468<br />hwy: 19.32335","displ: 4.265823<br />hwy: 18.98755","displ: 4.334177<br />hwy: 18.66880","displ: 4.402532<br />hwy: 18.37577","displ: 4.470886<br />hwy: 18.11714","displ: 4.539241<br />hwy: 17.90159","displ: 4.607595<br />hwy: 17.73748","displ: 4.675949<br />hwy: 17.60389","displ: 4.744304<br />hwy: 17.48447","displ: 4.812658<br />hwy: 17.38037","displ: 4.881013<br />hwy: 17.29276","displ: 4.949367<br />hwy: 17.22279","displ: 5.017722<br />hwy: 17.17163","displ: 5.086076<br />hwy: 17.14044","displ: 5.154430<br />hwy: 17.13038","displ: 5.222785<br />hwy: 17.14261","displ: 5.291139<br />hwy: 17.17830","displ: 5.359494<br />hwy: 17.23649","displ: 5.427848<br />hwy: 17.31426","displ: 5.496203<br />hwy: 17.41155","displ: 5.564557<br />hwy: 17.52835","displ: 5.632911<br />hwy: 17.66465","displ: 5.701266<br />hwy: 17.82043","displ: 5.769620<br />hwy: 17.99569","displ: 5.837975<br />hwy: 18.19041","displ: 5.906329<br />hwy: 18.40459","displ: 5.974684<br />hwy: 18.63821","displ: 6.043038<br />hwy: 18.89126","displ: 6.111392<br />hwy: 19.16372","displ: 6.179747<br />hwy: 19.45560","displ: 6.248101<br />hwy: 19.76687","displ: 6.316456<br />hwy: 20.09752","displ: 6.384810<br />hwy: 20.44755","displ: 6.453165<br />hwy: 20.81694","displ: 6.521519<br />hwy: 21.20568","displ: 6.589873<br />hwy: 21.61375","displ: 6.658228<br />hwy: 22.04116","displ: 6.726582<br />hwy: 22.48788","displ: 6.794937<br />hwy: 22.95391","displ: 6.863291<br />hwy: 23.43923","displ: 6.931646<br />hwy: 23.94384","displ: 7.000000<br />hwy: 24.46771","displ: 7.000000<br />hwy: 24.46771","displ: 7.000000<br />hwy: 24.46771","displ: 6.931646<br />hwy: 23.94384","displ: 6.863291<br />hwy: 23.43923","displ: 6.794937<br />hwy: 22.95391","displ: 6.726582<br />hwy: 22.48788","displ: 6.658228<br />hwy: 22.04116","displ: 6.589873<br />hwy: 21.61375","displ: 6.521519<br />hwy: 21.20568","displ: 6.453165<br />hwy: 20.81694","displ: 6.384810<br />hwy: 20.44755","displ: 6.316456<br />hwy: 20.09752","displ: 6.248101<br />hwy: 19.76687","displ: 6.179747<br />hwy: 19.45560","displ: 6.111392<br />hwy: 19.16372","displ: 6.043038<br />hwy: 18.89126","displ: 5.974684<br />hwy: 18.63821","displ: 5.906329<br />hwy: 18.40459","displ: 5.837975<br />hwy: 18.19041","displ: 5.769620<br />hwy: 17.99569","displ: 5.701266<br />hwy: 17.82043","displ: 5.632911<br />hwy: 17.66465","displ: 5.564557<br />hwy: 17.52835","displ: 5.496203<br />hwy: 17.41155","displ: 5.427848<br />hwy: 17.31426","displ: 5.359494<br />hwy: 17.23649","displ: 5.291139<br />hwy: 17.17830","displ: 5.222785<br />hwy: 17.14261","displ: 5.154430<br />hwy: 17.13038","displ: 5.086076<br />hwy: 17.14044","displ: 5.017722<br />hwy: 17.17163","displ: 4.949367<br />hwy: 17.22279","displ: 4.881013<br />hwy: 17.29276","displ: 4.812658<br />hwy: 17.38037","displ: 4.744304<br />hwy: 17.48447","displ: 4.675949<br />hwy: 17.60389","displ: 4.607595<br />hwy: 17.73748","displ: 4.539241<br />hwy: 17.90159","displ: 4.470886<br />hwy: 18.11714","displ: 4.402532<br />hwy: 18.37577","displ: 4.334177<br />hwy: 18.66880","displ: 4.265823<br />hwy: 18.98755","displ: 4.197468<br />hwy: 19.32335","displ: 4.129114<br />hwy: 19.66754","displ: 4.060759<br />hwy: 20.01144","displ: 3.992405<br />hwy: 20.34638","displ: 3.924051<br />hwy: 20.66369","displ: 3.855696<br />hwy: 20.95806","displ: 3.787342<br />hwy: 21.23752","displ: 3.718987<br />hwy: 21.50533","displ: 3.650633<br />hwy: 21.76400","displ: 3.582278<br />hwy: 22.01604","displ: 3.513924<br />hwy: 22.26397","displ: 3.445570<br />hwy: 22.51028","displ: 3.377215<br />hwy: 22.75749","displ: 3.308861<br />hwy: 23.00811","displ: 3.240506<br />hwy: 23.26464","displ: 3.172152<br />hwy: 23.52959","displ: 3.103797<br />hwy: 23.80547","displ: 3.035443<br />hwy: 24.08304","displ: 2.967089<br />hwy: 24.35467","displ: 2.898734<br />hwy: 24.62987","displ: 2.830380<br />hwy: 24.91819","displ: 2.762025<br />hwy: 25.22918","displ: 2.693671<br />hwy: 25.57223","displ: 2.625316<br />hwy: 25.93559","displ: 2.556962<br />hwy: 26.30908","displ: 2.488608<br />hwy: 26.69578","displ: 2.420253<br />hwy: 27.09876","displ: 2.351899<br />hwy: 27.51890","displ: 2.283544<br />hwy: 27.95190","displ: 2.215190<br />hwy: 28.39814","displ: 2.146835<br />hwy: 28.85839","displ: 2.078481<br />hwy: 29.33337","displ: 2.010127<br />hwy: 29.82386","displ: 1.941772<br />hwy: 30.33000","displ: 1.873418<br />hwy: 30.85090","displ: 1.805063<br />hwy: 31.38848","displ: 1.736709<br />hwy: 31.94222","displ: 1.668354<br />hwy: 32.51078","displ: 1.600000<br />hwy: 33.09286","displ: 1.600000<br />hwy: 33.09286"],"type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(153,153,153,0.4)","hoveron":"points","hoverinfo":"x+y","showlegend":false,"xaxis":"x","yaxis":"y","frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.33,7.27],"tickmode":"array","ticktext":["2","3","4","5","6","7"],"tickvals":[2,3,4,5,6,7],"categoryorder":"array","categoryarray":["2","3","4","5","6","7"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"displ","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[10.4,45.6],"tickmode":"array","ticktext":["20","30","40"],"tickvals":[20,30,40],"categoryorder":"array","categoryarray":["20","30","40"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"hwy","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"142ecbf4d4f":{"x":{},"y":{},"type":"scatter"},"142ec449042":{"x":{},"y":{}}},"cur_data":"142ecbf4d4f","visdat":{"142ecbf4d4f":["function (y) ","x"],"142ec449042":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p></p><figcaption class="figure-caption">Figure&nbsp;3: A simple ggplotly interactive example</figcaption><p></p>
 </figure>
 </div>
@@ -584,7 +555,7 @@ x_L \\ x_N \end{array}\right] \\
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">summary</span>(cars), <span class="at">caption =</span> <span class="st">"Table caption."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <caption>Table caption.</caption>
 <thead>
 <tr class="header">
@@ -734,12 +705,12 @@ x_L \\ x_N \end{array}\right] \\
 </section>
 <section id="to-go-further" class="level2" data-number="2.9">
 <h2 data-number="2.9" class="anchored" data-anchor-id="to-go-further"><span class="header-section-number">2.9</span> To go further</h2>
-<div class="callout callout-style-default callout-note callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 One last note
 </div>
 </div>
@@ -750,18 +721,18 @@ One last note
 </section>
 <section id="bibliography" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="bibliography">Bibliography</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-computo" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-computo" class="csl-entry" role="listitem">
 Computo Team. 2021. <span>“Computo: Reproducible Computational/Algorithmic Contributions in Statistics and Machine Learning.”</span> <em>Computo</em>.
 </div>
-<div id="ref-perez2011python" class="csl-entry" role="doc-biblioentry">
+<div id="ref-perez2011python" class="csl-entry" role="listitem">
 Perez, Fernando, Brian E Granger, and John D Hunter. 2011. <span>“Python: An Ecosystem for Scientific Computing.”</span> <em>Computing in Science<br>
 &amp; Engineering</em> 13 (2): 13–21.
 </div>
-<div id="ref-R-base" class="csl-entry" role="doc-biblioentry">
+<div id="ref-R-base" class="csl-entry" role="listitem">
 R Core Team. 2020. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
-<div id="ref-R-reticulate" class="csl-entry" role="doc-biblioentry">
+<div id="ref-R-reticulate" class="csl-entry" role="listitem">
 Ushey, Kevin, JJ Allaire, and Yuan Tang. 2020. <em>Reticulate: Interface to Python</em>. <a href="https://github.com/rstudio/reticulate">https://github.com/rstudio/reticulate</a>.
 </div>
 </div>
@@ -779,10 +750,10 @@ Ushey, Kevin, JJ Allaire, and Yuan Tang. 2020. <em>Reticulate: Interface to Pyth
 <li id="fn3"><p>For proper pdf rendering, use <a href="https://en.wikipedia.org/wiki/Camel_case">Camel cased</a> names for all <code>algorithmic</code> keywords, not upper case ones like the examples in <code>pseudocode.js</code>’s documentation<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{computoteam2023,
-  author = {The Computo Team and a friend},
+  author = {ComputoTeam, The and friend, a},
   title = {Computo {Journal} {Format}},
   journal = {Computo},
-  date = {23-01-02},
+  date = {2023-01-02},
   url = {https://github.com/computorg/computo-quarto-extension},
   doi = {10.xxxx/xxx-xxx},
   issn = {2824-7795},
@@ -795,8 +766,8 @@ Ushey, Kevin, JJ Allaire, and Yuan Tang. 2020. <em>Reticulate: Interface to Pyth
     porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit
     amet, venenatis eu ipsum.}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-computoteam2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-The Computo Team, and a friend. 23AD. <span>“Computo Journal
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-computoteam2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+ComputoTeam, The, and a friend. 2023. <span>“Computo Journal
 Format.”</span> <em>Computo</em>, January. <a href="https://doi.org/10.xxxx/xxx-xxx">https://doi.org/10.xxxx/xxx-xxx</a>.
 </div></div></section></div></main>
 <!-- /main column -->
@@ -827,9 +798,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1074,7 +1059,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1084,400 +1069,393 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<pre class="markdown" data-shortcodes="false"><code>---
-title: "Computo Journal Format"
-subtitle: "To be used as template for contribution to Computo"
-date: 01/02/2023
-date-modified: last-modified
-author:
-  - name: The Computo Team
-    corresponding: true
-    email: computo@sfds.asso.fr
-    url: https://computo.sfds.asso.fr
-    orcid: 0000-0000-0000-0000
-    affiliations:
-      - name: Société Française de Statistique
-        department: Statistique
-        address: IHP
-        city: Paris
-        country: France
-        postal-code: 75005
-  - name: a friend
-    affiliations:
-      - Another Affiliation
-description: |
-  This document provides a template based on the quarto system for contributions to Computo. The github repository in itself provides a specific quarto extension useful for authors (and editors!).
-abstract: |
-  This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
-keywords: [template, quarto, R, Python, reproductibility]
-doi: 10.xxxx/xxx-xxx
-citation:
-  type: article-journal
-  container-title: "Computo"
-  doi: "10.xxxx/xxx-xxx"
-  url: "https://github.com/computorg/computo-quarto-extension"
-  issn: "2824-7795"
-bibliography: references.bib
-google-scholar: true
-github-user: computorg
-repo: "computo-quarto-extension"
-draft: true # set to false once the build is running
-published: false # will be set to true once accepted
-format:
-  computo-html: default
-  computo-pdf: default
----
-
-# About this document
-
-This document provides a template based on the [quarto system](https://quarto.org/) for contributions to **Computo** [@computo]. We show how `Python` [@perez2011python] or  `R` [@R-base] code can be included.
-
-# Formatting
-
-This section covers basic formatting guidelines. [Quarto](https://quarto.org/) is a versatile  formatting system for authoring HTML based on markdown, integrating {{&lt; latex &gt;}} and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the [Pandoc Markdown](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html) markup language. 
-
-:::{.callout-note}
-We will only give some formatting elements. Authors can refer to the [Quarto web page](https://quarto.org/) for a complete view of the formatting possibilities.
-:::
-
-:::{.callout-note}
-Quarto itself is a work-in-progress and a lot of bugs are constantly fixed or features added. As such, we recommend:
-
-- searching any encountered issue with renders in [the upstream quarto dev repo](https://github.com/quarto-dev/quarto-cli/issues)
-- using a [version of quarto &gt; 1.2](https://github.com/quarto-dev/quarto-cli/releases)
-:::
-
-To render/compile a document, run `quarto render`. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:
-
-``` .bash
-quarto render content.qmd # will render to html
-```
-
-## Basic markdown formatting
-
-**Bold text** or _italic_
-
-- This is a list
-- With more elements
-- It isn't numbered.
-
-But we can also do a numbered list
-
-1. This is my first item
-2. This is my second item
-3. This is my third item
-
-## Mathematics
-
-### Mathematical formulae
-
-[{{&lt; latex &gt;}}](https://www.latex-project.org/) code is natively supported[^katex], which makes it possible to use mathematical formulae:
-
-[^katex]: We use [katex](https://katex.org/) for this purpose.
-
-will render
-
-$$
-f(x_1, \dots, x_n; \mu, \sigma^2) =
-\frac{1}{\sigma \sqrt{2\pi}} \exp{\left(- \frac{1}{2\sigma^2}\sum_{i=1}^n(x_i - \mu)^2\right)}
-$$
-
-It is also posible to cross-reference an equation, see @eq-mylabel:
-
-$$
-\begin{aligned}
-D_{x_N} &amp; = \frac12
-\left[\begin{array}{cc}
-x_L^\top &amp; x_N^\top \end{array}\right] \,
-\left[\begin{array}{cc}  L_L &amp; B \\ B^\top &amp; L_N \end{array}\right] \,
-\left[\begin{array}{c}
-x_L \\ x_N \end{array}\right] \\
-&amp; = \frac12 (x_L^\top L_L x_L + 2 x_N^\top B^\top x_L + x_N^\top L_N x_N),
-\end{aligned}
-$$ {#eq-mylabel}
-
-### Theorems and other amsthem-like environments
-
-Quarto includes a nice support for theorems, with predefined prefix labels for theorems, lemmas, proposition, etc. see [this page](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs). Here is a simple example:
-
-::: {#thm-slln}
-### Strong law of large numbers
-
-The sample average converges almost surely to the expected value:
-
-$$\overline{X}_n\ \xrightarrow{\text{a.s.}}\ \mu \qquad\textrm{when}\ n \to \infty.$$
-:::
-
-See @thm-slln.
-
-## Code
-
-Quarto uses either Jupyter or knitr to render code chunks. This can be triggered in the yaml header, e.g., for Jupyter (should be installed on your computer) use
-
-``` yaml
----
-title: "My Document"
-author "Jane Doe"
-jupyter: python3
----
-```
-
-For knitr (R + knitr must be installed on your computer)
-
-``` yaml
----
-title: "My Document"
-author "Jane Doe"
----
-```
-
-You can use Jupyter for Python code and more. And R + KnitR for if you want to mix R with Python (via the package reticulate @R-reticulate).
-
-### R
-
-`R` code [@R-base] chunks may be embedded as follows:
-
-```{r r-code, echo=TRUE}
-x &lt;- rnorm(10)
-```
-
-
-### Python
-
-quarto-executable-code-5450563D
-
-```python
-#| label: fig-plotly
-#| fig-cap: "A simple python plotly example"
-import plotly.express as px
-df = px.data.tips()
-fig = px.histogram(df, x="total_bill", y="tip", color="sex",
-                   marginal="box", # or violin, rug
-                   hover_data=df.columns)
-fig
-```
-
-## Figures
-
-Plots can be generated as follows and referenced. See plot @fig-gg:
-
-quarto-executable-code-5450563D
-
-```r
-#| label: fig-gg
-#| fig-cap: "A simple ggplot example"
-#| message: false
-library("ggplot2")
-p &lt;- ggplot(mpg, aes(displ, hwy)) +
-  geom_point() +
-  geom_smooth() + theme_bw()
-p
-```
-
-Interactive plots may also be produced in the HTML output of the document^[The pdf output is just a screenshot of the interactive plot from the html output]:
-
-quarto-executable-code-5450563D
-
-```r
-#| label: fig-ggplotly
-#| fig-cap: "A simple ggplotly interactive example"
-#| message: false
-#| warning: false
-library("plotly")
-ggplotly(p)
-```
-
-It is also possible to create figures from static images:
-
-:::{#fig-logo}
-
-![](figures/sfds.png)
-
-SFdS logo (c.a. 2021)
-
-:::
-
-## Tables
-
-### Markdown syntax
-
-Tables (with label: `@tbl-mylabel` renders @tbl-mylabel) can be generated with markdown as follows
-
-```markdown
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-: my table caption {#tbl-mylabel}
-```
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-: my table caption {#tbl-mylabel}
-
-### List-table filter
-
-We also integrate the [list tables](https://github.com/pandoc/lua-filters/tree/master/list-table) filter from Pandoc, so that you may alternatively use this format , easier to write and maintain:
-
-```markdown
-:::list-table
-   * - row 1, column 1
-     - row 1, column 2
-     - row 1, column 3
-
-   * - row 2, column 1
-     -
-     - row 2, column 3
-
-   * - row 3, column 1
-     - row 3, column 2
-:::
-```
-
-:::list-table
-   * - row 1, column 1
-     - row 1, column 2
-     - row 1, column 3
-
-   * - row 2, column 1
-     -
-     - row 2, column 3
-
-   * - row 3, column 1
-     - row 3, column 2
-:::
-
-### Table generated from code
-
-Table can also be generated by some code, for instance with ```knitr``` here:
-
-```{r cars}
-knitr::kable(summary(cars), caption = "Table caption.")
-```
-
-## Algorithms
-
-A solution to typeset pseudocode just like you would do with {{&lt; latex &gt;}}, yet with HTML output is to rely on the JavaScript [pseudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a [Code Block](https://quarto.org/docs/authoring/markdown-basics.html#source-code) with the `pseudocode` class. Do not forget the class tag, that will trigger the rendering process of your pseudo-code. The result is as follows^[For proper pdf rendering, use [Camel cased](https://en.wikipedia.org/wiki/Camel_case) names for all `algorithmic` keywords, not upper case ones like the examples in `pseudocode.js`’s documentation]:
-
-::: {#algo-label}
-
-````markdown
-```{.pseudocode}
-% This quicksort algorithm is extracted from Chapter 7, Introduction 
-% to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\Procedure{Quicksort}{$A, p, r$}
-    \If{$p &lt; r$} 
-        \State $q = $ \Call{Partition}{$A, p, r$}
-        \State \Call{Quicksort}{$A, p, q - 1$}
-        \State \Call{Quicksort}{$A, q + 1, r$}
-    \EndIf
-\EndProcedure
-\Procedure{Partition}{$A, p, r$}
-    \State $x = A[r]$
-    \State $i = p - 1$
-    \For{$j = p, \dots, r - 1$}
-        \If{$A[j] &lt; x$}
-            \State $i = i + 1$
-            \State exchange
-            $A[i]$ with $A[j]$
-        \EndIf
-        \State exchange $A[i]$ with $A[r]$
-    \EndFor
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-```
-````
-
-```{.pseudocode}
-% This quicksort algorithm is extracted from Chapter 7, Introduction 
-% to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\Procedure{Quicksort}{$A, p, r$}
-    \If{$p &lt; r$} 
-        \State $q = $ \Call{Partition}{$A, p, r$}
-        \State \Call{Quicksort}{$A, p, q - 1$}
-        \State \Call{Quicksort}{$A, q + 1, r$}
-    \EndIf
-\EndProcedure
-\Procedure{Partition}{$A, p, r$}
-    \State $x = A[r]$
-    \State $i = p - 1$
-    \For{$j = p, \dots, r - 1$}
-        \If{$A[j] &lt; x$}
-            \State $i = i + 1$
-            \State exchange
-            $A[i]$ with $A[j]$
-        \EndIf
-        \State exchange $A[i]$ with $A[r]$
-    \EndFor
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-```
-
-
-:::
-
-## Diagrams
-
-quarto-executable-code-5450563D
-
-```tikz
-%| label: tikz-ex
-%| fig-cap: "A simple tikz example"
-%| out-width: "40%"
-\usetikzlibrary{arrows}
-\begin{tikzpicture}[node distance=2cm, auto,&gt;=latex', thick, scale = 0.5]
-\node (P) {$P$};
-\node (B) [right of=P] {$B$};
-\node (A) [below of=P] {$A$};
-\node (C) [below of=B] {$C$};
-\node (P1) [node distance=1.4cm, left of=P, above of=P] {$\hat{P}$};
-\draw[-&gt;] (P) to node {$f$} (B);
-\draw[-&gt;] (P) to node [swap] {$g$} (A);
-\draw[-&gt;] (A) to node [swap] {$f$} (C);
-\draw[-&gt;] (B) to node {$g$} (C);
-\draw[-&gt;, bend right] (P1) to node [swap] {$\hat{g}$} (A);
-\draw[-&gt;, bend left] (P1) to node {$\hat{f}$} (B);
-\draw[-&gt;, dashed] (P1) to node {$k$} (P);
-\end{tikzpicture}
-```
-
-## Handling references {#sec-references}
-
-### Bibliographic references
-
-References are displayed as footnotes using [BibTeX](http://www.bibtex.org/), e.g. `[@computo]` will be displayed
-as [@computo], where `computo` is the bibtex key for this specific entry. The bibliographic information is automatically retrieved from
-the `.bib` file specified in the header of this document (here:`references.bib`).
-
-### Other cross-references
-
-As already (partially) seen, Quarto includes a mecanism similar to the bibliographic references for sections, equations, theorems, figures,
-lists, etc. Have a look at [this page](https://quarto.org/docs/authoring/cross-references.html).
-
-## To go further
-
-:::{.callout-note}
-### One last note
-To go into more involved details, you can also simply check the source code of this document (button at the top), or have a look at the source of our [t-sne remake example](https://computo.sfds.asso.fr/published-paper-tsne/).
-:::
-
-
-## Bibliography {.unnumbered}
-
-::: {#refs}
-:::</code></pre>
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Computo Journal Format"</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "To be used as template for contribution to Computo"</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 01/02/2023</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-modified:</span><span class="co"> last-modified</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: The Computo Team</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">    corresponding: true</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">    email: computo@sfds.asso.fr</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">    url: https://computo.sfds.asso.fr</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0000-0000-0000</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">      - name: Société Française de Statistique</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">        department: Statistique</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">        address: IHP</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">        city: Paris</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co">        country: France</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co">        postal-code: 75005</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: a friend</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="co">      - Another Affiliation</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="co">  This document provides a template based on the quarto system for contributions to Computo. The github repository in itself provides a specific quarto extension useful for authors (and editors!).</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="an">abstract:</span><span class="co"> |</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="co">  This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span><span class="co"> [template, quarto, R, Python, reproductibility]</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="an">doi:</span><span class="co"> 10.xxxx/xxx-xxx</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="co">  type: article-journal</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="co">  container-title: "Computo"</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co">  doi: "10.xxxx/xxx-xxx"</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a><span class="co">  url: "https://github.com/computorg/computo-quarto-extension"</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="co">  issn: "2824-7795"</span></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> references.bib</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="an">google-scholar:</span><span class="co"> true</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="an">github-user:</span><span class="co"> computorg</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="an">repo:</span><span class="co"> "computo-quarto-extension"</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> true # set to false once the build is running</span></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a><span class="an">published:</span><span class="co"> false # will be set to true once accepted</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a><span class="co">  computo-html: default</span></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="co">  computo-pdf: default</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="fu"># About this document</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>This document provides a template based on the <span class="co">[</span><span class="ot">quarto system</span><span class="co">](https://quarto.org/)</span> for contributions to **Computo** <span class="co">[</span><span class="ot">@computo</span><span class="co">]</span>. We show how <span class="in">`Python`</span> <span class="co">[</span><span class="ot">@perez2011python</span><span class="co">]</span> or  <span class="in">`R`</span> <span class="co">[</span><span class="ot">@R-base</span><span class="co">]</span> code can be included.</span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="fu"># Formatting</span></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>This section covers basic formatting guidelines. <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> is a versatile  formatting system for authoring HTML based on markdown, integrating {{&lt; latex &gt;}} and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the <span class="co">[</span><span class="ot">Pandoc Markdown</span><span class="co">](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)</span> markup language. </span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>We will only give some formatting elements. Authors can refer to the <span class="co">[</span><span class="ot">Quarto web page</span><span class="co">](https://quarto.org/)</span> for a complete view of the formatting possibilities.</span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>Quarto itself is a work-in-progress and a lot of bugs are constantly fixed or features added. As such, we recommend:</span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>searching any encountered issue with renders in <span class="co">[</span><span class="ot">the upstream quarto dev repo</span><span class="co">](https://github.com/quarto-dev/quarto-cli/issues)</span></span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>using a <span class="co">[</span><span class="ot">version of quarto &gt; 1.2</span><span class="co">](https://github.com/quarto-dev/quarto-cli/releases)</span></span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>To render/compile a document, run <span class="in">`quarto render`</span>. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:</span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="in">``` .bash</span></span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render content.qmd <span class="co"># will render to html</span></span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## Basic markdown formatting</span></span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>**Bold text** or _italic_</span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This is a list</span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>With more elements</span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It isn't numbered.</span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>But we can also do a numbered list</span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>This is my first item</span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>This is my second item</span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>This is my third item</span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mathematics</span></span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mathematical formulae</span></span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">{{&lt; latex &gt;}}</span><span class="co">](https://www.latex-project.org/)</span> code is natively supported<span class="ot">[^katex]</span>, which makes it possible to use mathematical formulae:</span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a><span class="ot">[^katex]: </span>We use <span class="co">[</span><span class="ot">katex</span><span class="co">](https://katex.org/)</span> for this purpose.</span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a>will render</span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a>f(x_1, \dots, x_n; \mu, \sigma^2) =</span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a>\frac{1}{\sigma \sqrt{2\pi}} \exp{\left(- \frac{1}{2\sigma^2}\sum_{i=1}^n(x_i - \mu)^2\right)}</span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a>It is also posible to cross-reference an equation, see @eq-mylabel:</span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a>D_{x_N} &amp; = \frac12</span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a>\left[\begin{array}{cc}</span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a>x_L^\top &amp; x_N^\top \end{array}\right] \,</span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a>\left<span class="co">[</span><span class="ot">\begin{array}{cc}  L_L &amp; B \\ B^\top &amp; L_N \end{array}\right</span><span class="co">]</span> \,</span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a>\left[\begin{array}{c}</span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a>x_L <span class="sc">\\</span> x_N \end{array}\right] <span class="sc">\\</span></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a>&amp; = \frac12 (x_L^\top L_L x_L + 2 x_N^\top B^\top x_L + x_N^\top L_N x_N),</span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mylabel}</span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a><span class="fu">### Theorems and other amsthem-like environments</span></span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a>Quarto includes a nice support for theorems, with predefined prefix labels for theorems, lemmas, proposition, etc. see <span class="co">[</span><span class="ot">this page</span><span class="co">](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs)</span>. Here is a simple example:</span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a>::: {#thm-slln}</span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a><span class="fu">### Strong law of large numbers</span></span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a>The sample average converges almost surely to the expected value:</span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a>$$\overline{X}_n\ \xrightarrow{\text{a.s.}}\ \mu \qquad\textrm{when}\ n \to \infty.$$</span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a>See @thm-slln.</span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code</span></span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a>Quarto uses either Jupyter or knitr to render code chunks. This can be triggered in the yaml header, e.g., for Jupyter (should be installed on your computer) use</span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a><span class="in">``` yaml</span></span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a>author<span class="at"> </span>"Jane<span class="at"> </span>Doe"</span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a>For knitr (R + knitr must be installed on your computer)</span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a><span class="in">``` yaml</span></span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a>author<span class="at"> </span>"Jane<span class="at"> </span>Doe"</span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a>You can use Jupyter for Python code and more. And R + KnitR for if you want to mix R with Python (via the package reticulate @R-reticulate).</span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a><span class="fu">### R</span></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a><span class="in">`R`</span> code <span class="co">[</span><span class="ot">@R-base</span><span class="co">]</span> chunks may be embedded as follows:</span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{r r-code, echo=TRUE}</span></span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a><span class="fu">### Python</span></span>
+<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-plotly</span></span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "A simple python plotly example"</span></span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> px.data.tips()</span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.histogram(df, x<span class="op">=</span><span class="st">"total_bill"</span>, y<span class="op">=</span><span class="st">"tip"</span>, color<span class="op">=</span><span class="st">"sex"</span>,</span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a>                   marginal<span class="op">=</span><span class="st">"box"</span>, <span class="co"># or violin, rug</span></span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a>                   hover_data<span class="op">=</span>df.columns)</span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a>fig</span>
+<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="fu">## Figures</span></span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a>Plots can be generated as follows and referenced. See plot @fig-gg:</span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-gg</span></span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "A simple ggplot example"</span></span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span></span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a>p</span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a>Interactive plots may also be produced in the HTML output of the document^<span class="co">[</span><span class="ot">The pdf output is just a screenshot of the interactive plot from the html output</span><span class="co">]</span>:</span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-ggplotly</span></span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "A simple ggplotly interactive example"</span></span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"plotly"</span>)</span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a>It is also possible to create figures from static images:</span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>:::{#fig-logo}</span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a><span class="al">![](figures/sfds.png)</span></span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a>SFdS logo (c.a. 2021)</span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tables</span></span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a><span class="fu">### Markdown syntax</span></span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>Tables (with label: <span class="in">`@tbl-mylabel`</span> renders @tbl-mylabel) can be generated with markdown as follows</span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a>| Tables   |      Are      |  Cool |</span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a>|----------|:-------------:|------:|</span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>| col 1 is |  left-aligned | $1600 |</span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a>| col 2 is |    centered   |   $12 |</span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a>| col 3 is | right-aligned |    $1 |</span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a>: my table caption {#tbl-mylabel}</span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a>| Tables   |      Are      |  Cool |</span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a>|----------|:-------------:|------:|</span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a>| col 1 is |  left-aligned | $1600 |</span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>| col 2 is |    centered   |   $12 |</span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a>| col 3 is | right-aligned |    $1 |</span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a>: my table caption {#tbl-mylabel}</span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a><span class="fu">### List-table filter</span></span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a>We also integrate the <span class="co">[</span><span class="ot">list tables</span><span class="co">](https://github.com/pandoc/lua-filters/tree/master/list-table)</span> filter from Pandoc, so that you may alternatively use this format , easier to write and maintain:</span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a>:::list-table</span>
+<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>- row 1, column 1</span>
+<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>row 1, column 2</span>
+<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>row 1, column 3</span>
+<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>- row 2, column 1</span>
+<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a>     -</span>
+<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>row 2, column 3</span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>- row 3, column 1</span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>row 3, column 2</span>
+<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a><span class="in">:::list-table</span></span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a><span class="in">   * - row 1, column 1</span></span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a><span class="in">     - row 1, column 2</span></span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a><span class="in">     - row 1, column 3</span></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a><span class="in">   * - row 2, column 1</span></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a><span class="in">     -</span></span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a><span class="in">     - row 2, column 3</span></span>
+<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a><span class="in">   * - row 3, column 1</span></span>
+<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a><span class="in">     - row 3, column 2</span></span>
+<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a><span class="in">:::</span></span>
+<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a><span class="in">### Table generated from code</span></span>
+<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a><span class="in">Table can also be generated by some code, for instance with ```knitr``` here:</span></span>
+<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{r cars}</span></span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::kable(summary(cars), caption = "Table caption.")</span></span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a><span class="fu">## Algorithms</span></span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a>A solution to typeset pseudocode just like you would do with {{&lt; latex &gt;}}, yet with HTML output is to rely on the JavaScript <span class="co">[</span><span class="ot">pseudocode.js</span><span class="co">](https://github.com/SaswatPadhi/pseudocode.js)</span>. Your pseudocode is written inside a <span class="co">[</span><span class="ot">Code Block</span><span class="co">](https://quarto.org/docs/authoring/markdown-basics.html#source-code)</span> with the <span class="in">`pseudocode`</span> class. Do not forget the class tag, that will trigger the rendering process of your pseudo-code. The result is as follows^<span class="co">[</span><span class="ot">For proper pdf rendering, use [Camel cased](https://en.wikipedia.org/wiki/Camel_case) names for all `algorithmic` keywords, not upper case ones like the examples in `pseudocode.js`’s documentation</span><span class="co">]</span>:</span>
+<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a>::: {#algo-label}</span>
+<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a><span class="in">````markdown</span></span>
+<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a><span class="in">```{.pseudocode}</span></span>
+<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a><span class="in">% This quicksort algorithm is extracted from Chapter 7, Introduction </span></span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a><span class="in">% to Algorithms (3rd edition)</span></span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{algorithm}</span></span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a><span class="in">\caption{Quicksort}</span></span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{algorithmic}</span></span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a><span class="in">\Procedure{Quicksort}{$A, p, r$}</span></span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a><span class="in">    \If{$p &lt; r$} </span></span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a><span class="in">        \State $q = $ \Call{Partition}{$A, p, r$}</span></span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a><span class="in">        \State \Call{Quicksort}{$A, p, q - 1$}</span></span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a><span class="in">        \State \Call{Quicksort}{$A, q + 1, r$}</span></span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a><span class="in">    \EndIf</span></span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a><span class="in">\EndProcedure</span></span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a><span class="in">\Procedure{Partition}{$A, p, r$}</span></span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a><span class="in">    \State $x = A[r]$</span></span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a><span class="in">    \State $i = p - 1$</span></span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a><span class="in">    \For{$j = p, \dots, r - 1$}</span></span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a><span class="in">        \If{$A[j] &lt; x$}</span></span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a><span class="in">            \State $i = i + 1$</span></span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a><span class="in">            \State exchange</span></span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a><span class="in">            $A[i]$ with $A[j]$</span></span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a><span class="in">        \EndIf</span></span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a><span class="in">        \State exchange $A[i]$ with $A[r]$</span></span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a><span class="in">    \EndFor</span></span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a><span class="in">\EndProcedure</span></span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a><span class="in">\end{algorithmic}</span></span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a><span class="in">\end{algorithm}</span></span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a><span class="in">```{.pseudocode}</span></span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a><span class="in">% This quicksort algorithm is extracted from Chapter 7, Introduction </span></span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a><span class="in">% to Algorithms (3rd edition)</span></span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{algorithm}</span></span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a><span class="in">\caption{Quicksort}</span></span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{algorithmic}</span></span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a><span class="in">\Procedure{Quicksort}{$A, p, r$}</span></span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a><span class="in">    \If{$p &lt; r$} </span></span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a><span class="in">        \State $q = $ \Call{Partition}{$A, p, r$}</span></span>
+<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a><span class="in">        \State \Call{Quicksort}{$A, p, q - 1$}</span></span>
+<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a><span class="in">        \State \Call{Quicksort}{$A, q + 1, r$}</span></span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a><span class="in">    \EndIf</span></span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a><span class="in">\EndProcedure</span></span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a><span class="in">\Procedure{Partition}{$A, p, r$}</span></span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a><span class="in">    \State $x = A[r]$</span></span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a><span class="in">    \State $i = p - 1$</span></span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a><span class="in">    \For{$j = p, \dots, r - 1$}</span></span>
+<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a><span class="in">        \If{$A[j] &lt; x$}</span></span>
+<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a><span class="in">            \State $i = i + 1$</span></span>
+<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a><span class="in">            \State exchange</span></span>
+<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a><span class="in">            $A[i]$ with $A[j]$</span></span>
+<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a><span class="in">        \EndIf</span></span>
+<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a><span class="in">        \State exchange $A[i]$ with $A[r]$</span></span>
+<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a><span class="in">    \EndFor</span></span>
+<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a><span class="in">\EndProcedure</span></span>
+<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a><span class="in">\end{algorithmic}</span></span>
+<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a><span class="in">\end{algorithm}</span></span>
+<span id="cb14-340"><a href="#cb14-340" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-341"><a href="#cb14-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-342"><a href="#cb14-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-343"><a href="#cb14-343" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-344"><a href="#cb14-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-345"><a href="#cb14-345" aria-hidden="true" tabindex="-1"></a><span class="fu">## Diagrams</span></span>
+<span id="cb14-346"><a href="#cb14-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-349"><a href="#cb14-349" aria-hidden="true" tabindex="-1"></a><span class="in">```{tikz}</span></span>
+<span id="cb14-350"><a href="#cb14-350" aria-hidden="true" tabindex="-1"></a><span class="in">%| label: tikz-ex</span></span>
+<span id="cb14-351"><a href="#cb14-351" aria-hidden="true" tabindex="-1"></a><span class="in">%| fig-cap: "A simple tikz example"</span></span>
+<span id="cb14-352"><a href="#cb14-352" aria-hidden="true" tabindex="-1"></a><span class="in">%| out-width: "40%"</span></span>
+<span id="cb14-353"><a href="#cb14-353" aria-hidden="true" tabindex="-1"></a><span class="in">\usetikzlibrary{arrows}</span></span>
+<span id="cb14-354"><a href="#cb14-354" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{tikzpicture}[node distance=2cm, auto,&gt;=latex', thick, scale = 0.5]</span></span>
+<span id="cb14-355"><a href="#cb14-355" aria-hidden="true" tabindex="-1"></a><span class="in">\node (P) {$P$};</span></span>
+<span id="cb14-356"><a href="#cb14-356" aria-hidden="true" tabindex="-1"></a><span class="in">\node (B) [right of=P] {$B$};</span></span>
+<span id="cb14-357"><a href="#cb14-357" aria-hidden="true" tabindex="-1"></a><span class="in">\node (A) [below of=P] {$A$};</span></span>
+<span id="cb14-358"><a href="#cb14-358" aria-hidden="true" tabindex="-1"></a><span class="in">\node (C) [below of=B] {$C$};</span></span>
+<span id="cb14-359"><a href="#cb14-359" aria-hidden="true" tabindex="-1"></a><span class="in">\node (P1) [node distance=1.4cm, left of=P, above of=P] {$\hat{P}$};</span></span>
+<span id="cb14-360"><a href="#cb14-360" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (P) to node {$f$} (B);</span></span>
+<span id="cb14-361"><a href="#cb14-361" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (P) to node [swap] {$g$} (A);</span></span>
+<span id="cb14-362"><a href="#cb14-362" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (A) to node [swap] {$f$} (C);</span></span>
+<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;] (B) to node {$g$} (C);</span></span>
+<span id="cb14-364"><a href="#cb14-364" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;, bend right] (P1) to node [swap] {$\hat{g}$} (A);</span></span>
+<span id="cb14-365"><a href="#cb14-365" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;, bend left] (P1) to node {$\hat{f}$} (B);</span></span>
+<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a><span class="in">\draw[-&gt;, dashed] (P1) to node {$k$} (P);</span></span>
+<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a><span class="in">\end{tikzpicture}</span></span>
+<span id="cb14-368"><a href="#cb14-368" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-369"><a href="#cb14-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-370"><a href="#cb14-370" aria-hidden="true" tabindex="-1"></a><span class="fu">## Handling references {#sec-references}</span></span>
+<span id="cb14-371"><a href="#cb14-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-372"><a href="#cb14-372" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bibliographic references</span></span>
+<span id="cb14-373"><a href="#cb14-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-374"><a href="#cb14-374" aria-hidden="true" tabindex="-1"></a>References are displayed as footnotes using <span class="co">[</span><span class="ot">BibTeX</span><span class="co">](http://www.bibtex.org/)</span>, e.g. <span class="in">`[@computo]`</span> will be displayed</span>
+<span id="cb14-375"><a href="#cb14-375" aria-hidden="true" tabindex="-1"></a>as <span class="co">[</span><span class="ot">@computo</span><span class="co">]</span>, where <span class="in">`computo`</span> is the bibtex key for this specific entry. The bibliographic information is automatically retrieved from</span>
+<span id="cb14-376"><a href="#cb14-376" aria-hidden="true" tabindex="-1"></a>the <span class="in">`.bib`</span> file specified in the header of this document (here:<span class="in">`references.bib`</span>).</span>
+<span id="cb14-377"><a href="#cb14-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-378"><a href="#cb14-378" aria-hidden="true" tabindex="-1"></a><span class="fu">### Other cross-references</span></span>
+<span id="cb14-379"><a href="#cb14-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-380"><a href="#cb14-380" aria-hidden="true" tabindex="-1"></a>As already (partially) seen, Quarto includes a mecanism similar to the bibliographic references for sections, equations, theorems, figures,</span>
+<span id="cb14-381"><a href="#cb14-381" aria-hidden="true" tabindex="-1"></a>lists, etc. Have a look at <span class="co">[</span><span class="ot">this page</span><span class="co">](https://quarto.org/docs/authoring/cross-references.html)</span>.</span>
+<span id="cb14-382"><a href="#cb14-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-383"><a href="#cb14-383" aria-hidden="true" tabindex="-1"></a><span class="fu">## To go further</span></span>
+<span id="cb14-384"><a href="#cb14-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-385"><a href="#cb14-385" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb14-386"><a href="#cb14-386" aria-hidden="true" tabindex="-1"></a><span class="fu">### One last note</span></span>
+<span id="cb14-387"><a href="#cb14-387" aria-hidden="true" tabindex="-1"></a>To go into more involved details, you can also simply check the source code of this document (button at the top), or have a look at the source of our <span class="co">[</span><span class="ot">t-sne remake example</span><span class="co">](https://computo.sfds.asso.fr/published-paper-tsne/)</span>.</span>
+<span id="cb14-388"><a href="#cb14-388" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-389"><a href="#cb14-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-390"><a href="#cb14-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-391"><a href="#cb14-391" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bibliography {.unnumbered}</span></span>
+<span id="cb14-392"><a href="#cb14-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-393"><a href="#cb14-393" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb14-394"><a href="#cb14-394" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <script>
