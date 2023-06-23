@@ -11,7 +11,7 @@ contributes:
         - list-table.lua
         - pseudocode.lua
         - not-in-format.lua
-#        - code-block-all.lua
+        - code-block-all.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
