@@ -16,10 +16,10 @@ jobs:
       contents: write   
     steps:
       - name: Checking out repository for Github action
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Installing dependencies with Micromamba
-        uses: mamba-org/provision-with-micromamba@v14
+        uses: mamba-org/provision-with-micromamba@v16
         with:
           cache-env: true
 
@@ -29,6 +29,13 @@ jobs:
           tinytex: true
           version: pre-release
 
+      - name: tinytex path
+        shell: bash -l {0}
+
+        run: |
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/bin
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
+          
 #      - name: Render and Publish
 #        uses: quarto-dev/quarto-actions/publish@v2
 #        with:

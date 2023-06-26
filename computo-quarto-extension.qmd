@@ -42,6 +42,9 @@ format:
   computo-pdf: default
 diagram:
   cache: true
+  engine:
+    tikz:
+      execpath: lualatex
 ---
 
 # About this document
