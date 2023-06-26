@@ -29,13 +29,14 @@ jobs:
           tinytex: true
           version: pre-release
 
-      - name: tinytex path
+      - name: tinytex path + inkscape
         shell: bash -l {0}
 
         run: |
+          apt install inkscape
           ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/bin
           ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
-          
+
 #      - name: Render and Publish
 #        uses: quarto-dev/quarto-actions/publish@v2
 #        with:
