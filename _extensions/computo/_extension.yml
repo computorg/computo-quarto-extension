@@ -9,9 +9,9 @@ contributes:
         # You can include here Lua filters from your extension format
         - color-text.lua
         - list-table.lua
-        - pseudocode.lua
         - not-in-format.lua
-        - code-block-all.lua
+        - pseudocode
+        - diagram
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua

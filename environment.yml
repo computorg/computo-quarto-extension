@@ -3,13 +3,14 @@ channels:
   - conda-forge
   - r
 dependencies:
+  - python=3.11
   - jupyter
   - plotly
   - matplotlib
   - numpy
   - pandas
   - python-kaleido
-  - r-base
+  - r-base=4.2.3
   - r-knitr
   - r-plotly
   - r-tidyverse
@@ -17,4 +18,4 @@ dependencies:
   - r-webshot
   - r-magick
   - r-pdftools
-  - python=3.10
+

@@ -1,10 +1,8 @@
 .DS_Store
 .Rhistory
-template.html
-template.pdf
 /.luarc.json
 /.quarto/
-/template_cache
-/template_files
-/template.html
+/*_files
 .Rprofile
+computo-quarto-extension.html
+computo-quarto-extension.pdf
