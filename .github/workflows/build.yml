@@ -35,7 +35,7 @@ jobs:
         shell: bash -l {0}
 
         run: |
-          apt install inkscape
+          sudo apt-get install -y inkscape
           ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/bin
           ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
 
