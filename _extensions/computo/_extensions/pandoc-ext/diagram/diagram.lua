@@ -206,7 +206,7 @@ local tikz = {
 
 --- Asymptote diagram engine
 local asymptote = {
-  line_comment_start = '%%',
+  line_comment_start = '//',
   mime_types = {
     ['application/pdf'] = true,
   },

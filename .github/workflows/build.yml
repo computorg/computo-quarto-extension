@@ -50,10 +50,8 @@ jobs:
         shell: bash -l {0}
 
         run: |
-            echo "$PATH"
-            echo `ls ~/.local/bin` 
-            echo `ls ~/bin`
-            quarto render ${{ env.quarto_file }}.qmd
+            quarto render ${{ env.quarto_file }}.qmd --to computo-html
+            quarto render ${{ env.quarto_file }}.qmd --to computo-pdf
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
