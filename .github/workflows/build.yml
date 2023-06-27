@@ -49,7 +49,7 @@ jobs:
 
         run: |
             echo "$PATH"
-            which pdflatex
+            ls ~/.local/bin
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
