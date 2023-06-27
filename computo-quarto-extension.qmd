@@ -21,8 +21,6 @@ author:
       - Another Affiliation
 description: |
   This document provides a template based on the quarto system for contributions to Computo. The github repository in itself provides a specific quarto extension useful for authors (and editors!).
-abstract: |
-  This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
 keywords: [template, quarto, R, Python, reproductibility]
 doi: 10.xxxx/xxx-xxx
 citation:
@@ -38,15 +36,18 @@ repo: "computo-quarto-extension"
 draft: true # set to false once the build is running
 published: false # will be set to true once accepted
 format:
-  computo-html: default
   computo-pdf: default
+  computo-html: default
 diagram:
-  cache: true
   engine:
     tikz:
       include-headers:
-        - '\usetikzlibrary{arrows}'     
+        - '\usetikzlibrary{arrows}'
 ---
+
+# Abstract
+
+This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
 
 # About this document
 
@@ -357,9 +358,9 @@ A solution to typeset pseudocode just like you would do with {{< latex >}}, yet 
 
 In addition of [quarto supported diagrams](https://quarto.org/docs/authoring/diagrams.html), we also support [tikz](https://www.overleaf.com/learn/latex/TikZ_package) diagrams. The following example is rendered as follows:
 
-``` {.tikz}
+```tikz
 %%| label: fig-tikz
-%%| fig-cap: A simple example of a flow chart with $\texttt{tikz}$.
+%%| fig-cap: A simple example of a commutative diagram with $\texttt{tikz}$.
 \begin{tikzpicture}[node distance=2cm, auto, thick, scale=2, every node/.style={transform shape}]
 \node (P) {$P$};
 \node (B) [right of=P] {$B$};

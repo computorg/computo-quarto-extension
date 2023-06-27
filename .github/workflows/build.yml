@@ -50,8 +50,8 @@ jobs:
         shell: bash -l {0}
 
         run: |
-            quarto render ${{ env.quarto_file }}.qmd --to computo-html
             quarto render ${{ env.quarto_file }}.qmd --to computo-pdf
+            quarto render ${{ env.quarto_file }}.qmd --to computo-html
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
