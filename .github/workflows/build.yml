@@ -50,7 +50,8 @@ jobs:
 
         run: |
             echo "$PATH"
-            ls ~/.local/bin
+            echo `ls ~/.local/bin` 
+            echo `ls ~/bin`
             quarto render ${{ env.quarto_file }}.qmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
