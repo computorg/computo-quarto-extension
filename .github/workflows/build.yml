@@ -27,17 +27,13 @@ jobs:
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          tinytex: true
-          version: pre-release
 
       - name: tinytex path + inkscape
         shell: bash -l {0}
 
         run: |
+          quarto install tool tinytex --update-path
           sudo apt-get install -y inkscape
-          ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/bin
-          ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
 
 #      - name: Render and Publish
 #        uses: quarto-dev/quarto-actions/publish@v2
@@ -61,6 +57,6 @@ jobs:
       - name: Deploying article on github pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          BRANCH: gh-pages
-          FOLDER: _build
-          CLEAN: true
+          branch: gh-pages
+          folder: _build
+          clean: true
