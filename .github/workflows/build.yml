@@ -27,12 +27,14 @@ jobs:
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
       - name: inkscape
         shell: bash -l {0}
 
         run: |
-          quarto tool install tinytex --update-path
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/.local/bin
           sudo apt-get install -y inkscape
 
 #      - name: Render and Publish
