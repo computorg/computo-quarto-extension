@@ -28,16 +28,11 @@ jobs:
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: tinytex path + inkscape
+      - name: inkscape
         shell: bash -l {0}
 
         run: |
-          quarto install tool tinytex --update-path
           sudo apt-get install -y inkscape
-          echo "$PATH"
-          which inkscape
-          which pdflatex
-          which lualatex
 
 #      - name: Render and Publish
 #        uses: quarto-dev/quarto-actions/publish@v2
