@@ -36,6 +36,7 @@ jobs:
         run: |
           mkdir -p ~/.local/bin
           ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/.local/bin
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
           sudo apt-get install -y inkscape
 
 #      - name: Render and Publish
