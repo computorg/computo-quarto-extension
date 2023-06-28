@@ -7,11 +7,12 @@ contributes:
       # define below YAML configuration common to all formats
       filters:
         # You can include here Lua filters from your extension format
+        - diagram
+        - pseudocode
+        - abstract-section
         - color-text.lua
         - list-table.lua
-        - pseudocode.lua
         - not-in-format.lua
-        - code-block-all.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua

@@ -16,18 +16,28 @@ jobs:
       contents: write   
     steps:
       - name: Checking out repository for Github action
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Installing dependencies with Micromamba
-        uses: mamba-org/provision-with-micromamba@v14
+      - uses: mamba-org/setup-micromamba@v1
         with:
-          cache-env: true
+          # environment-file is not assumed anymore
+          environment-file: environment.yml
+          # now called cache-environment
+          cache-environment: true
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
-          version: pre-release
+
+      - name: inkscape
+        shell: bash -l {0}
+
+        run: |
+          mkdir -p ~/.local/bin
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/.local/bin
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
+          sudo apt-get install -y inkscape
 
 #      - name: Render and Publish
 #        uses: quarto-dev/quarto-actions/publish@v2
@@ -40,7 +50,8 @@ jobs:
         shell: bash -l {0}
 
         run: |
-            quarto render ${{ env.quarto_file }}.qmd
+            quarto render ${{ env.quarto_file }}.qmd --to computo-pdf
+            quarto render ${{ env.quarto_file }}.qmd --to computo-html
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
             mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
@@ -50,6 +61,6 @@ jobs:
       - name: Deploying article on github pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          BRANCH: gh-pages
-          FOLDER: _build
-          CLEAN: true
+          branch: gh-pages
+          folder: _build
+          clean: true

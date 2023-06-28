@@ -21,8 +21,6 @@ author:
       - Another Affiliation
 description: |
   This document provides a template based on the quarto system for contributions to Computo. The github repository in itself provides a specific quarto extension useful for authors (and editors!).
-abstract: |
-  This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
 keywords: [template, quarto, R, Python, reproductibility]
 doi: 10.xxxx/xxx-xxx
 citation:
@@ -38,9 +36,18 @@ repo: "computo-quarto-extension"
 draft: true # set to false once the build is running
 published: false # will be set to true once accepted
 format:
-  computo-html: default
   computo-pdf: default
+  computo-html: default
+diagram:
+  engine:
+    tikz:
+      include-headers:
+        - '\usetikzlibrary{arrows}'
 ---
+
+# Abstract
+
+This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
 
 # About this document
 
@@ -269,81 +276,92 @@ knitr::kable(summary(cars), caption = "Table caption.")
 
 ## Algorithms
 
-A solution to typeset pseudocode just like you would do with {{< latex >}}, yet with HTML output is to rely on the JavaScript [pseudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a [Code Block](https://quarto.org/docs/authoring/markdown-basics.html#source-code) with the `pseudocode` class. Do not forget the class tag, that will trigger the rendering process of your pseudo-code. The result is as follows^[For proper pdf rendering, use [Camel cased](https://en.wikipedia.org/wiki/Camel_case) names for all `algorithmic` keywords, not upper case ones like the examples in `pseudocode.js`’s documentation]:
-
-::: {#algo-label}
+A solution to typeset pseudocode just like you would do with {{< latex >}}, yet with HTML output is to rely on the JavaScript [pseudocode.js](https://github.com/SaswatPadhi/pseudocode.js). Your pseudocode is written inside a [Code Block](https://quarto.org/docs/authoring/markdown-basics.html#source-code) with the `pseudocode` class. Do not forget the class tag, that will trigger the rendering process of your pseudo-code. The result is as follows^[For proper pdf rendering, use [Camel cased](https://en.wikipedia.org/wiki/Camel_case) names for all `algorithmic` keywords, not upper case ones, like the examples in `pseudocode.js`’s documentation, which are not compatible with LaTeX.]:
 
 ````markdown
-```{.pseudocode}
-% This quicksort algorithm is extracted from Chapter 7, Introduction 
-% to Algorithms (3rd edition)
+```pseudocode
+#| label: alg-quicksort
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
 \begin{algorithm}
 \caption{Quicksort}
 \begin{algorithmic}
 \Procedure{Quicksort}{$A, p, r$}
-    \If{$p < r$} 
-        \State $q = $ \Call{Partition}{$A, p, r$}
-        \State \Call{Quicksort}{$A, p, q - 1$}
-        \State \Call{Quicksort}{$A, q + 1, r$}
-    \EndIf
+  \If{$p < r$}
+    \State $q = $ \Call{Partition}{$A, p, r$}
+    \State \Call{Quicksort}{$A, p, q - 1$}
+    \State \Call{Quicksort}{$A, q + 1, r$}
+  \EndIf
 \EndProcedure
 \Procedure{Partition}{$A, p, r$}
-    \State $x = A[r]$
-    \State $i = p - 1$
-    \For{$j = p, \dots, r - 1$}
-        \If{$A[j] < x$}
-            \State $i = i + 1$
-            \State exchange
-            $A[i]$ with $A[j]$
-        \EndIf
-        \State exchange $A[i]$ with $A[r]$
-    \EndFor
+  \State $x = A[r]$
+  \State $i = p - 1$
+  \For{$j = p, \dots, r - 1$}
+    \If{$A[j] < x$}
+      \State $i = i + 1$
+      \State exchange
+      $A[i]$ with     $A[j]$
+    \EndIf
+    \State exchange $A[i]$ with $A[r]$
+  \EndFor
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
 ```
 ````
 
-```{.pseudocode}
-% This quicksort algorithm is extracted from Chapter 7, Introduction 
-% to Algorithms (3rd edition)
+```pseudocode
+#| label: alg-quicksort
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
 \begin{algorithm}
 \caption{Quicksort}
 \begin{algorithmic}
 \Procedure{Quicksort}{$A, p, r$}
-    \If{$p < r$} 
-        \State $q = $ \Call{Partition}{$A, p, r$}
-        \State \Call{Quicksort}{$A, p, q - 1$}
-        \State \Call{Quicksort}{$A, q + 1, r$}
-    \EndIf
+  \If{$p < r$}
+    \State $q = $ \Call{Partition}{$A, p, r$}
+    \State \Call{Quicksort}{$A, p, q - 1$}
+    \State \Call{Quicksort}{$A, q + 1, r$}
+  \EndIf
 \EndProcedure
 \Procedure{Partition}{$A, p, r$}
-    \State $x = A[r]$
-    \State $i = p - 1$
-    \For{$j = p, \dots, r - 1$}
-        \If{$A[j] < x$}
-            \State $i = i + 1$
-            \State exchange
-            $A[i]$ with $A[j]$
-        \EndIf
-        \State exchange $A[i]$ with $A[r]$
-    \EndFor
+  \State $x = A[r]$
+  \State $i = p - 1$
+  \For{$j = p, \dots, r - 1$}
+    \If{$A[j] < x$}
+      \State $i = i + 1$
+      \State exchange
+      $A[i]$ with     $A[j]$
+    \EndIf
+    \State exchange $A[i]$ with $A[r]$
+  \EndFor
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
 ```
 
-
-:::
+@alg-quicksort is extracted from Chapter 7, Introduction to Algorithms (3rd edition).
 
 ## Diagrams
 
-```{tikz}
-%| label: tikz-ex
-%| fig-cap: "A simple tikz example"
-%| out-width: "40%"
-\usetikzlibrary{arrows}
-\begin{tikzpicture}[node distance=2cm, auto,>=latex', thick, scale = 0.5]
+In addition of [quarto supported diagrams](https://quarto.org/docs/authoring/diagrams.html), we also support [tikz](https://www.overleaf.com/learn/latex/TikZ_package) diagrams. The following example is rendered as follows:
+
+```tikz
+%%| label: fig-tikz
+%%| fig-cap: A simple example of a commutative diagram with $\texttt{tikz}$.
+\begin{tikzpicture}[node distance=2cm, auto, thick, scale=2, every node/.style={transform shape}]
 \node (P) {$P$};
 \node (B) [right of=P] {$B$};
 \node (A) [below of=P] {$A$};
@@ -358,6 +376,8 @@ A solution to typeset pseudocode just like you would do with {{< latex >}}, yet 
 \draw[->, dashed] (P1) to node {$k$} (P);
 \end{tikzpicture}
 ```
+
+You may refer to it as @fig-tikz.
 
 ## Handling references {#sec-references}
 
