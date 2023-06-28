@@ -16,6 +16,4 @@ dependencies:
   - r-tidyverse
   - r-reticulate
   - r-webshot
-  - r-magick
-  - r-pdftools
 
