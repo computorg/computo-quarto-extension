@@ -6,14 +6,14 @@ dependencies:
   - python=3.11
   - jupyter
   - plotly
-  - matplotlib
   - numpy
   - pandas
   - python-kaleido
-  - r-base=4.2.3
+  - r-base
   - r-knitr
   - r-plotly
   - r-tidyverse
   - r-reticulate
   - r-webshot
+  - r-pdftools
 
