@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 0.2.3
+version: 0.2.4
 contributes:
   formats:
     common:
@@ -12,13 +12,11 @@ contributes:
         - abstract-section
         - color-text.lua
         - list-table.lua
-        - not-in-format.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
       knitr:
         opts_chunk:
-          echo: true
           screenshot.opts:
             cliprect: viewport
             vwidth: 640
@@ -46,7 +44,7 @@ contributes:
         caption: "source"
       code-copy: true
       code-summary: "Hide/Show the code"
-      code-fold: show
+      code-fold: hide
       anchor-sections: true
       link-external-icon: false
       link-external-newwindow: true
@@ -60,6 +58,7 @@ contributes:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
     pdf:
+      echo: false
       pdf-engine: lualatex
       papersize: a4
       geometry: 

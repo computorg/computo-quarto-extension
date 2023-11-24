@@ -1,19 +1,11 @@
 name: computo-quarto-extension
 channels:
   - conda-forge
-  - r
 dependencies:
-  - python=3.11
+  - python=3.12
   - jupyter
   - plotly
   - numpy
   - pandas
   - python-kaleido
-  - r-base
-  - r-knitr
-  - r-plotly
-  - r-tidyverse
-  - r-reticulate
-  - r-webshot
-  - r-pdftools
 

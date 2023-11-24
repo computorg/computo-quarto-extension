@@ -38,11 +38,6 @@ published: false # will be set to true once accepted
 format:
   computo-pdf: default
   computo-html: default
-diagram:
-  engine:
-    tikz:
-      include-headers:
-        - '\usetikzlibrary{arrows}'
 ---
 
 # Abstract
@@ -356,11 +351,12 @@ A solution to typeset pseudocode just like you would do with {{< latex >}}, yet 
 
 ## Diagrams
 
-In addition of [quarto supported diagrams](https://quarto.org/docs/authoring/diagrams.html), we also support [tikz](https://www.overleaf.com/learn/latex/TikZ_package) diagrams. The following example is rendered as follows:
+In addition of [quarto supported diagrams](https://quarto.org/docs/authoring/diagrams.html), we also support [tikz](https://www.overleaf.com/learn/latex/TikZ_package) diagrams. The following example^[This is the new syntax for cross-references since quarto 1.4, see [Crossreferenceable elements](https://quarto.org/docs/prerelease/1.4/crossref.html)] is rendered as follows.
 
-```tikz
-%%| label: fig-tikz
-%%| fig-cap: A simple example of a commutative diagram with $\texttt{tikz}$.
+````markdown
+:::{#fig-tikz}
+
+``` {.tikz opt-additional-packages="\usetikzlibrary{arrows}"}
 \begin{tikzpicture}[node distance=2cm, auto, thick, scale=2, every node/.style={transform shape}]
 \node (P) {$P$};
 \node (B) [right of=P] {$B$};
@@ -376,6 +372,34 @@ In addition of [quarto supported diagrams](https://quarto.org/docs/authoring/dia
 \draw[->, dashed] (P1) to node {$k$} (P);
 \end{tikzpicture}
 ```
+
+A simple example of a commutative diagram with $\texttt{tikz}$.
+
+:::
+````
+
+:::{#fig-tikz}
+
+``` {.tikz opt-additional-packages="\usetikzlibrary{arrows}"}
+\begin{tikzpicture}[node distance=2cm, auto, thick, scale=2, every node/.style={transform shape}]
+\node (P) {$P$};
+\node (B) [right of=P] {$B$};
+\node (A) [below of=P] {$A$};
+\node (C) [below of=B] {$C$};
+\node (P1) [node distance=1.4cm, left of=P, above of=P] {$\hat{P}$};
+\draw[->] (P) to node {$f$} (B);
+\draw[->] (P) to node [swap] {$g$} (A);
+\draw[->] (A) to node [swap] {$f$} (C);
+\draw[->] (B) to node {$g$} (C);
+\draw[->, bend right] (P1) to node [swap] {$\hat{g}$} (A);
+\draw[->, bend left] (P1) to node {$\hat{f}$} (B);
+\draw[->, dashed] (P1) to node {$k$} (P);
+\end{tikzpicture}
+```
+
+A simple example of a commutative diagram with $\texttt{tikz}$.
+
+:::
 
 You may refer to it as @fig-tikz.
 

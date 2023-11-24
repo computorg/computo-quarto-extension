@@ -5,10 +5,6 @@ on:
   push:
     branches: main
 
-env:
-  quarto_file: computo-quarto-extension
-  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   build-and-publish:    
     runs-on: ubuntu-latest
@@ -18,49 +14,45 @@ jobs:
       - name: Checking out repository for Github action
         uses: actions/checkout@v3
 
-      - uses: mamba-org/setup-micromamba@v1
+        
+      - name: Cache micromamba
+        uses: mamba-org/setup-micromamba@v1
         with:
-          # environment-file is not assumed anymore
           environment-file: environment.yml
-          # now called cache-environment
           cache-environment: true
-
+          
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
+          version: pre-release
 
-      - name: inkscape
-        shell: bash -l {0}
-
+      - name: register tinytex globally for diagram.lua
         run: |
           mkdir -p ~/.local/bin
           ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/.local/bin
           ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
-          sudo apt-get install -y inkscape
 
-#      - name: Render and Publish
-#        uses: quarto-dev/quarto-actions/publish@v2
-#        with:
-#          target: gh-pages
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Rendering with Quarto
-        shell: bash -l {0}
+      - name: install dependencies for diagram.lua and webshot2
+        run: sudo apt update && sudo apt install -y inkscape libcurl4-openssl-dev
 
-        run: |
-            quarto render ${{ env.quarto_file }}.qmd --to computo-pdf
-            quarto render ${{ env.quarto_file }}.qmd --to computo-html
-            mkdir _build
-            mv ${{ env.quarto_file }}.html _build/index.html
-            mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
-            cp environment.yml _build/
-            touch _build/.nojekyll
+      - name: register micromamba for reticulate
+        shell: micromamba-shell {0}
+        run: echo RETICULATE_PYTHON=`which python` > _environment
 
-      - name: Deploying article on github pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Install R
+        uses: r-lib/actions/setup-r@v2
         with:
-          branch: gh-pages
-          folder: _build
-          clean: true
+          r-version: '4.3.2'
+
+      - name: Install R Dependencies with renv
+        uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 1  
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
