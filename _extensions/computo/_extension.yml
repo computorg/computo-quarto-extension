@@ -54,6 +54,8 @@ contributes:
       fig-prefix: Figure
       tbl-prefix: Table
       html-math-method: katex
+      include-in-header:
+        - "partials/html/google-scholar-metadata.html"
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
