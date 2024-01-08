@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 0.2.4
+version: 0.2.5
 contributes:
   formats:
     common:
@@ -74,7 +74,6 @@ contributes:
       include-in-header:
         - "partials/pdf/include-in-header.tex"
       template-partials:
-        - "partials/pdf/_authors.tex"
         - "partials/pdf/before-body.tex"
       format-resources:
         - logo_text_white.pdf
