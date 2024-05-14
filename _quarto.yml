@@ -1,2 +1,16 @@
 project:
   title: "computo-quarto-extension"
+  render: 
+    - computo-quarto-extension.qmd
+  resources: 
+    - environment.yml
+    - .nojekyll
+
+execute: 
+  cache: true
+  freeze: auto
+
+format:
+  computo-html: 
+    output-file: index.html
+  computo-pdf: default  

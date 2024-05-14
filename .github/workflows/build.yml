@@ -31,7 +31,7 @@ jobs:
           mkdir -p ~/.local/bin
           ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/.local/bin
           ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
-          ~/.TinyTeX/bin/x86_64-linux/tlmgr install libertinus-otf
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr install libertinus-fonts
 
       - name: install dependencies for diagram.lua and webshot2
         run: sudo apt update && sudo apt install -y inkscape libcurl4-openssl-dev
