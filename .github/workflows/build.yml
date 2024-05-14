@@ -18,6 +18,7 @@ jobs:
       - name: Cache micromamba
         uses: mamba-org/setup-micromamba@v1
         with:
+          environment-file: environment.yml
           cache-environment: true
           
       - name: Installing quarto
