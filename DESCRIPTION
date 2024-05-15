@@ -1,1 +1,1 @@
-Depends: reticulate, webshot2
+Depends: reticulate, webshot2, ellipsis
