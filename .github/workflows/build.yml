@@ -12,7 +12,7 @@ jobs:
       contents: write   
     steps:
       - name: Checking out repository for Github action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       - name: Cache micromamba
         uses: mamba-org/setup-micromamba@v1
@@ -46,8 +46,6 @@ jobs:
 
       - name: Install R Dependencies with renv
         uses: r-lib/actions/setup-renv@v2
-        with:
-          cache-version: 1  
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
