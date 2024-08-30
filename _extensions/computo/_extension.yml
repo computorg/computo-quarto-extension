@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 0.2.5
+version: 0.2.6
 contributes:
   formats:
     common:
@@ -66,6 +66,9 @@ contributes:
         - textheight=24cm
         - textwidth=15.5cm
       fontfamily: libertinus
+      fontfamilyoptions:
+        - osf
+        - p  
       fontsize: 11pt
       highlight-style: github
       monofont: Latin Modern Mono
