@@ -6,11 +6,49 @@ project:
     - environment.yml
     - .nojekyll
 
-execute: 
-  cache: true
-  freeze: auto
-
+title: "Computo Journal Format"
+subtitle: "To be used as template for contribution to Computo"
+date: 01/02/2023
+date-modified: last-modified
+author:
+  - name: The Computo Team
+    corresponding: true
+    email: computo@sfds.asso.fr
+    url: https://computo.sfds.asso.fr
+    orcid: 0000-0000-0000-0000
+    affiliations:
+      - name: Société Française de Statistique
+        department: Statistique
+        address: IHP
+        city: Paris
+        country: France
+        postal-code: 75005
+  - name: a friend
+    affiliations:
+      - Another Affiliation
+description: |
+  This document provides a template based on the quarto system for contributions to Computo. The github repository in itself provides a specific quarto extension useful for authors (and editors!).
+keywords: [template, quarto, R, Python, reproductibility]
+doi: 10.xxxx/xxx-xxx
+citation:
+  type: article-journal
+  container-title: "Computo"
+  doi: "10.xxxx/xxx-xxx"
+  url: "https://github.com/computorg/computo-quarto-extension"
+  issn: "2824-7795"
+bibliography: references.bib
+google-scholar: true
+github-user: computorg
+repo: "computo-quarto-extension"
+draft: true # set to false once the build is running
+published: false # will be set to true once accepted
 format:
-  computo-html: 
-    output-file: index.html
-  computo-pdf: default  
+  computo-pdf: default
+  computo-html: default
+
+diagram:
+  engine:
+    tikz:
+      header-includes:
+        - '\usetikzlibrary{arrows}'
+

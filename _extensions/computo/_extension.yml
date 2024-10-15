@@ -1,20 +1,17 @@
 title: Computo Format Template
 author: Computorg Team
-version: 0.2.5
+version: 0.2.6
 contributes:
   formats:
     common:
       # define below YAML configuration common to all formats
       filters:
         # You can include here Lua filters from your extension format
-        - diagram
-        - pseudocode
         - abstract-section
-        - color-text.lua
-        - list-table.lua
-      shortcodes:
-        # You can include here Lua filters defining shortcodes from your extension
+        - pseudocode
+        - list-table
         - shortcodes.lua
+        - color-text.lua
       knitr:
         opts_chunk:
           screenshot.opts:
