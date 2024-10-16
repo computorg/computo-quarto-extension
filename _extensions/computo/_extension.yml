@@ -26,6 +26,26 @@ contributes:
       toc-title: Contents
       code-copy: true
       code-block-background: true
+    pdf:
+      echo: false
+      pdf-engine: lualatex
+      papersize: a4
+      geometry: 
+        - a4paper
+        - textheight=24cm
+        - textwidth=15.5cm
+      fontfamily: libertinus
+      fontsize: 11pt
+      highlight-style: github
+      monofont: Latin Modern Mono
+      monofontoptions:
+        - Scale=0.92
+      include-in-header:
+        - "partials/pdf/include-in-header.tex"
+      template-partials:
+        - "partials/pdf/before-body.tex"
+      format-resources:
+        - logo_text_white.pdf
     html:
       theme: [code-block-all.scss, custom.scss]
       title-block-banner: "#034E79"
@@ -57,23 +77,3 @@ contributes:
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
-    pdf:
-      echo: false
-      pdf-engine: lualatex
-      papersize: a4
-      geometry: 
-        - a4paper
-        - textheight=24cm
-        - textwidth=15.5cm
-      fontfamily: libertinus
-      fontsize: 11pt
-      highlight-style: github
-      monofont: Latin Modern Mono
-      monofontoptions:
-        - Scale=0.92
-      include-in-header:
-        - "partials/pdf/include-in-header.tex"
-      template-partials:
-        - "partials/pdf/before-body.tex"
-      format-resources:
-        - logo_text_white.pdf
