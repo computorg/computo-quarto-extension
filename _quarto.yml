@@ -43,8 +43,8 @@ repo: "computo-quarto-extension"
 draft: true # set to false once the build is running
 published: false # will be set to true once accepted
 format:
-  computo-pdf: default
   computo-html: default
+  computo-pdf: default
 
 diagram:
   engine:
