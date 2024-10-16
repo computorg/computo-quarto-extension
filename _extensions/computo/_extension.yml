@@ -8,6 +8,7 @@ contributes:
       filters:
         # You can include here Lua filters from your extension format
         - abstract-section
+        - diagram
         - pseudocode
         - list-table
         - color-text.lua
