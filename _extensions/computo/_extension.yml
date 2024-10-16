@@ -10,8 +10,10 @@ contributes:
         - abstract-section
         - pseudocode
         - list-table
-        - shortcodes.lua
         - color-text.lua
+      shortcodes:
+        # You can include here Lua filters defining shortcodes from your extension
+        - shortcodes.lua
       knitr:
         opts_chunk:
           screenshot.opts:
