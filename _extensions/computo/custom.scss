@@ -61,7 +61,9 @@ $callout-border-width: 5px ;
   color: $computo-color-dark !important;
 }
 
-.pseudocode {}
+.pseudocode {
+  /* avoid parser error in quarto */
+}
 
 // Bad inclusion of TOC if color specified in CSS for title-block-banner
 // Works when using .yml
