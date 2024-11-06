@@ -49,4 +49,8 @@ $endif$
 
 $if(draft)$
 \linenumbers
+\DraftwatermarkOptions{stamp=true, colorspec=0.9, text={\rm submitted}}
+$else$
+\DraftwatermarkOptions{stamp=false}
 $endif$
+
