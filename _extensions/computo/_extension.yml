@@ -47,7 +47,7 @@ contributes:
       format-resources:
         - logo_text_white.pdf
     html:
-      theme: [code-block-all.scss, custom.scss]
+      theme: [custom.scss]
       title-block-banner: "#034E79"
       title-block-banner-color: "#FFFFFF"
       license: "CC BY"

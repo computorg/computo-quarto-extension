@@ -314,8 +314,8 @@ In addition of [quarto supported diagrams](https://quarto.org/docs/authoring/dia
 ````markdown
 :::{#fig-tikz}
 
-``` {.tikz}
-%%| filename: ../figure-tikz/fig-tikz
+``` tikz
+%%| filename: fig-tikz
 \begin{tikzpicture}[node distance=2cm, auto, thick, scale=2, every node/.style={transform shape}]
 \node (P) {$P$};
 \node (B) [right of=P] {$B$};
@@ -339,7 +339,7 @@ A simple example of a commutative diagram with $\texttt{tikz}$.
 
 :::{#fig-tikz}
 
-``` {.tikz}
+``` tikz
 %%| filename: ../figure-tikz/fig-tikz
 \begin{tikzpicture}[node distance=2cm, auto, thick, scale=2, every node/.style={transform shape}]
 \node (P) {$P$};
