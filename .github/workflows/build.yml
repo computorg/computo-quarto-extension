@@ -12,12 +12,12 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write
 
 jobs:
   call_env_workflow:
     uses: computorg/workflows/.github/workflows/global-env.yml@main
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
+    secrets: inherit
     with:
       config-path: './config/quarto_config.yml'
   call_quartopublish_workflow:
@@ -25,5 +25,4 @@ jobs:
     needs: call_env_workflow
     with:
       config-path: './config/quarto_config.yml'
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
+    secrets: inherit
