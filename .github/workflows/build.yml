@@ -9,15 +9,9 @@ on:
   schedule:
     - cron: '0 4 * * 0'
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 jobs:
   call_env_workflow:
     uses: computorg/workflows/.github/workflows/global-env.yml@main
-    secrets: inherit
     with:
       config-path: './config/quarto_config.yml'
   call_quartopublish_workflow:
@@ -25,4 +19,3 @@ jobs:
     needs: call_env_workflow
     with:
       config-path: './config/quarto_config.yml'
-    secrets: inherit
