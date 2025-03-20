@@ -45,6 +45,10 @@ published: false # will be set to true once accepted
 format:
   computo-html: default
   computo-pdf: default
+  gfm:
+    output-file: README-test.md
+    wrap: none
+    template: _extensions/computo/_extensions/README.md
 
 diagram:
   engine:
