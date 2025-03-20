@@ -2,7 +2,6 @@
 
 This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
 
-
 # About this document
 
 This document provides a template based on the [quarto system](https://quarto.org/) for contributions to **Computo** [@computo]. We show how `Python` [@perez2011python] or  `R` [@R-base] code can be included.
