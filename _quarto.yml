@@ -4,7 +4,6 @@ project:
     - computo-quarto-extension.qmd
   resources: 
     - environment.yml
-    - .nojekyll
 
 title: "Computo Journal Format"
 subtitle: "To be used as template for contribution to Computo"
