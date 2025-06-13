@@ -376,7 +376,7 @@ lists, etc. Have a look at [this page](https://quarto.org/docs/authoring/cross-r
 
 :::{.callout-note}
 ### One last note
-To go into more involved details, you can also simply check the source code of this document (button at the top), or have a look at the source of our [t-sne remake example](https://computo.sfds.asso.fr/published-paper-tsne/).
+To go into more involved details, you can also simply check the source code of this document (button at the top), or have a look at the source of our [t-sne remake example](https://computo-journal.org/published-paper-tsne/).
 :::
 
 

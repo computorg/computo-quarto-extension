@@ -53,6 +53,8 @@ contributes:
       license: "CC BY"
       reference-section-title: Bibliography
       date-format: long
+      format-resources:
+        - logo_notext_white.png
       hover-citations: true
       hover-footnotes: true
       fig-format: svg
