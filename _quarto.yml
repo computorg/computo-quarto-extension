@@ -12,7 +12,7 @@ date-modified: last-modified
 author:
   - name: The Computo Team
     corresponding: true
-    email: computo@sfds.asso.fr
+    email: contact@computo-journal.org
     url: https://computo-journal.org
     orcid: 0000-0000-0000-0000
     affiliations:
@@ -28,13 +28,6 @@ author:
 description: |
   This document provides a template based on the quarto system for contributions to Computo. The github repository in itself provides a specific quarto extension useful for authors (and editors!).
 keywords: [template, quarto, R, Python, reproductibility]
-doi: 10.xxxx/xxx-xxx
-citation:
-  type: article-journal
-  container-title: "Computo"
-  doi: "10.xxxx/xxx-xxx"
-  url: "https://github.com/computorg/computo-quarto-extension"
-  issn: "2824-7795"
 abstract: |
   This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
 bibliography: references.bib
