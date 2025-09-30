@@ -13,3 +13,5 @@ _environment
 logo_notext_white.png
 logo_text_white.pdf
 
+
+**/*.quarto_ipynb
