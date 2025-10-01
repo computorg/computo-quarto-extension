@@ -125,6 +125,26 @@ fig = px.histogram(df, x="total_bill", y="tip", color="sex",
 fig
 ``` -->
 
+For a demonstration of a line plot on a polar axis, see @fig-polar
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
 ## Figures
 
 Plots can be generated as follows and referenced. See plot @fig-gg:
@@ -229,7 +249,7 @@ A solution to typeset pseudocode just like you would do with {{< latex >}}, yet 
 
 ````markdown
 ```pseudocode
-#| label: quicksort
+#| label: algo-quicksort
 #| html-indent-size: "1.2em"
 #| html-comment-delimiter: "//"
 #| html-line-number: true
@@ -266,7 +286,7 @@ A solution to typeset pseudocode just like you would do with {{< latex >}}, yet 
 ````
 
 ```pseudocode
-#| label: quicksort
+#| label: algo-quicksort
 #| html-indent-size: "1.2em"
 #| html-comment-delimiter: "//"
 #| html-line-number: true
@@ -301,7 +321,7 @@ A solution to typeset pseudocode just like you would do with {{< latex >}}, yet 
 \end{algorithm}
 ```
 
-@quicksort is extracted from Chapter 7, Introduction to Algorithms (3rd edition).
+@algo-quicksort is extracted from Chapter 7, Introduction to Algorithms (3rd edition).
 
 ## Diagrams
 
