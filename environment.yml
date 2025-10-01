@@ -5,7 +5,8 @@ dependencies:
   - python=3.12
   - jupyter
   - plotly
+  - matplotlib
   - numpy
   - pandas
-  - python-kaleido
-
+  - python-kaleido==0.2.1
+  
