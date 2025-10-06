@@ -17,7 +17,7 @@ Quarto itself is a work-in-progress and a lot of bugs are constantly fixed or fe
 - using a [version of quarto > 1.2](https://github.com/quarto-dev/quarto-cli/releases)
 :::
 
-To render/compile a document, run `quarto render`. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:
+To render/compile a document, run `quarto render`. A document will be generated that includes both content and the output of any embedded code chunks within the document:
 
 ``` .bash
 quarto render content.qmd # will render to html
@@ -114,7 +114,7 @@ x <- rnorm(10)
 
 ### Python
 
-<!-- ```{python}
+```{python}
 #| label: fig-plotly
 #| fig-cap: "A simple python plotly example"
 import plotly.express as px
@@ -123,7 +123,7 @@ fig = px.histogram(df, x="total_bill", y="tip", color="sex",
                    marginal="box", # or violin, rug
                    hover_data=df.columns)
 fig
-``` -->
+```
 
 For a demonstration of a line plot on a polar axis, see @fig-polar
 
