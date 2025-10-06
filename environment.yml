@@ -4,7 +4,7 @@ channels:
 dependencies:
   - python=3.13
   - jupyter
-  - plotly==v6.3.1
+  - plotly==6.3.1
   - matplotlib
   - numpy
   - pandas
