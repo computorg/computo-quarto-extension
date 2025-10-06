@@ -2,9 +2,9 @@ name: computo-quarto-extension
 channels:
   - conda-forge
 dependencies:
-  - python=3.12
+  - python=3.13
   - jupyter
-  - plotly
+  - plotly==v6.3.1
   - matplotlib
   - numpy
   - pandas
