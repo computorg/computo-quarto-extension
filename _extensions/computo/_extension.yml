@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 0.2.9
+version: 0.2.10
 contributes:
   formats:
     common:
@@ -12,6 +12,7 @@ contributes:
         - pseudocode
         - list-table
         - color-text.lua
+        - canonical.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
