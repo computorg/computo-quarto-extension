@@ -1,6 +1,6 @@
 \definecolor{computo-blue}{HTML}{034E79}
 
-$if(draft)$
+$if(submitted)$
 % Neutral header for drafts/submissions: no Computo branding, so the PDF can
 % travel to HAL, PCI, arXiv, double-blind reviewers, etc. without implying
 % any relationship to the journal beyond a discreet mention.
@@ -97,7 +97,7 @@ $if(status-watermark)$
 $else$
 \DraftwatermarkOptions{stamp=false}
 $endif$
-$if(draft)$
+$if(submitted)$
 \linenumbers
 $endif$
 

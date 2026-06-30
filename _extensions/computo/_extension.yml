@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 0.2.13
+version: 0.2.14
 contributes:
   formats:
     common:
@@ -81,3 +81,4 @@ contributes:
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
+        - "partials/html/status-alert.html"
