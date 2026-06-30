@@ -79,12 +79,15 @@ $endif$
   $endif$
 
   <div>
-    <div class="quarto-title-meta-heading">Status</div>
+    <div class="quarto-title-meta-heading">Links</div>
     <div class="quarto-title-meta-contents">
       $if(draft)$
       <p class="date">draft</p>
       $else$
-      <a href="https://github.com/$github-user$/$repo$"><img src='https://github.com/$github-user$/$repo$/actions/workflows/build.yml/badge.svg' alt='build status'></a>
+      <ul style="list-style: none; padding-left: 0; margin: 0;">
+      <li><a href="https://github.com/$github-user$/$repo$/"><img src="https://img.shields.io/badge/repo-GitHub-181717?logo=github"></a></li>
+      <li><a href="https://github.com/$github-user$/$repo$/actions/workflows/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/computorg/$repo$/build.yml?label=build&logo=github" class="img-fluid" alt="Build Status" style="margin-left:0px; margin-top:0px; display:block;" /></a></li>
+      </ul>
       $endif$
       $if(published)$
       <p class="date"></p>
