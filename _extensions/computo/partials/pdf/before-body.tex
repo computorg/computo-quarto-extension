@@ -20,6 +20,7 @@ $else$
 \newlength{\computobannerheight}
 \sbox{\computotitlebox}{%
   \begin{minipage}{15cm}
+    \sffamily\bfseries\color{white}
     \fontsize{25}{30}\selectfont
     $title$
     $if(subtitle)$
@@ -47,7 +48,7 @@ $else$
 \node[font=\sffamily\bfseries\color{white},anchor=north west, xshift=.75cm,
   yshift=-4.25cm] at (current page.north
   west) {\fontsize{10}{12}\selectfont ISSN 2824-7795};
-\node[font=\sffamily\bfseries\color{white},anchor=west,
+\node[anchor=west,
   xshift=4.25cm,yshift=-2.75cm] at (current page.north west)
   {\usebox{\computotitlebox}};
 \end{tikzpicture}
