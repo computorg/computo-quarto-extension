@@ -35,6 +35,11 @@ google-scholar: true
 github-user: computorg
 repo: "computo-quarto-extension"
 status: draft # one of: draft, accepted, published
+citation:
+  type: article-journal
+  container-title: "Computo"
+  issn: "2824-7795"
+  doi: "10.5072/computo.0000" # placeholder DOI (10.5072 is the official DOI test prefix), replace once assigned
 format:
   computo-html: default
   computo-pdf: default

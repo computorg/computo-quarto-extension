@@ -72,6 +72,13 @@ $endif$
   \bigskip
 
   Date published: $date$ \quad Last modified: $date-modified$
+  $if(published)$
+  $if(citation.doi)$
+
+  \smallskip
+  DOI: \href{https://doi.org/$citation.doi$}{$citation.doi$}
+  $endif$
+  $endif$
 \end{center}
 
 \bigskip
