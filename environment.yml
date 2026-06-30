@@ -5,16 +5,9 @@ dependencies:
   - python=3.13
   - jupyter
   - ipython
-  - plotly==6.3.1
+  - plotly==6.8.0
   - matplotlib
   - numpy
   - pandas
-  - python-kaleido==0.2.1
-  # Pinned together: an unpinned solve can pick a harfbuzz build without
-  # FreeType interop compiled in, which breaks libraqm at import time with
-  # "undefined symbol: hb_ft_font_get_ft_face" as soon as matplotlib renders
-  # any text. These versions are confirmed to work together.
-  - freetype=2.14.3
-  - harfbuzz=14.2.1
-  - libraqm=0.10.5
+  - python-kaleido==1.3.0
   
