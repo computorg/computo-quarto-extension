@@ -6,7 +6,7 @@ project:
     - environment.yml
 
 title: "Computo Journal Format"
-subtitle: "To be used as template for contribution to Computo"
+subtitle: "To be used as template for contribution to `Computo`"
 date: 01/02/2023
 date-modified: last-modified
 author:
