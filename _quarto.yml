@@ -6,7 +6,7 @@ project:
     - environment.yml
 
 title: "Computo Journal Format"
-subtitle: "To be used as template for contribution to Computo"
+subtitle: "To be used as template for contribution to `Computo`"
 date: 01/02/2023
 date-modified: last-modified
 author:
@@ -34,8 +34,12 @@ bibliography: references.bib
 google-scholar: true
 github-user: computorg
 repo: "computo-quarto-extension"
-draft: true # set to false once the build is running
-published: false # will be set to true once accepted
+status: draft # one of: draft, accepted, published
+citation:
+  type: article-journal
+  container-title: "Computo"
+  issn: "2824-7795"
+  doi: "10.5072/computo.0000" # placeholder DOI (10.5072 is the official DOI test prefix), replace once assigned
 format:
   computo-html: default
   computo-pdf: default
