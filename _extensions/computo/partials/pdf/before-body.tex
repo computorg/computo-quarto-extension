@@ -1,5 +1,19 @@
 \definecolor{computo-blue}{HTML}{034E79}
 
+$if(draft)$
+% Neutral header for drafts/submissions: no Computo branding, so the PDF can
+% travel to HAL, PCI, arXiv, double-blind reviewers, etc. without implying
+% any relationship to the journal beyond a discreet mention.
+\begin{center}
+  {\Large\bfseries $title$}
+  $if(subtitle)$\\[.3cm]{\large $subtitle$}$endif$
+
+  \medskip
+  {\small\itshape Submitted to Computo}
+\end{center}
+
+\bigskip
+$else$
 % Measure the title block once so the banner can grow with long titles
 % instead of clipping them inside a fixed-height box.
 \newsavebox{\computotitlebox}
@@ -41,6 +55,7 @@
 % The banner is an absolute overlay (zero height in the flow), so reserve the
 % same gap as before (2.5cm) plus whatever extra height the banner grew by.
 \vspace*{\dimexpr 2.5cm + \computobannerheight - 5cm\relax}
+$endif$
 \begin{center}
   $for(by-author)$
     \textbf{$it.name.literal$}$if(it.affiliations)$\textsuperscript{$for(it.affiliations)$$it.number$$sep$,$endfor$}$endif$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$$if(it.attributes.corresponding)${\renewcommand{\thefootnote}{\fnsymbol{footnote}}\footnote{Corresponding author: $if(it.email)$\href{mailto:$it.email$}{$it.email$}$endif$}}$endif$\quad
