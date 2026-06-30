@@ -117,7 +117,14 @@ x <- rnorm(10)
 ```{python}
 #| label: fig-plotly
 #| fig-cap: "A simple python plotly example"
+import plotly.io as pio
 import plotly.express as px
+
+# Force a kaleido-based static renderer: the default auto-detected
+# "notebook" renderer relies on IPython's rich display machinery, which
+# isn't available in this R/knitr + reticulate execution context.
+pio.renderers.default = "png"
+
 df = px.data.tips()
 fig = px.histogram(df, x="total_bill", y="tip", color="sex",
                    marginal="box", # or violin, rug
