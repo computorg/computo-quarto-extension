@@ -114,6 +114,20 @@ x <- rnorm(10)
 
 ### Python
 
+`reticulate` [@R-reticulate] manages the Python side: declare the packages you
+need with `py_require()` and it provisions an isolated environment (via `uv`)
+the first time Python is actually used, no separate conda/virtualenv setup
+required.
+
+```{r setup-python-env, include=FALSE, cache=TRUE}
+library(reticulate)
+py_require(
+  packages = c("ipython", "plotly==6.8.0", "numpy", "pandas",
+               "kaleido==1.3.0", "matplotlib"),
+  python_version = "3.13"
+)
+```
+
 ```{python}
 #| label: fig-plotly
 #| fig-cap: "A simple python plotly example"
