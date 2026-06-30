@@ -34,8 +34,7 @@ bibliography: references.bib
 google-scholar: true
 github-user: computorg
 repo: "computo-quarto-extension"
-draft: true # set to false once the build is running
-published: false # will be set to true once accepted
+status: draft # one of: draft, accepted, published
 format:
   computo-html: default
   computo-pdf: default

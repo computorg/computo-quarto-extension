@@ -1,10 +1,33 @@
 \definecolor{computo-blue}{HTML}{034E79}
 
+% Measure the title block once so the banner can grow with long titles
+% instead of clipping them inside a fixed-height box.
+\newsavebox{\computotitlebox}
+\newlength{\computobannerheight}
+\sbox{\computotitlebox}{%
+  \begin{minipage}{15cm}
+    \fontsize{25}{30}\selectfont
+    $title$
+    $if(subtitle)$
+    \vspace{.5cm}
+    \\
+    \fontsize{15}{18}\selectfont
+    $subtitle$
+    $endif$
+  \end{minipage}%
+}
+\settototalheight{\computobannerheight}{\usebox{\computotitlebox}}
+\addtolength{\computobannerheight}{2.75cm} % space above the title box
+\addtolength{\computobannerheight}{1cm} % breathing room below the title box
+\ifdim\computobannerheight<5cm
+  \setlength{\computobannerheight}{5cm} % keep the historical minimum height
+\fi
+
 \begin{tikzpicture}[remember picture,overlay]
 \fill[computo-blue]
   (current page.north west) -- (current page.north east) --
-  ([yshift=-5cm]current page.north east|-current page.north east) --
-  ([yshift=-5cm]current page.north west|-current page.north west) -- cycle;
+  ([yshift=-\computobannerheight]current page.north east|-current page.north east) --
+  ([yshift=-\computobannerheight]current page.north west|-current page.north west) -- cycle;
 \node[anchor=north west, xshift=.75cm,
   yshift=-.75cm] at (current page.north west) {\includegraphics[height=3cm]{logo_text_white}};
 \node[font=\sffamily\bfseries\color{white},anchor=north west, xshift=.75cm,
@@ -12,30 +35,29 @@
   west) {\fontsize{10}{12}\selectfont ISSN 2824-7795};
 \node[font=\sffamily\bfseries\color{white},anchor=west,
   xshift=4.25cm,yshift=-2.75cm] at (current page.north west)
-  {\begin{minipage}{15cm}
-    \fontsize{25}{30}\selectfont
-    $title$
-    \vspace{.5cm}
-    \\
-    \fontsize{15}{18}\selectfont
-    $subtitle$
-  \end{minipage}};
+  {\usebox{\computotitlebox}};
 \end{tikzpicture}
 
-\vspace*{2.5cm}
+% The banner is an absolute overlay (zero height in the flow), so reserve the
+% same gap as before (2.5cm) plus whatever extra height the banner grew by.
+\vspace*{\dimexpr 2.5cm + \computobannerheight - 5cm\relax}
 \begin{center}
-    $for(by-author)$
-      $if(by-author.name.literal)$$by-author.name.literal$$endif$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$$if(it.attributes.corresponding)$\footnote{Corresponding author: $if(it.email)$\href{mailto:$it.email$}{$it.email$}$endif$}$endif$\quad
-      $for(by-author.affiliations)$
-       $if(it.department)$$it.department$$if(it.name)$, $endif$$endif$$if(it.name)$$it.name$$endif$$if(it.department)$\\$elseif(it.name)$\\$endif$
-       $endfor$
-    $endfor$
+  $for(by-author)$
+    \textbf{$it.name.literal$}$if(it.affiliations)$\textsuperscript{$for(it.affiliations)$$it.number$$sep$,$endfor$}$endif$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$$if(it.attributes.corresponding)${\renewcommand{\thefootnote}{\fnsymbol{footnote}}\footnote{Corresponding author: $if(it.email)$\href{mailto:$it.email$}{$it.email$}$endif$}}$endif$\quad
+  $endfor$
+
+  \smallskip
+  {\small
+  $for(affiliations)$
+    \textsuperscript{$it.number$}$if(it.department)$$it.department$$if(it.name)$, $endif$$endif$$if(it.name)$$it.name$$endif$\quad
+  $endfor$
+  }
 
   \bigskip
-  
+
   Date published: $date$ \quad Last modified: $date-modified$
 \end{center}
-      
+
 \bigskip
 \begin{abstract}
 $abstract$
@@ -47,10 +69,12 @@ $if(keywords)$
 \vfill
 $endif$
 
-$if(draft)$
-\linenumbers
-\DraftwatermarkOptions{stamp=true, colorspec=0.9, text={\rm submitted}}
+$if(status-watermark)$
+\DraftwatermarkOptions{stamp=true, colorspec=0.9, text={\rm $status-watermark$}}
 $else$
 \DraftwatermarkOptions{stamp=false}
+$endif$
+$if(draft)$
+\linenumbers
 $endif$
 
