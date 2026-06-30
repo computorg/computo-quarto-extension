@@ -1,1 +1,1 @@
-sudo apt-get install -y libcurl4-openssl-dev libpng-dev ipython3
+sudo apt-get install -y libcurl4-openssl-dev libpng-dev
