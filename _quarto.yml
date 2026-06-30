@@ -2,8 +2,6 @@ project:
   title: "computo-quarto-extension"
   render: 
     - computo-quarto-extension.qmd
-  resources: 
-    - environment.yml
 
 title: "Computo Journal Format"
 subtitle: "To be used as template for contribution to `Computo`"
@@ -25,11 +23,9 @@ author:
   - name: a friend
     affiliations:
       - Another Affiliation
-description: |
-  This document provides a template based on the quarto system for contributions to Computo. The github repository in itself provides a specific quarto extension useful for authors (and editors!).
 keywords: [template, quarto, R, Python, reproductibility]
 abstract: |
-  This is the abstract - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
+  This document provides a template based on the quarto system for contributions to Computo. The github repository in itself provides a specific quarto extension useful for authors (and editors!).
 bibliography: references.bib
 google-scholar: true
 github-user: computorg
