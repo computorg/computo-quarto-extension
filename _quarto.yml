@@ -4,7 +4,7 @@ project:
     - computo-quarto-extension.qmd
 
 title: "Computo Journal Format"
-subtitle: "To be used as template for contribution to `Computo`"
+subtitle: "To be used as a template for contributions to `Computo`"
 date: 01/02/2023
 date-modified: last-modified
 author:
@@ -30,7 +30,7 @@ bibliography: references.bib
 google-scholar: true
 github-user: computorg
 repo: "computo-quarto-extension"
-status: published # one of: submitted, accepted, published
+status: submitted # one of: submitted, accepted, published
 citation:
   type: article-journal
   container-title: "Computo"
