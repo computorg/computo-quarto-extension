@@ -16,6 +16,43 @@ function latex()
   end
 end
 
+-- Generate a Markdown bullet list of all authors with optional URL and affiliations.
+-- Usage: {{< author-list >}}
+function author_list(_, _, meta)
+  local authors = meta["by-author"]
+  if authors == nil then return {} end
+
+  local items = {}
+  for _, author in ipairs(authors) do
+    local name = pandoc.utils.stringify(author.name and author.name.literal or pandoc.Str(""))
+    local url = author.url and pandoc.utils.stringify(author.url) or nil
+
+    local affil_parts = {}
+    if author.affiliations then
+      for _, affil in ipairs(author.affiliations) do
+        local affil_name = affil.name and pandoc.utils.stringify(affil.name) or nil
+        if affil_name and affil_name ~= "" then
+          table.insert(affil_parts, affil_name)
+        end
+      end
+    end
+
+    local inlines = {}
+    if url and url ~= "" then
+      table.insert(inlines, pandoc.Link({pandoc.Str(name)}, url))
+    else
+      table.insert(inlines, pandoc.Str(name))
+    end
+    if #affil_parts > 0 then
+      table.insert(inlines, pandoc.Str(" (" .. table.concat(affil_parts, ", ") .. ")"))
+    end
+
+    table.insert(items, {pandoc.Plain(inlines)})
+  end
+
+  return pandoc.BulletList(items)
+end
+
 -- Encode a metadata value for use in a shields.io badge URL.
 -- shields.io uses '-' as a label/message/color separator, so literal dashes
 -- must be doubled ('--') and slashes must be percent-encoded ('%2F').
