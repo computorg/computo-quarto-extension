@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 0.2.15
+version: 0.3.0
 contributes:
   formats:
     common:
@@ -77,7 +77,9 @@ contributes:
       eq-prefix: Equation
       fig-prefix: Figure
       tbl-prefix: Table
-      html-math-method: katex
+      html-math-method: mathjax
+      include-in-header:
+        - "partials/html/mathjax-ams.html"
       template-partials:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
