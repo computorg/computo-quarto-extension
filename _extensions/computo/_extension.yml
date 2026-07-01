@@ -2,6 +2,8 @@ title: Computo Format Template
 author: Computorg Team
 version: 0.3.0
 contributes:
+  shortcodes:
+    - shortcodes.lua
   formats:
     common:
       # define below YAML configuration common to all formats
@@ -14,9 +16,6 @@ contributes:
         - color-text.lua
         - status.lua
         - canonical.lua
-      shortcodes:
-        # You can include here Lua filters defining shortcodes from your extension
-        - shortcodes.lua
       knitr:
         opts_chunk:
           screenshot.opts:
