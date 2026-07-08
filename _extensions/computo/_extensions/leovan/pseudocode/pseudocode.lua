@@ -18,8 +18,8 @@ local function ensure_html_deps()
   ]])
   quarto.doc.include_text("after-body", [[
     <script type="text/javascript">
-    (function(d) {
-      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll(".pseudocode-container").forEach(function(el) {
         let pseudocodeOptions = {
           indentSize: el.dataset.indentSize,
           commentDelimiter: el.dataset.commentDelimiter,
@@ -30,9 +30,7 @@ local function ensure_html_deps()
         };
         pseudocode.renderElement(el.querySelector(".pseudocode"), pseudocodeOptions);
       });
-    })(document);
-    (function(d) {
-      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
+      document.querySelectorAll(".pseudocode-container").forEach(function(el) {
         let captionSpan = el.querySelector(".ps-root > .ps-algorithm > .ps-line > .ps-keyword")
         if (captionSpan !== null) {
           let captionPrefix = el.dataset.captionPrefix + " ";
@@ -46,7 +44,7 @@ local function ensure_html_deps()
           captionSpan.innerHTML = captionPrefix + captionNumber;
         }
       });
-    })(document);
+    });
     </script>
   ]])
 end
