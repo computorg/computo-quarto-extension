@@ -26,18 +26,31 @@ local function count_rows(tbl)
   return n
 end
 
-local function longtable_to_tabular(tex)
+local function longtable_to_tabular(tex, has_id)
   local _, colspec_end, colspec =
     tex:find("\\begin{longtable}%[%]{(.-)}")
   if not colspec then return nil end
 
-  -- Quarto's crossref filter already wraps a captioned/labelled table in
-  -- its own `table` float (with `\caption`/`\label`) around whatever block
-  -- we return, so we must NOT add another float or caption here - just the
-  -- resizable `tabular`, or the caption/float ends up duplicated.
+  -- A crossref-labelled table (has an id, e.g. from `#| label: tbl-x`) is
+  -- wrapped by Quarto's crossref filter in its own `table` float with its
+  -- own `\caption`, around whatever block we return - so in that case we
+  -- must not add another float/caption, just the resizable `tabular`.
+  -- A table with no id (e.g. a bare `knitr::kable(..., caption = ...)`)
+  -- gets no such external wrapper, so we must supply our own, or the
+  -- caption pandoc embedded in the longtable ends up orphaned outside any
+  -- float ("\caption outside float").
   local body = tex:sub(colspec_end + 1)
+  local caption = nil
+  local cap_s, _, cap_text = body:find("\\caption{(.-)}\\label{[^}]-}\\tabularnewline")
+  if not cap_s then
+    cap_s, _, cap_text = body:find("\\caption{(.-)}\\tabularnewline")
+  end
+  if cap_s and cap_text ~= "" then
+    caption = cap_text
+  end
   body = body:gsub("\\caption{.-}\\label{[^}]-}\\tabularnewline", "", 1)
   body = body:gsub("\\caption{}\\label{[^}]-}\\tabularnewline", "", 1)
+  body = body:gsub("\\caption{.-}\\tabularnewline", "", 1)
   body = body:gsub("\\tabularnewline%s*", "", 1)
 
   -- Drop the repeated header block plus longtable's page-break plumbing.
@@ -54,10 +67,20 @@ local function longtable_to_tabular(tex)
   body = body:gsub("\\end{longtable}", "\\bottomrule\\noalign{}\n\\end{tabular}")
 
   local out = {}
+  if not has_id then
+    table.insert(out, "\\begin{table}")
+    table.insert(out, "\\centering")
+    if caption then
+      table.insert(out, "\\caption{" .. caption .. "}")
+    end
+  end
   table.insert(out, "\\begin{adjustbox}{max width=\\linewidth}")
   table.insert(out, "\\begin{tabular}{" .. colspec .. "}")
   table.insert(out, body)
   table.insert(out, "\\end{adjustbox}")
+  if not has_id then
+    table.insert(out, "\\end{table}")
+  end
   return table.concat(out, "\n")
 end
 
@@ -70,7 +93,8 @@ function Table(tbl)
   end
 
   local rendered = pandoc.write(pandoc.Pandoc({ tbl }), "latex")
-  local converted = longtable_to_tabular(rendered)
+  local has_id = tbl.attr and tbl.attr.identifier and tbl.attr.identifier ~= ""
+  local converted = longtable_to_tabular(rendered, has_id)
   if not converted then
     return nil
   end
