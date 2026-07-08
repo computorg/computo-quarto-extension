@@ -151,6 +151,7 @@ For a demonstration of a line plot on a polar axis, see @fig-polar
 ```{python}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
+#| dev: svg
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -179,6 +180,25 @@ p <- ggplot(mpg, aes(displ, hwy)) +
   geom_point() +
   geom_smooth() + theme_bw()
 p
+```
+
+Plots combining semi-transparent layers with a `viridis` colour scale mapping missing values to a transparent colour (`na.value = NA`) render correctly in both formats, see @fig-viridis-alpha. Prior to `v1.0.4`, R's Cairo-based `svg()` device (the previous HTML figure backend) emulated this kind of transparency through SVG filter chains that most browsers fail to render, showing a solid black rectangle instead of the plot; the HTML backend was switched to `svglite`, which supports transparency natively, to fix this.
+
+```{r}
+#| label: fig-viridis-alpha
+#| fig-cap: "A scatter plot mixing a transparent-NA viridis colour scale with an alpha-blended confidence ribbon"
+#| message: false
+#| warning: false
+library("ggplot2")
+library("viridis")
+set.seed(42)
+df <- data.frame(x = rnorm(500), y = rnorm(500), v = rnorm(500))
+df$v[sample(nrow(df), 50)] <- NA
+ggplot(df, aes(x, y)) +
+  geom_ribbon(aes(ymin = -2, ymax = 2), fill = "red", alpha = 0.2) +
+  geom_point(aes(color = v), size = 2, shape = 15) +
+  scale_color_viridis(na.value = NA) +
+  theme_bw()
 ```
 
 Interactive plots may also be produced in the HTML output of the document^[The pdf output is just a screenshot of the interactive plot from the html output]:

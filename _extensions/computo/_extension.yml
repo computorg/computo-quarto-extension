@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 1.0.3
+version: 1.0.4
 contributes:
   shortcodes:
     - shortcodes.lua
@@ -61,6 +61,9 @@ contributes:
       hover-citations: true
       hover-footnotes: true
       fig-format: svg
+      knitr:
+        opts_chunk:
+          dev: svglite
       highlight-style: github
       code-block-background: true
       code-tools:

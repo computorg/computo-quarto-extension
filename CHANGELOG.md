@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.4
+
+### Bug Fixes
+
+- **HTML figures rendered as invisible/black boxes**: R's Cairo-based `svg()` device (used by default for `fig-format: svg`) emulates semi-transparent layers (e.g. `scale_color_viridis(na.value = NA)`, alpha-blended ribbons) via SVG filter chains (`feImage`/`feColorMatrix` compositing groups) that most browsers fail to render correctly, leaving a solid black rectangle in place of the plot. Switched the HTML knitr device to `svglite`, which supports transparency natively without this filter-based workaround.
+
+---
+
 All notable changes to the Computo Quarto extension, from `v0.2.9` to `v1.0.3`.
 
 ## Features
