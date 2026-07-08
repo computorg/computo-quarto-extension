@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 1.0.1
+version: 1.0.2
 contributes:
   shortcodes:
     - shortcodes.lua
