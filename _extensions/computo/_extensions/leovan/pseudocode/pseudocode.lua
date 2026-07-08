@@ -5,7 +5,18 @@ local function ensure_html_deps()
     scripts = { "pseudocode.min.js" },
     stylesheets = { "pseudocode.min.css" }
   })
+  -- pseudocode.js typesets the math inside algorithm blocks itself (it does
+  -- not reuse the page's MathJax rendering pipeline). It picks KaTeX if
+  -- present, else falls back to driving the page's MathJax instance via its
+  -- (synchronous, v2-era) API. Computo pages use MathJax v3, whose startup
+  -- is asynchronous, which both races pseudocode.js's readiness check and
+  -- mismatches the API calls it makes - silently dropping all algorithm
+  -- math. Loading KaTeX (synchronous, no such API mismatch) avoids that
+  -- MathJax coupling entirely.
   quarto.doc.include_text("in-header", [[
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+            integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+            crossorigin="anonymous"></script>
     <style type="text/css">
     .ps-root .ps-algorithm {
       border-top: 2px solid;
@@ -19,31 +30,43 @@ local function ensure_html_deps()
   quarto.doc.include_text("after-body", [[
     <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll(".pseudocode-container").forEach(function(el) {
-        let pseudocodeOptions = {
-          indentSize: el.dataset.indentSize,
-          commentDelimiter: el.dataset.commentDelimiter,
-          lineNumber: el.dataset.lineNumber.toLowerCase() === "true",
-          lineNumberPunc: el.dataset.lineNumberPunc,
-          noEnd: el.dataset.noEnd.toLowerCase() === "true",
-          titlePrefix: el.dataset.captionPrefix
-        };
-        pseudocode.renderElement(el.querySelector(".pseudocode"), pseudocodeOptions);
-      });
-      document.querySelectorAll(".pseudocode-container").forEach(function(el) {
-        let captionSpan = el.querySelector(".ps-root > .ps-algorithm > .ps-line > .ps-keyword")
-        if (captionSpan !== null) {
-          let captionPrefix = el.dataset.captionPrefix + " ";
-          let captionNumber = "";
-          if (el.dataset.pseudocodeNumber) {
-            captionNumber = el.dataset.pseudocodeNumber + " ";
-            if (el.dataset.chapterLevel) {
-              captionNumber = el.dataset.chapterLevel + "." + captionNumber;
+      function renderPseudocode() {
+        document.querySelectorAll(".pseudocode-container").forEach(function(el) {
+          let pseudocodeOptions = {
+            indentSize: el.dataset.indentSize,
+            commentDelimiter: el.dataset.commentDelimiter,
+            lineNumber: el.dataset.lineNumber.toLowerCase() === "true",
+            lineNumberPunc: el.dataset.lineNumberPunc,
+            noEnd: el.dataset.noEnd.toLowerCase() === "true",
+            titlePrefix: el.dataset.captionPrefix
+          };
+          pseudocode.renderElement(el.querySelector(".pseudocode"), pseudocodeOptions);
+        });
+        document.querySelectorAll(".pseudocode-container").forEach(function(el) {
+          let captionSpan = el.querySelector(".ps-root > .ps-algorithm > .ps-line > .ps-keyword")
+          if (captionSpan !== null) {
+            let captionPrefix = el.dataset.captionPrefix + " ";
+            let captionNumber = "";
+            if (el.dataset.pseudocodeNumber) {
+              captionNumber = el.dataset.pseudocodeNumber + " ";
+              if (el.dataset.chapterLevel) {
+                captionNumber = el.dataset.chapterLevel + "." + captionNumber;
+              }
             }
+            captionSpan.innerHTML = captionPrefix + captionNumber;
           }
-          captionSpan.innerHTML = captionPrefix + captionNumber;
-        }
-      });
+        });
+      }
+      // pseudocode.js sniffs `MathJax.version` to decide how to typeset math.
+      // MathJax v3 sets up `window.MathJax` synchronously but finishes its
+      // own (async) startup later, so `MathJax.version` is still undefined
+      // at DOMContentLoaded time and pseudocode.js throws. Wait for
+      // MathJax's own readiness promise before rendering, when present.
+      if (window.MathJax && window.MathJax.startup && window.MathJax.startup.promise) {
+        window.MathJax.startup.promise.then(renderPseudocode);
+      } else {
+        renderPseudocode();
+      }
     });
     </script>
   ]])
