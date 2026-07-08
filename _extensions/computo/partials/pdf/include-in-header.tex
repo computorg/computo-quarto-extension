@@ -7,4 +7,10 @@
 \usepackage{unicode-math}
 \setmathfont{Libertinus Math}
 \usepackage{draftwatermark}
+\usepackage{adjustbox}
+\usepackage{float}
+% Tables converted from `longtable` to `table` (see pdf-table-fit.lua, used
+% to shrink-to-fit overly wide tables) must stay in place like `longtable`
+% does, instead of floating to the top of the page/document.
+\floatplacement{table}{H}
 

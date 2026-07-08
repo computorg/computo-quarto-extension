@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 1.0.0
+version: 1.0.1
 contributes:
   shortcodes:
     - shortcodes.lua
@@ -47,6 +47,8 @@ contributes:
         - "partials/pdf/before-body.tex"
       format-resources:
         - logo_text_white.pdf
+      filters:
+        - pdf-table-fit.lua
     html:
       theme: [custom.scss]
       title-block-banner: "#034E79"
