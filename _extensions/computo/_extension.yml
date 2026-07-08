@@ -85,3 +85,5 @@ contributes:
         - "partials/html/title-block.html"
         - "partials/html/title-metadata.html"
         - "partials/html/status-alert.html"
+      filters:
+        - strip-legacy-plotly-mathjax.lua
