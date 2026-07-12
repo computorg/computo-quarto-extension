@@ -1,0 +1,13 @@
+[project]
+name = "computo-quarto-extension"
+version = "0.1.0"
+description = "Python dependencies for the Computo Quarto extension's demo document (computo-quarto-extension.qmd)"
+requires-python = "==3.13.*"
+dependencies = [
+  "ipython",
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "plotly==6.8.0",
+  "kaleido==1.3.0",
+]
