@@ -119,7 +119,10 @@ need with `py_require()` and it provisions an isolated environment (via `uv`)
 the first time Python is actually used, no separate conda/virtualenv setup
 required.
 
-```{r setup-python-env, include=FALSE, cache=TRUE}
+```{r}
+#| label: setup-python-env
+#| include: false
+#| cache: true
 library(reticulate)
 py_require(
   packages = c("ipython", "plotly==6.8.0", "numpy", "pandas",
