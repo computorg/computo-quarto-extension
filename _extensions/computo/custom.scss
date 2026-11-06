@@ -1,6 +1,6 @@
 /*-- scss:defaults --*/
-@import url('https://fonts.googleapis.com/css2?family=Oswald');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
 /*******************************************************************************
  * Variables used throughout the theme.
@@ -93,4 +93,9 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-size: 1rem;
   font-weight: 300;
+}
+
+// Bootstrap's relative bolder weight maps the light body text to regular weight.
+b, strong {
+  font-weight: 700;
 }
