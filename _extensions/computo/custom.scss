@@ -92,10 +92,10 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
-// Bootstrap's relative bolder weight maps the light body text to regular weight.
+// Explicit bold weight, now that the 700 weight is loaded.
 b, strong {
   font-weight: 700;
 }

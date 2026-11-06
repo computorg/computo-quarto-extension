@@ -4,7 +4,7 @@
 
 ### Bug Fixes
 
-- **Bold text not rendered in HTML** (#55, by Johan Larsson): the Open Sans and Oswald imports loaded no weight, so Google Fonts served the regular weight only and bold text looked like plain text. The imports now load the weights and italics used by the theme, and `b`/`strong` are set to 700. Body text is now rendered in the light weight (300) that the theme always asked for.
+- **Bold text not rendered in HTML** (#55, by Johan Larsson): the Open Sans and Oswald imports loaded no weight, so Google Fonts served the regular weight only and bold text looked like plain text. The imports now load the weights and italics used by the theme, and `b`/`strong` are set to 700. Body text stays in the regular weight (400), as it was effectively rendered before: the theme asked for 300, which was never loaded.
 - **Abstract too close to the links**: more space between the title block metadata (links, badges) and the abstract in HTML.
 
 ## v1.1.0
