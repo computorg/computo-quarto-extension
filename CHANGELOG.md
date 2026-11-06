@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased
+## v1.1.0
+
+### Changes
+
+- **Date and DOI in the title block follow the status**: a published article shows its publication date ("Published"), its last modification ("Modified") and its DOI, read from `citation.doi` (the DOI of Computo articles was set there and no longer shown on the page). A submitted or accepted article shows a single "Last updated" date, since its `date` is the date of the last render, and no DOI, since it carries a placeholder.
 
 ### Bug Fixes
 
