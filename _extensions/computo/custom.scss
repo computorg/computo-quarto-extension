@@ -92,10 +92,16 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
-// Bootstrap's relative bolder weight maps the light body text to regular weight.
+// Explicit bold weight, now that the 700 weight is loaded.
 b, strong {
   font-weight: 700;
+}
+
+// Leave some room between the title block metadata (links, badges) and the abstract.
+// (Quarto sets margin-top: 0 with this selector, hence the same specificity.)
+#title-block-header.quarto-title-block.default .abstract {
+  margin-top: 1.5rem;
 }
