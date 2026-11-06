@@ -99,3 +99,9 @@ body {
 b, strong {
   font-weight: 700;
 }
+
+// Leave some room between the title block metadata (links, badges) and the abstract.
+// (Quarto sets margin-top: 0 with this selector, hence the same specificity.)
+#title-block-header.quarto-title-block.default .abstract {
+  margin-top: 1.5rem;
+}
