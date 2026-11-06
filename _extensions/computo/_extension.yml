@@ -27,6 +27,8 @@ contributes:
       toc-title: Contents
       code-copy: true
       code-block-background: true
+      # Chicago author-date without the "accepted <date>" clause in the citation of the article
+      csl: computo.csl
     pdf:
       echo: false
       pdf-engine: lualatex
