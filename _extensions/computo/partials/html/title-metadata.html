@@ -40,6 +40,9 @@ $endif$
   </div>
   $endif$
                           
+  $-- Date labels follow the status: only a published article has a
+  $-- publication date; before that, `date` is the date of the last render.
+  $if(published)$
   $if(date)$
   <div>
     <div class="quarto-title-meta-heading">$labels.published$</div>
@@ -48,7 +51,7 @@ $endif$
     </div>
   </div>
   $endif$
-                                
+
   $if(date-modified)$
   <div>
     <div class="quarto-title-meta-heading">$labels.modified$</div>
@@ -57,7 +60,21 @@ $endif$
     </div>
   </div>
   $endif$
-  
+  $else$
+  $if(date)$
+  <div>
+    <div class="quarto-title-meta-heading">Last updated</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">$date$</p>
+    </div>
+  </div>
+  $endif$
+  $endif$
+
+  $-- The DOI of a Computo article is set in citation.doi (used for the
+  $-- citation and the metadata); show it on published articles only, since
+  $-- submitted ones carry a placeholder.
+  $if(published)$
   $if(doi)$
   <div>
     <div class="quarto-title-meta-heading">$labels.doi$</div>
@@ -67,6 +84,16 @@ $endif$
       </p>
     </div>
   </div>
+  $elseif(citation.doi)$
+  <div>
+    <div class="quarto-title-meta-heading">$labels.doi$</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        <a href="https://doi.org/$citation.doi$">$citation.doi$</a>
+      </p>
+    </div>
+  </div>
+  $endif$
   $endif$
               
   $if(keywords)$

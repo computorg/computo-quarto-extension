@@ -1,6 +1,6 @@
 title: Computo Format Template
 author: Computorg Team
-version: 1.0.4
+version: 1.1.0
 contributes:
   shortcodes:
     - shortcodes.lua
@@ -27,6 +27,8 @@ contributes:
       toc-title: Contents
       code-copy: true
       code-block-background: true
+      # Chicago author-date without the "accepted <date>" clause in the citation of the article
+      csl: computo.csl
     pdf:
       echo: false
       pdf-engine: lualatex

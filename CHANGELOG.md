@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.1.0
+
+### Changes
+
+- **Date and DOI in the title block follow the status**: a published article shows its publication date ("Published"), its last modification ("Modified") and its DOI, read from `citation.doi` (the DOI of Computo articles was set there and no longer shown on the page). A submitted or accepted article shows a single "Last updated" date, since its `date` is the date of the last render, and no DOI, since it carries a placeholder.
+
+### Bug Fixes
+
+- **"accepted" in the citation of every article**: Quarto sets the CSL `available-date` of the document to its date, and Pandoc's default style (Chicago author-date, 18th edition) cites an article without volume, issue or pages as "accepted, <date>", which is the case of every Computo article ("*Computo*, accepted, September 3"). The extension now ships `computo.csl`, the same style without that clause, and uses it by default; reference lists are unchanged.
+- **Citation box shown on submitted articles**: Quarto's "Citation" appendix ("For attribution, please cite this work as") is now hidden while `status: submitted`, since a submitted article is not citable yet. It appears as soon as the status becomes `accepted` or `published`.
+
 ## v1.0.4
 
 ### Bug Fixes
